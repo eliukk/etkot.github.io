@@ -35,6 +35,7 @@ const options = {
   screenOverlayContainer: viewer.container,
 };
 
+var itemCounter = 0;
 
 viewer.camera.flyHome(0);
 viewer.dataSources.add(
@@ -44,6 +45,22 @@ viewer.dataSources.add(
   )
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
+
+            dataSource.entities.forEach((item) => {
+
+              if (itemCounter != 0) {
+                setTimeout(function() {
+                  viewer.trackedEntity = item;
+                  viewer.selectedEntity = viewer.trackedEntity;
+                }, 15000);
+              }
+              else{
+                viewer.trackedEntity = item;
+                viewer.selectedEntity = viewer.trackedEntity;
+              }
+
+              itemCounter += 1;
+            });
 });
    
         /*viewer.dataSources
