@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Cesium Demo</title>
+    <script src="Cesium.js"></script>
+  </head>
+  <body><style>
+      @import url(bucket.css);
+    </style>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay"><h1>Loading...</h1></div>
+    <div id="toolbar"></div>
+
+<script>
+const viewer = new Cesium.Viewer("cesiumContainer", {
+  imageryProvider: false,
+  timeline: false,
+  baseLayerPicker: false,
+  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
+    Cesium.TileMapServiceImageryProvider.fromUrl(
+      Cesium.buildModuleUrl("Assets/Textures/NaturalEarthII")
+    )
+  ),
+  geocoder: false,
+});
+const options = {
+  timeline: false,
+  camera: viewer.scene.camera,
+  canvas: viewer.scene.canvas,
+  screenOverlayContainer: viewer.container,
+};
+
+
+/*viewer.camera.flyHome(0);
+viewer.dataSources.add(
+  Cesium.KmlDataSource.load(
+    "testi2.kmz",
+    options
+  )
+);*/
+   
+        /*viewer.dataSources
+          .add(
+            Cesium.KmlDataSource.load(
+              "../SampleData/kml/bikeRide.kml",
+              options
+            )
+          )
+          .then(function (dataSource) {
+            viewer.clock.shouldAnimate = false;
+            const rider = dataSource.entities.getById("tour");
+            viewer.flyTo(rider).then(function () {
+              viewer.trackedEntity = rider;
+              // viewer.selectedEntity = viewer.trackedEntity;
+              viewer.clock.multiplier = 30;
+              viewer.clock.shouldAnimate = true;
+            });
+          });
+      },*/
+
+</script>
+</body>
+</html>
