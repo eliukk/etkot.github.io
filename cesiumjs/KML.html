@@ -51,13 +51,19 @@ viewer.dataSources.add(
 
               if (i != 0) {
                 setTimeout(function() {
-                  viewer.trackedEntity = dataSource._entityCollection._entities._array[i];
-                  viewer.selectedEntity = viewer.trackedEntity;
-                }, 15000);
+                  const currentEntity = dataSource._entityCollection._entities._array[i];
+                  viewer.flyTo(rider).then(function () {
+                    viewer.trackedEntity = currentEntity;
+                    viewer.selectedEntity = viewer.trackedEntity;
+                  });
+                }, 15000 * i);
               }
               else{
-                viewer.trackedEntity = dataSource._entityCollection._entities._array[i];
-                viewer.selectedEntity = viewer.trackedEntity;
+                const currentEntity = dataSource._entityCollection._entities._array[i];
+                  viewer.flyTo(rider).then(function () {
+                    viewer.trackedEntity = currentEntity;
+                    viewer.selectedEntity = viewer.trackedEntity;
+                  });
               }
               i+=1;
             }
