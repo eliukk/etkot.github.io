@@ -47,16 +47,16 @@ viewer.dataSources.add(
             viewer.clock.shouldAnimate = false;
 
             let i = 0;
-            while (i < dataSource.entities) {
+            while (i < dataSource._entityCollection._entities._array.length) {
 
               if (i != 0) {
                 setTimeout(function() {
-                  viewer.trackedEntity = dataSource.entities[i];
+                  viewer.trackedEntity = dataSource._entityCollection._entities._array[i];
                   viewer.selectedEntity = viewer.trackedEntity;
                 }, 15000);
               }
               else{
-                viewer.trackedEntity = dataSource.entities[i];
+                viewer.trackedEntity = dataSource._entityCollection._entities._array[i];
                 viewer.selectedEntity = viewer.trackedEntity;
               }
             }
