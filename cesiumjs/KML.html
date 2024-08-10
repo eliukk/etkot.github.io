@@ -46,22 +46,21 @@ viewer.dataSources.add(
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
 
-            dataSource.entities.forEach((item) => {
+            while (i < dataSource.entities) {
 
-              if (itemCounter != 0) {
+              if (i != 0) {
                 setTimeout(function() {
-                  viewer.trackedEntity = item;
+                  viewer.trackedEntity = dataSource.entities[i];
                   viewer.selectedEntity = viewer.trackedEntity;
                 }, 15000);
               }
               else{
-                viewer.trackedEntity = item;
+                viewer.trackedEntity = dataSource.entities[i];
                 viewer.selectedEntity = viewer.trackedEntity;
               }
-
-              itemCounter += 1;
+            }
             });
-});
+
    
         /*viewer.dataSources
           .add(
