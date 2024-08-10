@@ -41,7 +41,10 @@ viewer.dataSources.add(
     "testaus.kml",
     options
   )
-);
+).then(function (dataSource) {
+            viewer.clock.shouldAnimate = false;
+            console.log("testausta:" + dataSource.entities);
+});
    
         /*viewer.dataSources
           .add(
