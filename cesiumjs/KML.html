@@ -19,10 +19,16 @@
 
 <script>
 const viewer = new Cesium.Viewer("cesiumContainer", {
-  imageryProvider: true,
+  imageryProvider: false,
   timeline: false,
-  baseLayerPicker: true,
-  geocoder: true,
+  baseLayerPicker: false,
+  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
+    Cesium.BingMapsImageryProvider.fromUrl(
+  "https://dev.virtualearth.net", {
+    key: "get-yours-at-https://www.bingmapsportal.com/",
+    mapStyle: Cesium.BingMapsStyle.AERIAL
+  })),
+  geocoder: false,
 });
 const options = {
   timeline: false,
