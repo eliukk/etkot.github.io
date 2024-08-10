@@ -22,11 +22,6 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   imageryProvider: false,
   timeline: false,
   baseLayerPicker: false,
-  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
-    Cesium.TileMapServiceImageryProvider.fromUrl(
-      Cesium.buildModuleUrl("/Assets/Textures/NaturalEarthII")
-    )
-  ),
   geocoder: false,
 });
 const options = {
