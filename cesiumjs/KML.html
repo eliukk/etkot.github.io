@@ -52,7 +52,7 @@ viewer.dataSources.add(
               if (i != 0) {
                 setTimeout(function() {
                   const currentEntity = dataSource._entityCollection._entities._array[i];
-                  viewer.flyTo(rider).then(function () {
+                  viewer.flyTo(currentEntity).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
                   });
@@ -60,7 +60,7 @@ viewer.dataSources.add(
               }
               else{
                 const currentEntity = dataSource._entityCollection._entities._array[i];
-                  viewer.flyTo(rider).then(function () {
+                  viewer.flyTo(currentEntity).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
                   });
