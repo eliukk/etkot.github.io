@@ -46,10 +46,10 @@ viewer.dataSources.add(
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
 
-            var i = 1;
+            var i = 2;
             while (i < dataSource._entityCollection._entities._array.length) {
 
-              if (i != 1) {
+              if (i != 2) {
                 setTimeout(function() {
                   const currentEntity = dataSource._entityCollection._entities._array[i];
                   viewer.flyTo(currentEntity).then(function () {
