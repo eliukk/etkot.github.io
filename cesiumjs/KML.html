@@ -19,6 +19,18 @@
     <div id="toolbar"></div>
 
 <script>
+
+function configureTimeout(currentEntity, i) {
+  setTimeout(function() {
+                  viewer.flyTo(currentEntity).then(function () {
+                    viewer.trackedEntity = currentEntity;
+                    viewer.selectedEntity = viewer.trackedEntity;
+                  });
+                }, 15000 * i -1);
+
+}
+
+
 const viewer = new Cesium.Viewer("cesiumContainer", {
   imageryProvider: false,
   timeline: false,
@@ -50,13 +62,15 @@ viewer.dataSources.add(
             while (i < dataSource._entityCollection._entities._array.length) {
 
               if (i != 2) {
-                setTimeout(function() {
+
+                configureTimeout(dataSource._entityCollection._entities._array[i], i);
+                /*setTimeout(function() {
                   const currentEntity = dataSource._entityCollection._entities._array[i];
                   viewer.flyTo(currentEntity).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
                   });
-                }, 15000 * i);
+                }, 15000 * i);*/
               }
               else{
                 const currentEntity = dataSource._entityCollection._entities._array[i];
