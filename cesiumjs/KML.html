@@ -46,7 +46,7 @@ viewer.dataSources.add(
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
 
-            let i = 0;
+            var i = 0;
             while (i < dataSource._entityCollection._entities._array.length) {
 
               if (i != 0) {
@@ -59,7 +59,9 @@ viewer.dataSources.add(
                 viewer.trackedEntity = dataSource._entityCollection._entities._array[i];
                 viewer.selectedEntity = viewer.trackedEntity;
               }
+              i+=1;
             }
+
             });
 
    
