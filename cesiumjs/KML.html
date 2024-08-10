@@ -46,6 +46,7 @@ viewer.dataSources.add(
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
 
+            let i = 0;
             while (i < dataSource.entities) {
 
               if (i != 0) {
