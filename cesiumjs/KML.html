@@ -27,7 +27,7 @@ function configureTimeout(currentEntity, i) {
                     viewer.selectedEntity = viewer.trackedEntity;
 
                     viewer.clock.onTick.addEventListener(function (clock) {
-                    viewer.scene.camera.rotateRight(0.0005);
+                    viewer.scene.camera.rotateRight(0.001);
                     });
                   });
                 }, 15000 * i-1);
@@ -45,6 +45,12 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 })),
   geocoder: false,
 });
+
+var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
+    url : 'https://assets.agi.com/stk-terrain/world'
+});
+viewer.terrainProvider = cesiumTerrainProviderMeshes;
+
 const options = {
   camera: viewer.scene.camera,
   canvas: viewer.scene.canvas,
