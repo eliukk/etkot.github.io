@@ -40,8 +40,8 @@ function configureTimeout(currentEntity, i) {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
 
-                    viewer.clock.onTick.removeEventListener(rotateCamera);
-                    unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                    //viewer.clock.onTick.removeEventListener(rotateCamera);
+                    //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
                   });
                 }, timeout * i-1);
 
@@ -120,7 +120,7 @@ viewer.dataSources.add(
             }
 
             // stop camera rotation
-            viewer.clock.onTick.removeEventListener(rotateCamera);
+            //viewer.clock.onTick.removeEventListener(rotateCamera);
 
             // return camera back to main top coords
             setTimeout(function() {
