@@ -67,8 +67,8 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   timeline: false,
   baseLayerPicker: false,
   selectionIndicator : false,
-  HomeButton: false,
-  SceneModePicker: false,
+  homeButton: false,
+  sceneModePicker: false,
   baseLayer: Cesium.ImageryLayer.fromProviderAsync(
     new Cesium.OpenStreetMapImageryProvider({
     url : 'https://tile.openstreetmap.org/'
@@ -77,7 +77,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 });
 
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
-const modeButton = document.querySelector("span.cesium-sceneModePicker-wrapper");
+const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
 const myButton = document.createElement("button");
 myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Aloita esitys";
