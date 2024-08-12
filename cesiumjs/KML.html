@@ -109,7 +109,7 @@ startPrsentation();
 
 function startPrsentation (){
   timeoutCounter = 0;
-  document.getElementById("Button").disabled = true;
+  myButton.disabled = true;
 
   viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
@@ -160,7 +160,7 @@ function startPrsentation (){
 
                 viewer.trackedEntity = undefined;
                 viewer.selectedEntity = undefined;
-                document.getElementById("Button").disabled = false;
+                myButton.disabled = false;
 
                 viewer.camera.flyTo({
                   destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
