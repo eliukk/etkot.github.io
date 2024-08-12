@@ -145,12 +145,13 @@ function startPresentation(){
               var i = 1;
               while (i < dataSource._entityCollection._entities._array.length) {
 
+                dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
+
                 if (i == 1){
                   viewer.trackedEntity = dataSource._entityCollection._entities._array[1];
                   viewer.selectedEntity = dataSource._entityCollection._entities._array[1];
                 }
                 else {
-
                   configureTimeout(dataSource._entityCollection._entities._array[i], i);
                 }
                   /*setTimeout(function() {
