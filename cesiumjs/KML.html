@@ -46,7 +46,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   geocoder: false,
 });
 
-const scene = viewer.scene;
+/*const scene = viewer.scene;
 scene.globe.depthTestAgainstTerrain = true;
 
 let worldTerrain;
@@ -55,7 +55,7 @@ try {
   viewer.scene.terrainProvider = worldTerrain;
 } catch (error) {
   window.alert(`There was an error creating world terrain. ${error}`);
-}
+}*/
 
 const options = {
   camera: viewer.scene.camera,
