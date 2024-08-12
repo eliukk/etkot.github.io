@@ -81,7 +81,7 @@ const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrap
 const myButton = document.createElement("button");
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
-myButton.onclick = "startPresentation()";
+myButton.onclick = startPresentation();
 toolbar.insertBefore(myButton, modeButton);
 
 /*const scene = viewer.scene;
@@ -116,6 +116,7 @@ function startPrsentation(){
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
   });
 
+  viewer.dataSources.removeAll();
   viewer.dataSources.add(
     Cesium.KmlDataSource.load(
       "testi2.kmz",
