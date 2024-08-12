@@ -27,7 +27,7 @@ function configureTimeout(currentEntity, i) {
                     viewer.selectedEntity = viewer.trackedEntity;
 
                     viewer.clock.onTick.addEventListener(function (clock) {
-                    viewer.scene.camera.rotateRight(0.00005);
+                    viewer.scene.camera.rotateRight(0.0005);
                     });
                   });
                 }, 15000 * i-1);
@@ -93,6 +93,12 @@ viewer.dataSources.add(
               i+=1;
             }
 
+            // return camera back to main top coords
+            setTimeout(function() {
+              viewer.camera.flyTo({
+                destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+              });
+            }, 15000 * i-1);    
             });
 
    
