@@ -20,18 +20,30 @@
 
 <script type="module">
 
+var unsubscribeTicks = null;
+
 function configureTimeout(currentEntity, i) {
+
+  timeout = 15000;
+
+  if (i == 2) {
+    timeout = 5000;
+  }
+
   setTimeout(function() {
                   viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1900)}).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
-                    currentEntity._label.text = "testaus";
 
-                    viewer.clock.onTick.addEventListener(function (clock) {
+                    if (unsubscribeTicks != null) {
+                      unsubscribeTicks();
+                    }
+
+                    unsubscribeTicks = viewer.clock.onTick.addEventListener(function (clock) {
                     viewer.scene.camera.rotateRight(0.0008);
                     });
                   });
-                }, 15000 * i-1);
+                }, timeout * i-1);
 
 }
 
@@ -106,6 +118,11 @@ viewer.dataSources.add(
               }*/
               i+=1;
             }
+
+            // stop camera rotation
+            if (unsubscribeTicks != null) {
+                      unsubscribeTicks();
+                    }
 
             // return camera back to main top coords
             setTimeout(function() {
