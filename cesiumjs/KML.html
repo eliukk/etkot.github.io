@@ -39,7 +39,7 @@ function configureTimeout(currentEntity, i) {
   
   setTimeout(function() {
 
-                  viewer.flyTo(currentEntity, {duration:5.0}).then(function () {
+                  viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
                                     viewer.trackedEntity = currentEntity;
                                     viewer.selectedEntity = viewer.trackedEntity;
                                   });
