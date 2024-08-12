@@ -25,7 +25,7 @@ function configureTimeout(currentEntity, i) {
                   viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1900)}).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
-                    viewer.dataSources[0]._entityCollection._entities._array[0]._label = "testaus";
+                    currentEntity._label = "testaus";
 
                     viewer.clock.onTick.addEventListener(function (clock) {
                     viewer.scene.camera.rotateRight(0.0008);
