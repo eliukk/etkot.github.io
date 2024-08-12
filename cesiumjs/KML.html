@@ -146,7 +146,7 @@ function startPresentation(){
               while (i < dataSource._entityCollection._entities._array.length) {
 
                 if (dataSource._entityCollection._entities._array[i]._description) {
-                  dataSource._entityCollection._entities._array[i]._description = dataSource._entityCollection._entities._array[i]._description.replace('<img', '<img crossorigin="anonymous"');
+                  dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
                 }
 
                 if (i == 1){
