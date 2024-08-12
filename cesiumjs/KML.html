@@ -79,8 +79,9 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
 const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
 const myButton = document.createElement("button");
-myButton.classList.add("cesium-button", "cesium-toolbar-button");
+//myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
+myButton.onclick = "startPresentation()";
 toolbar.insertBefore(myButton, modeButton);
 
 /*const scene = viewer.scene;
@@ -107,7 +108,7 @@ var itemCounter = 0;
 
 startPrsentation();
 
-function startPrsentation (){
+function startPrsentation(){
   timeoutCounter = 0;
   myButton.disabled = true;
 
