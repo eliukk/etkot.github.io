@@ -37,7 +37,6 @@ function configureTimeout(currentEntity, i) {
 
 const viewer = new Cesium.Viewer("cesiumContainer", {
   imageryProvider: false,
-  terrainProvider: await Cesium.createWorldTerrainAsync(),
   timeline: false,
   baseLayerPicker: false,
   baseLayer: Cesium.ImageryLayer.fromProviderAsync(
@@ -47,7 +46,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   geocoder: false,
 });
 
-/*const scene = viewer.scene;
+const scene = viewer.scene;
 scene.globe.depthTestAgainstTerrain = true;
 
 let worldTerrain;
@@ -57,7 +56,7 @@ try {
   scene.globe.show = false;
 } catch (error) {
   window.alert(`There was an error creating world terrain. ${error}`);
-}*/
+}
 
 const options = {
   camera: viewer.scene.camera,
