@@ -26,7 +26,7 @@ function configureTimeout(currentEntity, i) {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
                   });
-                }, 15000 * i -1);
+                }, 15000 * i-1);
 
 }
 
@@ -49,7 +49,12 @@ const options = {
 
 var itemCounter = 0;
 
-viewer.camera.flyHome(0);
+//viewer.camera.flyHome(0);
+
+viewer.camera.flyTo({
+    destination: Cesium.Cartesian3.fromDegrees(61.68857, 27.27227, 15000.0),
+});
+
 viewer.dataSources.add(
   Cesium.KmlDataSource.load(
     "testi2.kmz",
@@ -58,10 +63,10 @@ viewer.dataSources.add(
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
 
-            var i = 1;
+            var i = 2;
             while (i < dataSource._entityCollection._entities._array.length) {
 
-              if (i != 1) {
+              //if (i != 2) {
 
                 configureTimeout(dataSource._entityCollection._entities._array[i], i);
 
@@ -72,14 +77,14 @@ viewer.dataSources.add(
                     viewer.selectedEntity = viewer.trackedEntity;
                   });
                 }, 15000 * i);*/
-              }
+              /*}
               else{
                 const currentEntity = dataSource._entityCollection._entities._array[i];
                   viewer.flyTo(currentEntity).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
                   });
-              }
+              }*/
               i+=1;
             }
 
