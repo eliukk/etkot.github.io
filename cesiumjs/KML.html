@@ -99,6 +99,9 @@ viewer.dataSources.add(
             var i = 2;
             while (i < dataSource._entityCollection._entities._array.length) {
 
+              if (i == 1){
+                viewer.selectedEntity = dataSource._entityCollection._entities._array[1];
+              }
               //if (i != 2) {
 
                 configureTimeout(dataSource._entityCollection._entities._array[i], i);
