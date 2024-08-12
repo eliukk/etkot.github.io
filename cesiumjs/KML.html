@@ -41,7 +41,7 @@ function configureTimeout(currentEntity, i) {
 
                   if (i == 3) {
                     viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
-                      viewer.trackedEntity = currentEntity;
+                      //viewer.trackedEntity = currentEntity;
                       viewer.selectedEntity = viewer.trackedEntity;
 
                       //viewer.clock.onTick.removeEventListener(rotateCamera);
@@ -73,6 +73,13 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 })),
   geocoder: false,
 });
+
+const toolbar = document.querySelector("div.cesium-viewer-toolbar");
+const modeButton = document.querySelector("span.cesium-sceneModePicker-wrapper");
+const myButton = document.createElement("button");
+myButton.classList.add("cesium-button", "cesium-toolbar-button");
+myButton.innerHTML = "Aloita esitys";
+toolbar.insertBefore(myButton, modeButton);
 
 /*const scene = viewer.scene;
 scene.globe.depthTestAgainstTerrain = true;
