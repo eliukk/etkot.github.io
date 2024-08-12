@@ -38,13 +38,25 @@ function configureTimeout(currentEntity, i) {
   timeoutCounter += timeout;
   
   setTimeout(function() {
-                  viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1500)}).then(function () {
-                    viewer.trackedEntity = currentEntity;
-                    viewer.selectedEntity = viewer.trackedEntity;
 
-                    //viewer.clock.onTick.removeEventListener(rotateCamera);
-                    //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
-                  });
+                  if (i == 3) {
+                    viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1500)}).then(function () {
+                      viewer.trackedEntity = currentEntity;
+                      viewer.selectedEntity = viewer.trackedEntity;
+
+                      //viewer.clock.onTick.removeEventListener(rotateCamera);
+                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                    });
+                  }
+                  else {
+                      viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 0, 1500)}).then(function () {
+                      viewer.trackedEntity = currentEntity;
+                      viewer.selectedEntity = viewer.trackedEntity;
+
+                      //viewer.clock.onTick.removeEventListener(rotateCamera);
+                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                      });
+                  }
                 }, timeoutCounter);
 
 }
