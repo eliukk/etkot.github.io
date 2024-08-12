@@ -46,10 +46,17 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   geocoder: false,
 });
 
-var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
-    url : 'https://assets.agi.com/stk-terrain/world'
-});
-viewer.terrainProvider = cesiumTerrainProviderMeshes;
+const scene = viewer.scene;
+scene.globe.depthTestAgainstTerrain = true;
+
+let worldTerrain;
+try {
+  worldTerrain = await Cesium.createWorldTerrainAsync();
+  viewer.scene.terrainProvider = worldTerrain;
+  scene.globe.show = false;
+} catch (error) {
+  window.alert(`There was an error creating world terrain. ${error}`);
+}
 
 const options = {
   camera: viewer.scene.camera,
