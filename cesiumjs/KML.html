@@ -22,7 +22,7 @@
 
 function configureTimeout(currentEntity, i) {
   setTimeout(function() {
-                  viewer.flyTo(currentEntity).then(function () {
+                  viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 5900)}).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
 
@@ -45,7 +45,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   imageryProvider: false,
   timeline: false,
   baseLayerPicker: false,
-  selectionIndicater : false,
+  selectionIndicator : false,
   baseLayer: Cesium.ImageryLayer.fromProviderAsync(
     new Cesium.OpenStreetMapImageryProvider({
     url : 'https://tile.openstreetmap.org/'
