@@ -21,6 +21,7 @@
 <script type="module">
 
 var unsubscribeTicks = null;
+var timeoutCounter = 0;
 
 function rotateCamera(clock) {
   viewer.scene.camera.rotateRight(0.0008);
@@ -34,16 +35,17 @@ function configureTimeout(currentEntity, i) {
     timeout = 5000;
   }
 
+  timeoutCounter += timeout;
   
   setTimeout(function() {
-                  viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1900)}).then(function () {
+                  viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1500)}).then(function () {
                     viewer.trackedEntity = currentEntity;
                     viewer.selectedEntity = viewer.trackedEntity;
 
                     //viewer.clock.onTick.removeEventListener(rotateCamera);
                     //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
                   });
-                }, timeout * i-1);
+                }, timeoutCounter);
 
 }
 
@@ -121,6 +123,9 @@ viewer.dataSources.add(
 
             // stop camera rotation
             //viewer.clock.onTick.removeEventListener(rotateCamera);
+
+            viewer.trackedEntity = undifined;
+            viewer.selectedEntity = undifined;
 
             // return camera back to main top coords
             setTimeout(function() {
