@@ -96,17 +96,17 @@ viewer.dataSources.add(
 ).then(function (dataSource) {
             viewer.clock.shouldAnimate = false;
 
-            var i = 2;
+            var i = 1;
             while (i < dataSource._entityCollection._entities._array.length) {
 
               if (i == 1){
                 viewer.trackedEntity = dataSource._entityCollection._entities._array[1];
                 viewer.selectedEntity = dataSource._entityCollection._entities._array[1];
               }
-              //if (i != 2) {
+              else {
 
                 configureTimeout(dataSource._entityCollection._entities._array[i], i);
-
+              }
                 /*setTimeout(function() {
                   const currentEntity = dataSource._entityCollection._entities._array[i];
                   viewer.flyTo(currentEntity).then(function () {
