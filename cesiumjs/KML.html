@@ -81,7 +81,7 @@ const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrap
 const myButton = document.createElement("button");
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
-myButton.onclick = startPresentation();
+myButton.onclick = function(){startPresentation();};
 toolbar.insertBefore(myButton, modeButton);
 
 /*const scene = viewer.scene;
