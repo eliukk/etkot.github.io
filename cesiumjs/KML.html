@@ -40,11 +40,11 @@ function configureTimeout(currentEntity, i) {
   setTimeout(function() {
 
                   //viewer.trackedEntity = currentEntity;
-                  viewer.selectedEntity = viewer.trackedEntity;
+                  //viewer.selectedEntity = viewer.trackedEntity;
 
                   viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 3, 2500)}).then(function () {
-                                    //viewer.trackedEntity = currentEntity;
-                                    //viewer.selectedEntity = viewer.trackedEntity;
+                                    viewer.trackedEntity = currentEntity;
+                                    viewer.selectedEntity = viewer.trackedEntity;
                                   });
 
                   /*if (i == 3) {
