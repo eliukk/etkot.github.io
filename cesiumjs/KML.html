@@ -46,8 +46,14 @@ function configureTimeout(currentEntity, i) {
                                     viewer.trackedEntity = currentEntity;
                                     viewer.selectedEntity = viewer.trackedEntity;
                                     
-                                    var iframe = document.getElementsByClassName('cesium-infoBox-iframe')[0];
-                                    iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms'); 
+                                    var iframe = document.getElementsByClassName('cesium-infoBox-description-lighter')[0];
+
+                                    if (iframe){
+                                      var img = iframe.getElementsByClassName("img")[0];
+                                      if (img){
+                                        img.setAttribute('crossorigin', 'anonymous');
+                                      } 
+                                    } 
                                   });
 
                   /*if (i == 3) {
