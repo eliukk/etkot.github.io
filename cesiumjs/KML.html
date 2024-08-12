@@ -124,15 +124,16 @@ viewer.dataSources.add(
             // stop camera rotation
             //viewer.clock.onTick.removeEventListener(rotateCamera);
 
-            viewer.trackedEntity = undefined;
-            viewer.selectedEntity = undefined;
-
             // return camera back to main top coords
             setTimeout(function() {
+
+              viewer.trackedEntity = undefined;
+              viewer.selectedEntity = undefined;
+
               viewer.camera.flyTo({
                 destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
               });
-            }, 15000 * i-1);    
+            }, timeoutCounter + 15000);    
             });
 
    
