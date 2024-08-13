@@ -45,15 +45,6 @@ function configureTimeout(currentEntity, i) {
                   viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 3, 2500)}).then(function () {
                                     viewer.trackedEntity = currentEntity;
                                     viewer.selectedEntity = viewer.trackedEntity;
-                                    
-                                    var iframe = document.getElementsByClassName('cesium-infoBox-description-lighter')[0];
-
-                                    if (iframe){
-                                      var img = iframe.getElementsByClassName("img")[0];
-                                      if (img){
-                                        img.setAttribute('crossorigin', 'anonymous');
-                                      } 
-                                    } 
                                   });
 
                   /*if (i == 3) {
@@ -142,16 +133,16 @@ function startPresentation(){
   ).then(function (dataSource) {
               viewer.clock.shouldAnimate = false;
 
-              var i = 1;
+              var i = 0;
               while (i < dataSource._entityCollection._entities._array.length) {
 
-                if (dataSource._entityCollection._entities._array[i]._description) {
+                /*if (dataSource._entityCollection._entities._array[i]._description) {
                   dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
-                }
+                }*/
 
-                if (i == 1){
-                  viewer.trackedEntity = dataSource._entityCollection._entities._array[1];
-                  viewer.selectedEntity = dataSource._entityCollection._entities._array[1];
+                if (i == 0){
+                  viewer.trackedEntity = dataSource._entityCollection._entities._array[0];
+                  viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
                 }
                 else {
                   configureTimeout(dataSource._entityCollection._entities._array[i], i);
