@@ -122,16 +122,25 @@ function startPresentation(){
   timeoutCounter = 0;
   myButton.disabled = true;
 
-  /*viewer.camera.flyTo({
+  viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
-  });*/
+  });
 
   viewer.dataSources.removeAll();
   viewer.dataSources.add(
     Cesium.KmlDataSource.load(
       "testi3.kml",
       options
-    )
+    ).then(function () {
+    
+    var i = 0;
+    while (i < viewer._dataSourceCollection.get(0)._entityCollection._entities._array.length) {
+    
+      if (viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label) {
+        viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+      }
+    }
+  })
   ).then(function (dataSource) {
               viewer.clock.shouldAnimate = false;
 
@@ -187,8 +196,9 @@ function startPresentation(){
                 });
               }, timeoutCounter + 15000);    
               });
+  }
 
-  viewer.camera.flyTo({
+  /*viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0)
   }).then(function () {
     
@@ -200,7 +210,7 @@ function startPresentation(){
       }
     }
   });
-}
+}*/
         /*viewer.dataSources
           .add(
             Cesium.KmlDataSource.load(
