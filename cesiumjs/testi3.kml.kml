@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>testaus</name>
+    <description/>
+    <Style id="icon-1899-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>ETKOT paikat</name>
+      <Placemark>
+        <name>Kommelin luolat</name>
+        <description><![CDATA[Mikkelin Matinmäen länsirinteen alaosassa sijaitsee Kommelinluola, joka  on maakunnallinen nähtävyys. Tarinan mukaan luolassa asuu piruja ja  haltioita, joista tunnetuin on Kommelin ukko.<br><br><br><br>https://retkipaikka.fi/kommelinluola/<br><br>https://www.lansi-savo.fi/paikalliset/4756626]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            27.192004,61.647448,130.54
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rapion mylly</name>
+        <description><![CDATA[Rapion myllärit  ovat jauhaneet suomalaista viljaa jo yli 200 vuoden ajan. Mylly seisoo  kosken partaalla, Rapionjoen varrella. Rauhoittavan solinan lisäksi  koski antaa suuren osan jauhatukseen tarvittavasta energiasta. Rapion vilja on lähiruokaa: kaurasta, rukiista, ohrasta ja vehnästä suurin osa hankitaan lähiseudun viljelijöiltä.<br><br><br><br>https://rapiontuote.fi/tarina/]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            28.118908,61.925654,88.28
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Neitvuori</name>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iCETVduAE842R5LwrAHiVOBDdLPYFt722JsPmju-i-TIu4WWrG2SuR81aoOiSABgmweWEyQWC1fgX7nRUW0jTQT9hW8Hka4kHxcPwrTrSH-OFnGjbb12g6R2Vf-e4b7EDOo0UHvNWI7pj_uk0vrVVK9wILS-XQJy26t1z9phcy6OLayd-MbnSSJDjcDk-nKkruCg-DGaAJfLOyUkhx7cMlOP_W7j3Vx_tYyYRD1kiJO81HhMlnoIZ8crmc?authuser=0&fife=s16383" height="200" width="auto" /><br><br>Neitvuori on yksi Etelä-Savon korkeimmista vuorista (184 m). Huippu on 110 m Saimaan pintaa korkeammalla. Neitvuorelta on avarat näkymät Luonterin saaristoon ja metsämaisemiin.<br>test<br>Neitvuoreen liittyy kosolti tarinoita. Alun perin sen nimi on ollut Hiidenvuori. <br><br><br><br>https://www.luontoon.fi/neitvuori-luonteri/nahtavyydetjahistoria<br><br><img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iAUEtQ7YPpF2borvg_qivg89hO80TOD0Zvp-r1wf2RWegxBsrczeHMmhPpl6zq5KKTbJVjJEWdKzhqGcm6nEJs77wA9K8ucaWJ36lbo3xxNX2cVEh5d4V6ewGgeyytQuynDD4v0LP6Dh_TxAhOnCAEFk67GLl1o1bFTIAVGpYH4Xk1pYckvbuRrWF9765Cr3doFrTf_wrFhPNibfA8ke9BsWLug9RagQtmf4wmusvovzVioVDIxYgefjaw?authuser=0&fife=s16383" height="200" width="auto" />]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iCETVduAE842R5LwrAHiVOBDdLPYFt722JsPmju-i-TIu4WWrG2SuR81aoOiSABgmweWEyQWC1fgX7nRUW0jTQT9hW8Hka4kHxcPwrTrSH-OFnGjbb12g6R2Vf-e4b7EDOo0UHvNWI7pj_uk0vrVVK9wILS-XQJy26t1z9phcy6OLayd-MbnSSJDjcDk-nKkruCg-DGaAJfLOyUkhx7cMlOP_W7j3Vx_tYyYRD1kiJO81HhMlnoIZ8crmc?authuser=0&fife=s16383 https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iAUEtQ7YPpF2borvg_qivg89hO80TOD0Zvp-r1wf2RWegxBsrczeHMmhPpl6zq5KKTbJVjJEWdKzhqGcm6nEJs77wA9K8ucaWJ36lbo3xxNX2cVEh5d4V6ewGgeyytQuynDD4v0LP6Dh_TxAhOnCAEFk67GLl1o1bFTIAVGpYH4Xk1pYckvbuRrWF9765Cr3doFrTf_wrFhPNibfA8ke9BsWLug9RagQtmf4wmusvovzVioVDIxYgefjaw?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.747831,61.669491,170.38
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kissakoski</name>
+        <description><![CDATA[Teollisuushistoriallisesti merkittävä Kissakoski rakentuu 1850-luvulla  valmistuneen Kissakosken kanavan ympärille. Metsäiseen ympäristöön  1900-luvun alussa syntyneestä laajasta teollisuusyhdyskunnasta on  jäljellä punatiilinen Kissakosken paperitehtaan tuotantorakennus  1920-luvulta, 1932 rakennettu voimalaitos sekä tehtaaseen liittyvät  arkkitehti Waldemar Aspelinin suunnittelemat johtajiston ja työväen  asuinrakennukset sekä 1916 valmistunut kansakoulu.<br><br><br><br>https://www.ravintolakissakoski.fi/historia]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            26.747535,61.624506,95.46
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>testi</name>
+        <description><![CDATA[<img src="https://upload.wikimedia.org/wikipedia/fi/9/9a/Neitvuori_3_358317395_584420207100285_352849994699563979_n.jpg" height="200" width="auto">]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            26.9176318,61.7184528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
