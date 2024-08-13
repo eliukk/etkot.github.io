@@ -47,8 +47,6 @@ function configureTimeout(currentEntity, i) {
                                     viewer.selectedEntity = viewer.trackedEntity;
                                   });
 
-                  viewer._dataSourceCollection.get(0).entities._entities._array[1].label.text = 'testi paikka';
-
                   /*if (i == 3) {
                     viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
                       //viewer.trackedEntity = currentEntity;
@@ -124,9 +122,9 @@ function startPresentation(){
   timeoutCounter = 0;
   myButton.disabled = true;
 
-  viewer.camera.flyTo({
+  /*viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
-  });
+  });*/
 
   viewer.dataSources.removeAll();
   viewer.dataSources.add(
@@ -190,6 +188,18 @@ function startPresentation(){
               }, timeoutCounter + 15000);    
               });
 
+  viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+  }).then(function (dataSource) {
+    
+    var i = 0;
+    while (i < viewer._dataSourceCollection.get(0)._entityCollection._entities._array.length) {
+    
+      if (dataSource._entityCollection._entities._array[i]._label) {
+        dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+      }
+    }
+  });
 }
         /*viewer.dataSources
           .add(
