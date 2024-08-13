@@ -190,13 +190,13 @@ function startPresentation(){
 
   viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
-  }).then(function (dataSource) {
+  }).then(function () {
     
     var i = 0;
     while (i < viewer._dataSourceCollection.get(0)._entityCollection._entities._array.length) {
     
-      if (dataSource._entityCollection._entities._array[i]._label) {
-        dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+      if (viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label) {
+        viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
       }
     }
   });
