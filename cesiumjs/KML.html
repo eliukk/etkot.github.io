@@ -138,9 +138,10 @@ function startPresentation(){
               var i = 0;
               while (i < dataSource._entityCollection._entities._array.length) {
 
-                dataSource._entityCollection._entities._array[i]._label._outlineWidth = 8;
-                dataSource._entityCollection._entities._array[i]._label._horizontalOrigin = Cesium.HorizontalOrigin.CENTER;
-
+                if (dataSource._entityCollection._entities._array[i]._label) {
+                  dataSource._entityCollection._entities._array[i]._label._outlineWidth = 8;
+                  dataSource._entityCollection._entities._array[i]._label._horizontalOrigin = Cesium.HorizontalOrigin.CENTER;
+                }
                 /*if (dataSource._entityCollection._entities._array[i]._description) {
                   dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
                 }*/
