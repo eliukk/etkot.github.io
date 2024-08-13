@@ -47,6 +47,8 @@ function configureTimeout(currentEntity, i) {
                                     viewer.selectedEntity = viewer.trackedEntity;
                                   });
 
+                  viewer._dataSourceCollection.get(0).entities._entities._array[1].label.text = 'testi paikka';
+
                   /*if (i == 3) {
                     viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
                       //viewer.trackedEntity = currentEntity;
@@ -117,7 +119,6 @@ var itemCounter = 0;
 //viewer.camera.flyHome(0);
 
 startPresentation();
-viewer._dataSourceCollection.get(0).entities._entities._array[1].label.text = 'testi paikka';
 
 function startPresentation(){
   timeoutCounter = 0;
