@@ -139,7 +139,7 @@ function startPresentation(){
               while (i < dataSource._entityCollection._entities._array.length) {
 
                 if (dataSource._entityCollection._entities._array[i]._label) {
-                  dataSource._entityCollection._entities._array[i]._label._fillColor = Cesium.Color.BLACK;
+                  dataSource._entityCollection._entities._array[i]._label._fillColor._value = Cesium.Color.BLACK;
                   dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
                 }
                 /*if (dataSource._entityCollection._entities._array[i]._description) {
