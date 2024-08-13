@@ -47,14 +47,6 @@ function configureTimeout(currentEntity, i) {
                                     viewer.selectedEntity = viewer.trackedEntity;
                                   });
 
-                  var i = 0;
-                  while (i < viewer._dataSourceCollection.get(0)._entityCollection._entities._array.length) {
-                  
-                    if (viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label) {
-                      viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
-                    }
-                    i+=1;
-                  }
 
                   /*if (i == 3) {
                     viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
