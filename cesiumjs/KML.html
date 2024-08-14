@@ -144,6 +144,7 @@ function startPresentation(){
                   //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
                   viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
                   //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+                  dataSource._entityCollection._entities._array[i]._billboard._pixelOffset._value = new Cesium.Cartesian2(0.0, 0.0);
                   dataSource._entityCollection._entities._array[i]._label._pixelOffset._value = new Cesium.Cartesian2(0.0, 0.0);
                   dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
                 }
