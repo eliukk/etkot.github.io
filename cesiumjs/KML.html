@@ -32,11 +32,10 @@ function configureTimeout(currentEntity, i) {
   var timeout = 25000;
 
   if (i == 1) {
-    timeoutCounter = 5000;
+    timeout = 5000;
   }
-  else {
-    timeoutCounter += timeout;
-  }
+
+  timeoutCounter += timeout;
   
   setTimeout(function() {
 
@@ -79,6 +78,10 @@ function configureTimeout(currentEntity, i) {
                       });
                   }*/
                 }, timeoutCounter);
+
+  if (i == 1) {
+    timeoutCounter = 0;
+  }
 
 }
 
