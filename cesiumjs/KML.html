@@ -29,7 +29,7 @@ function rotateCamera(clock) {
 
 function configureTimeout(currentEntity, i) {
 
-  var timeout = 15000;
+  var timeout = 18000;
 
   if (i == 1) {
     timeout = 5000;
@@ -45,8 +45,13 @@ function configureTimeout(currentEntity, i) {
                   viewer.flyTo(currentEntity, {duration:5.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), 2500)}).then(function () {
                                     viewer.trackedEntity = currentEntity;
                                     viewer.selectedEntity = viewer.trackedEntity;
-                                  });
 
+                                    setTimeout(function() {
+                                      viewer.camera.flyTo({
+                                        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+                                      });
+                                    }, 10000);
+                                  });
 
                   /*if (i == 3) {
                     viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
