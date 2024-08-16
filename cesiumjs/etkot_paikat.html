@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Cesium Demo</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  </head>
+  <body><style>
+      @import url(bucket.css);
+    </style>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay"><h1>Loading...</h1></div>
+    <div id="toolbar"></div>
+
+<script type="module">
+
+var unsubscribeTicks = null;
+var timeoutCounter = 0;
+var cameraTimeouts = [];
+
+function rotateCamera(clock) {
+  viewer.scene.camera.rotateRight(0.0008);
+};
+
+function configureTimeout(currentEntity, i) {
+
+  var timeout = 25000;
+
+  if (i == 1) {
+    timeout = 5000;
+  }
+
+  timeoutCounter += timeout;
+  
+  cameraTimeouts.push(setTimeout(function() {
+
+                  //viewer.trackedEntity = currentEntity;
+                  //viewer.selectedEntity = viewer.trackedEntity;
+
+                  viewer.selectedEntity = currentEntity;
+
+                  viewer.flyTo(currentEntity, {duration:5.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), 2500)}).then(function () {
+                                    //viewer.trackedEntity = currentEntity;
+                                    //viewer.trackedEntity;
+
+                                    cameraTimeouts.push(setTimeout(function() {
+
+                                      viewer.selectedEntity = undefined;
+
+                                      viewer.camera.flyTo({
+                                        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+                                        maximumHeight: 145000.0,
+                                        duration: 5.0
+                                      });
+                                    }, 12000));
+                                });
+
+                  /*if (i == 3) {
+                    viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
+                      //viewer.trackedEntity = currentEntity;
+                      viewer.selectedEntity = viewer.trackedEntity;
+
+                      //viewer.clock.onTick.removeEventListener(rotateCamera);
+                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                    });
+                  }
+                  else {
+                      viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1500)}).then(function () {
+                      viewer.trackedEntity = currentEntity;
+                      viewer.selectedEntity = viewer.trackedEntity;
+
+                      //viewer.clock.onTick.removeEventListener(rotateCamera);
+                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                      });
+                  }*/
+                }, timeoutCounter));
+
+  // clear timeoutCounter after first entity, so that timeout is 25 seconds between each entity
+  /*if (i == 1) {
+    timeoutCounter = 0;
+  }*/
+
+}
+
+
+const viewer = new Cesium.Viewer("cesiumContainer", {
+  imageryProvider: false,
+  timeline: false,
+  animation: false,
+  baseLayerPicker: false,
+  selectionIndicator : false,
+  homeButton: false,
+  navigationHelpButton: false,
+  sceneModePicker: false,
+  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
+    new Cesium.OpenStreetMapImageryProvider({
+    url : 'https://tile.openstreetmap.org/'
+})),
+  geocoder: false,
+});
+
+const toolbar = document.querySelector("div.cesium-viewer-toolbar");
+const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
+const myButton = document.createElement("button");
+//myButton.classList.add("cesium-button", "cesium-toolbar-button");
+myButton.innerHTML = "Esitys";
+myButton.style = "opacity:0.2";
+myButton.onclick = function(){togglePresentation();};
+toolbar.insertBefore(myButton, modeButton);
+
+/*const scene = viewer.scene;
+scene.globe.depthTestAgainstTerrain = true;
+
+let worldTerrain;
+try {
+  worldTerrain = await Cesium.createWorldTerrainAsync();
+  viewer.scene.terrainProvider = worldTerrain;
+} catch (error) {
+  window.alert(`There was an error creating world terrain. ${error}`);
+}*/
+
+const options = {
+  camera: viewer.scene.camera,
+  canvas: viewer.scene.canvas,
+  screenOverlayContainer: viewer.container,
+  clampToGround: true
+};
+
+var itemCounter = 0;
+var isPresentationMode = false;
+
+//viewer.camera.flyHome(0);
+
+togglePresentation();
+
+function togglePresentation() {
+  timeoutCounter = 0;
+  isPresentationMode = !isPresentationMode;
+
+  if (isPresentationMode) {
+    myButton.innerHTML = 'Pysäytä esitys';
+ 
+    viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+    });
+
+    viewer.dataSources.removeAll();
+    viewer.dataSources.add(
+      Cesium.KmlDataSource.load(
+        "etkot_paikat.kml",
+        options
+      )
+    ).then(function (dataSource) {
+                viewer.clock.shouldAnimate = false;
+
+                var i = 0;
+                while (i < dataSource._entityCollection._entities._array.length) {
+                  if (dataSource._entityCollection._entities._array[i]._label) {
+                    var currentId = dataSource._entityCollection._entities._array[i]._id;
+                    viewer.dataSources.get(0).entities.getById(currentId).label.showBackground = true;
+                    //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
+                    viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
+                    //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+                    dataSource._entityCollection._entities._array[i]._billboard._pixelOffset._value = new Cesium.Cartesian2(0.0, 0.0);
+                    dataSource._entityCollection._entities._array[i]._label._pixelOffset._value = new Cesium.Cartesian2(0.0, 30.0);
+                    dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
+                  }
+                  /*if (dataSource._entityCollection._entities._array[i]._description) {
+                    dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
+                  }*/
+
+                  if (i == 0){
+                    viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
+                  }
+                  else {
+                    configureTimeout(dataSource._entityCollection._entities._array[i], i);
+                  }
+                    /*setTimeout(function() {
+                      const currentEntity = dataSource._entityCollection._entities._array[i];
+                      viewer.flyTo(currentEntity).then(function () {
+                        viewer.trackedEntity = currentEntity;
+                        viewer.selectedEntity = viewer.trackedEntity;
+                      });
+                    }, 15000 * i);*/
+                  /*}
+                  else{
+                    const currentEntity = dataSource._entityCollection._entities._array[i];
+                      viewer.flyTo(currentEntity).then(function () {
+                        viewer.trackedEntity = currentEntity;
+                        viewer.selectedEntity = viewer.trackedEntity;
+                      });
+                  }*/
+                  i+=1;
+                }
+
+                // stop camera rotation
+                //viewer.clock.onTick.removeEventListener(rotateCamera);
+
+                // return camera back to main top coords
+                cameraTimeouts.push(setTimeout(function() {
+
+                  viewer.selectedEntity = undefined;
+                  myButton.innerHTML = 'Esitys';
+                  isPresentationMode = false;
+
+                  viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+                  });
+                }, timeoutCounter + 15000));    
+              });
+  }
+  else {
+
+    for (var i=0; i<cameraTimeouts.length; i++) {
+      clearTimeout(cameraTimeouts[i]);
+    }
+  
+    viewer.selectedEntity = undefined;
+    myButton.innerHTML = 'Esitys';
+
+    viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+                  });
+  } 
+}
+  /*viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0)
+  }).then(function () {
+    
+    var i = 0;
+    while (i < viewer._dataSourceCollection.get(0)._entityCollection._entities._array.length) {
+    
+      if (viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label) {
+        viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+      }
+    }
+  });
+}*/
+        /*viewer.dataSources
+          .add(
+            Cesium.KmlDataSource.load(
+              "../SampleData/kml/bikeRide.kml",
+              options
+            )
+          )
+          .then(function (dataSource) {
+            viewer.clock.shouldAnimate = false;
+            const rider = dataSource.entities.getById("tour");
+            viewer.flyTo(rider).then(function () {
+              viewer.trackedEntity = rider;
+              // viewer.selectedEntity = viewer.trackedEntity;
+              viewer.clock.multiplier = 30;
+              viewer.clock.shouldAnimate = true;
+            });
+          });
+      },*/
+
+</script>
+</body>
+</html>

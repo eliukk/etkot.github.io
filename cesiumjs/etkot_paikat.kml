@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>etkot paikat</name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-673AB7-normal">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-673AB7-highlight">
+      <IconStyle>
+        <color>ffb73a67</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-673AB7">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-673AB7-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-673AB7-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-817717-nodesc-normal">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-817717-nodesc-highlight">
+      <IconStyle>
+        <color>ff177781</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-817717-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-817717-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-817717-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-9C27B0-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-9C27B0-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-9C27B0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-9C27B0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-9C27B0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-9C27B0-nodesc-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-9C27B0-nodesc-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-9C27B0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-9C27B0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-9C27B0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Kiinnostavat paikat</name>
+      <Placemark>
+        <name>Astuvansalmi rock paintings</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.540812,61.459946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pien-Toijola Peasant Museum</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.534824,61.46537,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Varkaantaipale</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.490272,61.481795,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pattoi Heritage Farm</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.83688,61.865847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Anttolanhovi</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.601235,61.575573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>S/S Wenno Satamatie 2</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.177172,61.520787,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hiisipolku Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.181521,61.525587,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kukkeistenpolku Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.185547,61.524216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Liehtalanniemi Ecomuseum</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.134881,61.459425,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Okkola Holiday Cottages and Restaurant Niinipuu</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.154885,61.453509,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Myrkkylammit</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.263774,61.694256,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Linnaniemi Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.278188,61.488443,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pattoi Nature Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.846791,61.87034,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Gottlund's tour]]></name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.882964,61.893138,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Seal Trail Through Esker Terrain</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.167341,61.494053,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nenälampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.173398,61.461795,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hätinvirta Cable Ferry</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.170641,61.452963,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Metso- ja teemapolut</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.012704,61.427257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Nestori's Crêperie]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.001345,61.430691,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Koiralampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.526398,61.463696,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Potaattisaari</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.445785,61.489507,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ylä-Pentti</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.400558,61.488159,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Guesthouse Ristina</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.390344,61.491749,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Akanlahti</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.383057,61.500134,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Brahenlinna ruins</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.271918,61.497086,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Duncker stone</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.271105,61.496606,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gränna-talo</name>
+        <description>200-vuotias hirsitalo, kunnostettu 1990-luvun alussa</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.270413,61.498082,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Organic Farm Haaran Torppa</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.222577,61.513806,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Löydön Kartano Oy</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.261688,61.558768,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kyyhkylän kartano</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.288529,61.635009,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tuukkala Graveyard</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.267446,61.644727,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Säynätti Hiking Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.398229,61.660658,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>TeaHouse of Wehmais</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.76799,61.912731,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kannashovi</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.902346,61.875942,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Haravaniemi Lean-to Shelter</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.933619,61.856438,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kiiskilän tila</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.937718,61.850187,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Juva Glacial Erratics - Church Stones</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.90775,61.78086,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Akkalampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.901143,61.775144,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Naurislahti</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.844164,61.719684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Enkelinpesä Broken Erratic Boulder</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.801072,61.713491,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Kololahti Giant's kettles]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.812898,61.740656,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Repokivi Stone</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.018605,61.714822,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Juvan Ararat Glacial Erratic Boulder</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.075591,61.684141,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            28.012116,61.691796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Otava Church Stones</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.121174,61.613013,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Talkkunalampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.606026,61.458823,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sydänmaanlampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.57652,61.460125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Steep Rocky Area at Tollonvuori</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.763831,61.423084,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Koiralampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.805939,61.458525,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Suppakuja</name>
+        <description>Antellinpuisto muodostuu lähes kokonaan supasta. Suppa on jääkauden sulamisvaiheen aikana muodostunut painanne. Sellainen syntyy, kun maa-aineksen alle hautautunut jäälohkare sulaa ja sen yllä oleva maa-aines painuu kuopan pohjalle. Supilla on yleensä oma mikro-ilmastonsa. Lämpötila supan pohjalla voi olla useita asteita ympäristöä matalampi.</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.28738,61.658048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Koirasaari</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.307163,61.618901,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piikinperse</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.540553,61.503104,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kylälahden Kartano</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.447273,61.557596,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Elämänlähde Spring</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.427611,61.567026,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.414197,61.577098,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Raijan Aitta</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.407774,61.595776,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskosaari</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.360202,61.61982,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kekkola Manor</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.148227,61.689097,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kissaniemi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.166623,61.692608,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kommeli Caves</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.191945,61.64742,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kissakoski Nature Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.749697,61.624648,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rapion Mylly</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.120122,61.926024,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saunasaari</name>
+        <description><![CDATA[Lehmät viinankeittäjinä <br>Lehmät wiinankeittäiinä. T. k. 9 p:nä oliwat lehmät yhyttäneet Saunasaaressa wiinakeittiön ja kun tehtailija ei ollut saapuwilla, niin rupesiwat lehmät keittohommiin. Mutta ruwetessaan maistelemaan tehtaan walmistetta sattuiwatkin rankkiastialle ja joiwat rankkia niin paljon, että kaksi lehmää kuoli paikalla ja kolmas wähissä hengin wietiin pois. Eiköhän se wahingosta piisanne köyhälla miehelle kun kaksikin lehmää kuoletuon kurjan „liemen" takia. Kummallista, etteiwät tuollaiset tehtaat wieläkään rupea paikkakunnalta häwiämään; mutta tottapa sillä lienee suosiota, sillä ei se muuten menestyisi. Eiköhän nykyisenä aikana olisi muuta tärkeämpää ajateltawaa Suomenkin kansalle kuin tuo ainainen wiinankura. Enemmän siwistystä tarwittaisiin.<br><br>Mikkelin Sanomat, 17.09.1910, nro 104, s. 2<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/670335?page=2<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:09.08.2024]]></description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.506489,62.451017,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kettusaari</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.365634,61.633981,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vaimolampi</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.035795,61.74759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>M/S AINO</name>
+        <description><![CDATA[Mikkeli, 03.08.1895, nro 62, s. 4<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/540476?page=4<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:12.08.2024]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.246334,61.510802,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Louhivesi</name>
+        <description><![CDATA[Louhivesi – onnettomuuksien järvi, 4 onnettomuutta<br>Savon Sanomat, 30.11.1937, nro 139, s. 1<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/2091022?page=1<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:12.08.2024]]></description>
+        <styleUrl>#icon-1899-673AB7</styleUrl>
+        <Point>
+          <coordinates>
+            27.496364,61.498893,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Kaarnavuori Overhanging Cliff</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.840413,61.571687,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Kaihunharju Esker Terrain</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.281675,61.672028,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Matinmäki Drumlin Shield</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.598883,61.578898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mikkeli Park</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.283889,61.676216,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Naisvuori</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.27199,61.692222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Neitvuori Hill</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.747572,61.669604,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Giant's kettle]]></name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.294636,61.670485,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rakokallio</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.628417,61.560367,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kauriansalmi Observation Tower</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.421071,61.359751,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Haukkovuori Scarps</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.90732,61.524723,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.901431,61.526251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Rakokivet Erratics</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.865095,61.527942,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.769702,61.494195,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.049808,61.258582,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.316521,61.273296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mustalampi</name>
+        <description>Suomen 1. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.080713,61.468567,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Sarkaslampi Bedrock Topography</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.92768,61.595152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Rakokivet Erratics</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.865095,61.527942,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Lietvesi Scenic Road</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            27.962389,61.549579,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saimaa Geopark Pistohiekka Shore Formations</name>
+        <description>Saimaa Geopark</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            28.00751,61.559952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Karhunpääsaari</name>
+        <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.207299,61.580976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Paskolampi</name>
+        <description>Suomen 2. suosituin lammen nimi (Kiviniemi 1990)</description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            26.674869,62.026029,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kiven ja Veden polku - Rock and Lake Trail</name>
+        <styleUrl>#icon-1899-817717-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.926523,62.018609,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hiidenmäki</name>
+        <description><![CDATA[https://nimiarkisto.fi/wiki/Q7702677<br><br>Sanan-Lennätin, 14.03.1857, nro 11, s. 4<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/472889?page=4<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:15.08.2024]]></description>
+        <styleUrl>#icon-1899-9C27B0</styleUrl>
+        <Point>
+          <coordinates>
+            27.419768,61.55383,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
