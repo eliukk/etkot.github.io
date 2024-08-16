@@ -110,6 +110,7 @@ const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrap
 const myButton = document.createElement("button");
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
+myButton.style = "opacity:0.8";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
 
