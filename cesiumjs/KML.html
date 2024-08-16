@@ -22,6 +22,7 @@
 
 var unsubscribeTicks = null;
 var timeoutCounter = 0;
+var cameraTimeouts = [];
 
 function rotateCamera(clock) {
   viewer.scene.camera.rotateRight(0.0008);
@@ -37,7 +38,7 @@ function configureTimeout(currentEntity, i) {
 
   timeoutCounter += timeout;
   
-  setTimeout(function() {
+  cameraTimeouts.push(setTimeout(function() {
 
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;
@@ -48,9 +49,8 @@ function configureTimeout(currentEntity, i) {
                                     //viewer.trackedEntity = currentEntity;
                                     //viewer.trackedEntity;
 
-                                    setTimeout(function() {
+                                    cameraTimeouts.push(setTimeout(function() {
 
-                                      viewer.trackedEntity = undefined;
                                       viewer.selectedEntity = undefined;
 
                                       viewer.camera.flyTo({
@@ -58,8 +58,8 @@ function configureTimeout(currentEntity, i) {
                                         maximumHeight: 145000.0,
                                         duration: 5.0
                                       });
-                                    }, 12000);
-                                  });
+                                    }, 12000));
+                                });
 
                   /*if (i == 3) {
                     viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
@@ -79,8 +79,9 @@ function configureTimeout(currentEntity, i) {
                       //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
                       });
                   }*/
-                }, timeoutCounter);
+                }, timeoutCounter));
 
+  // clear timeoutCounter after first entity, so that timeout is 25 seconds between each entity
   if (i == 1) {
     timeoutCounter = 0;
   }
@@ -109,7 +110,7 @@ const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrap
 const myButton = document.createElement("button");
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
-myButton.onclick = function(){startPresentation();};
+myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
 
 /*const scene = viewer.scene;
@@ -131,86 +132,101 @@ const options = {
 };
 
 var itemCounter = 0;
+var isPresentationMode = false;
 
 //viewer.camera.flyHome(0);
 
-startPresentation();
+togglePresentation();
 
-function startPresentation(){
+function togglePresentation() {
   timeoutCounter = 0;
-  myButton.disabled = true;
+  isPresentationMode = !isPresentationMode;
 
-  viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
-  });
+  if (isPresentationMode) {
+    myButton.innerHTML = 'Pysäytä esitys';
+ 
+    viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+    });
 
-  viewer.dataSources.removeAll();
-  viewer.dataSources.add(
-    Cesium.KmlDataSource.load(
-      "testi3.kml",
-      options
-    )
-  ).then(function (dataSource) {
-              viewer.clock.shouldAnimate = false;
+    viewer.dataSources.removeAll();
+    viewer.dataSources.add(
+      Cesium.KmlDataSource.load(
+        "testi3.kml",
+        options
+      )
+    ).then(function (dataSource) {
+                viewer.clock.shouldAnimate = false;
 
-              var i = 0;
-              while (i < dataSource._entityCollection._entities._array.length) {
-                if (dataSource._entityCollection._entities._array[i]._label) {
-                  var currentId = dataSource._entityCollection._entities._array[i]._id;
-                  viewer.dataSources.get(0).entities.getById(currentId).label.showBackground = true;
-                  //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
-                  viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
-                  //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
-                  dataSource._entityCollection._entities._array[i]._billboard._pixelOffset._value = new Cesium.Cartesian2(0.0, 0.0);
-                  dataSource._entityCollection._entities._array[i]._label._pixelOffset._value = new Cesium.Cartesian2(0.0, 30.0);
-                  dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
-                }
-                /*if (dataSource._entityCollection._entities._array[i]._description) {
-                  dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
-                }*/
+                var i = 0;
+                while (i < dataSource._entityCollection._entities._array.length) {
+                  if (dataSource._entityCollection._entities._array[i]._label) {
+                    var currentId = dataSource._entityCollection._entities._array[i]._id;
+                    viewer.dataSources.get(0).entities.getById(currentId).label.showBackground = true;
+                    //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
+                    viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
+                    //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+                    dataSource._entityCollection._entities._array[i]._billboard._pixelOffset._value = new Cesium.Cartesian2(0.0, 0.0);
+                    dataSource._entityCollection._entities._array[i]._label._pixelOffset._value = new Cesium.Cartesian2(0.0, 30.0);
+                    dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
+                  }
+                  /*if (dataSource._entityCollection._entities._array[i]._description) {
+                    dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
+                  }*/
 
-                if (i == 0){
-                  viewer.trackedEntity = dataSource._entityCollection._entities._array[0];
-                  viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
-                }
-                else {
-                  configureTimeout(dataSource._entityCollection._entities._array[i], i);
-                }
-                  /*setTimeout(function() {
+                  if (i == 0){
+                    viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
+                  }
+                  else {
+                    configureTimeout(dataSource._entityCollection._entities._array[i], i);
+                  }
+                    /*setTimeout(function() {
+                      const currentEntity = dataSource._entityCollection._entities._array[i];
+                      viewer.flyTo(currentEntity).then(function () {
+                        viewer.trackedEntity = currentEntity;
+                        viewer.selectedEntity = viewer.trackedEntity;
+                      });
+                    }, 15000 * i);*/
+                  /*}
+                  else{
                     const currentEntity = dataSource._entityCollection._entities._array[i];
-                    viewer.flyTo(currentEntity).then(function () {
-                      viewer.trackedEntity = currentEntity;
-                      viewer.selectedEntity = viewer.trackedEntity;
-                    });
-                  }, 15000 * i);*/
-                /*}
-                else{
-                  const currentEntity = dataSource._entityCollection._entities._array[i];
-                    viewer.flyTo(currentEntity).then(function () {
-                      viewer.trackedEntity = currentEntity;
-                      viewer.selectedEntity = viewer.trackedEntity;
-                    });
-                }*/
-                i+=1;
-              }
+                      viewer.flyTo(currentEntity).then(function () {
+                        viewer.trackedEntity = currentEntity;
+                        viewer.selectedEntity = viewer.trackedEntity;
+                      });
+                  }*/
+                  i+=1;
+                }
 
-              // stop camera rotation
-              //viewer.clock.onTick.removeEventListener(rotateCamera);
+                // stop camera rotation
+                //viewer.clock.onTick.removeEventListener(rotateCamera);
 
-              // return camera back to main top coords
-              setTimeout(function() {
+                // return camera back to main top coords
+                cameraTimeouts.push(setTimeout(function() {
 
-                viewer.trackedEntity = undefined;
-                viewer.selectedEntity = undefined;
-                myButton.disabled = false;
+                  viewer.selectedEntity = undefined;
+                  myButton.innerHTML = 'Esitys';
 
-                viewer.camera.flyTo({
-                  destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
-                });
-              }, timeoutCounter + 15000);    
+                  viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+                  });
+                }, timeoutCounter + 15000));    
               });
   }
+  else {
 
+    for (var i=0; i<cameraTimeouts.length; i++) {
+      clearTimeout(cameraTimeouts[i]);
+    }
+  
+    viewer.selectedEntity = undefined;
+    myButton.innerHTML = 'Esitys';
+
+    viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
+                  });
+  } 
+}
   /*viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0)
   }).then(function () {
