@@ -110,7 +110,7 @@ const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrap
 const myButton = document.createElement("button");
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
-myButton.style = "opacity:0.5";
+myButton.style = "opacity:0.7";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
 
@@ -164,7 +164,7 @@ function togglePresentation() {
                   if (dataSource._entityCollection._entities._array[i]._label) {
                     var currentId = dataSource._entityCollection._entities._array[i]._id;
                     viewer.dataSources.get(0).entities.getById(currentId).label.showBackground = true;
-                    viewer.dataSources.get(0).entities.getById(currentId).label.translucencyByDistance = new Cesium.NearFarScalar(1.0e7, 1.0, 3.0e7, 0.0);
+                    viewer.dataSources.get(0).entities.getById(currentId).label.translucencyByDistance = new Cesium.NearFarScalar(1.5e2, 1.0, 8.0e6, 0.0);
                     //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
                     viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
                     //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
