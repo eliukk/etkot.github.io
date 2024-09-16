@@ -24,12 +24,6 @@ var unsubscribeTicks = null;
 var timeoutCounter = 0;
 var cameraTimeouts = [];
 
-var gifs = [
-
-new Cesium.BillboardAnimator.fromGif({
-  url : 'arrow.gif'
-})];
-
 function rotateCamera(clock) {
   viewer.scene.camera.rotateRight(0.0008);
 };
@@ -175,9 +169,14 @@ function togglePresentation() {
                     //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
 
                     if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
-                      dataSource._entityCollection._entities._array[i]._billboard._image = gifs[0].image;
-			                dataSource._entityCollection._entities._array[i]._billboard._imageSubRegion = gifs[0].imageSubRegion;
-                      dataSource._entityCollection._entities._array[i]._billboard.scale = 0.25;
+                      viewer.polylines.add({
+                        positions: [Cesium.Cartesian3.fromDegrees(63.098953,27.306241, 0), Cesium.Cartesian3.fromDegrees(62.272236,27.482140, 0)],
+                        width: 12.0,
+                        material: Cesium.Material.fromType('PolylineArrow', {
+                        color: new Cesium.Color.fromBytes(255, 255, 0, 185)
+                        })
+                      });
+
                     }
                     
 
