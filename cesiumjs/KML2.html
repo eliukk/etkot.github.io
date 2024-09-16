@@ -173,11 +173,7 @@ function togglePresentation() {
                         polyline: {
                           positions: [Cesium.Cartesian3.fromDegrees(27.306241,63.098953, 0), Cesium.Cartesian3.fromDegrees(27.482140,62.272236, 0)],
                           width: 12.0,
-                          material: new Cesium.PolylineArrowMaterialProperty({
-                            color: Cesium.Color.fromCssColorString('#FF0000'),
-                            headLength: 10,
-                            headWidth: 10
-                          })
+                          material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE)
                         }
                       });
 
