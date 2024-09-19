@@ -193,7 +193,7 @@ function togglePresentation() {
                       var currentName = dataSource._entityCollection._entities._array[i]._name
                       var arrowName = currentName.substring(0, 1);
 
-                      var newArrowPoints;
+                      var newArrowPoints = {lat1: 0, lon1: 0, lat2:0, lon2:0};
 
                       if (currentName.endsWith("1")) {
                         if (currentName in arrowCoords) {
