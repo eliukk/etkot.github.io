@@ -291,11 +291,11 @@ function togglePresentation() {
                           // This callback updates positions each frame.
                           positions: new Cesium.CallbackProperty(function (time, result) {
 
-                            current_endlatSmaller = startLatitude > endLatitude ? true : false;
-                            current_endlonSmaller = startLongitude > endLongitude ? true : false;
+                            var current_endlatSmaller = startLatitude > endLatitude ? true : false;
+                            var current_endlonSmaller = startLongitude > endLongitude ? true : false;
 
-                            latCompleted = endlatSmaller != current_endlatSmaller ? true : false;
-                            lonCompleted = endlonSmaller != current_endlonSmaller ? true : false;
+                            var latCompleted = endlatSmaller != current_endlatSmaller ? true : false;
+                            var lonCompleted = endlonSmaller != current_endlonSmaller ? true : false;
 
                             if(!lonCompleted) {
                               if (endlonSmaller) {
