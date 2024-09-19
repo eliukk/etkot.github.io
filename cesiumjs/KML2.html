@@ -157,7 +157,11 @@ function togglePresentation() {
         options
       )
     ).then(function (dataSource) {
-                viewer.clock.shouldAnimate = false;
+                viewer.clock.shouldAnimate = true;
+                const startLatitude = 27.482140;
+                const startLongitude = 62.272236;
+                let endLongitude;
+                const startTime = Cesium.JulianDate.now();
 
                 var i = 0;
                 while (i < dataSource._entityCollection._entities._array.length) {
@@ -171,12 +175,21 @@ function togglePresentation() {
                     if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
                       viewer.entities.add({
                         polyline: {
-                          positions: [Cesium.Cartesian3.fromDegrees(27.306241,63.098953, 0), Cesium.Cartesian3.fromDegrees(27.482140,62.272236, 0)],
-                          width: 12.0,
-                          material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE)
-                        }
+                          // This callback updates positions each frame.
+                          positions: new Cesium.CallbackProperty(function (time, result) {
+                            endLongitude =
+                              startLongitude +
+                              0.001 * Cesium.JulianDate.secondsDifference(time, startTime);
+                            return Cesium.Cartesian3.fromDegreesArray(
+                              [startLongitude, startLatitude, endLongitude, startLatitude],
+                              Cesium.Ellipsoid.WGS84,
+                              result
+                            );
+                          }, isConstant),
+                          width: 5,
+                          material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE),
+                        },
                       });
-
                     }
                     
 
