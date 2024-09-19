@@ -153,7 +153,7 @@ function togglePresentation() {
     viewer.dataSources.removeAll();
     viewer.dataSources.add(
       Cesium.KmlDataSource.load(
-        "testi3.kml",
+        "testi4.kml",
         options
       )
     ).then(function (dataSource) {
@@ -163,6 +163,7 @@ function togglePresentation() {
                 let endLongitude;
                 const startTime = Cesium.JulianDate.now();
                 const isConstant = false;
+                var arrowCoords = {};
 
                 var i = 0;
                 while (i < dataSource._entityCollection._entities._array.length) {
@@ -173,7 +174,53 @@ function togglePresentation() {
                     viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
                     //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
 
-                    if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
+                    const placeColor = {
+                        "red": 0.00784313725490196,
+                        "green": 0.5333333333333333,
+                        "blue": 0.8196078431372549,
+                        "alpha": 1
+                    };
+
+                    [1]._billboard._color
+                    //if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
+                      if(dataSource._entityCollection._entities._array[1]._billboard._color != placeColor){
+
+                      var currentPosition = dataSource._entityCollection._entities._array[i]._position._value;
+
+                      var carto = Cesium.Ellipsoid.WGS84.cartesianToCartographic(currentPosition);
+                      var lon = Cesium.Math.toDegrees(carto.longitude);
+                      var lat = Cesium.Math.toDegrees(carto.latitude);
+
+                      var currentName = dataSource._entityCollection._entities._array[i]._name
+                      var arrowName = currentName.substring(0, 1);
+
+                      var newArrowPoints;
+
+                      if (currentName.endsWith("1")) {
+                        if (currentName in arrowCoords) {
+                          arrowCoords[arrowName].lon1 = lon;
+                          arrowCoords[arrowName].lat1 = lat;
+                        }
+                        else {
+                          newArrowPoints.lon1 = lon;
+                          newArrowPoints.lat1 = lat;
+
+                          arrowCoords[arrowName] = newArrowPoints;
+                        }
+                      }
+                      else if (currentName.endsWith("1")) {
+                        if (currentName in arrowCoords) {
+                          arrowCoords[arrowName].lon2 = lon;
+                          arrowCoords[arrowName].lat2 = lat;
+                        }
+                        else {
+                          newArrowPoints.lon2 = lon;
+                          newArrowPoints.lat2 = lat;
+
+                          arrowCoords[arrowName] = newArrowPoints;
+                        }
+                      }
+
                       viewer.entities.add({
                         polyline: {
                           // This callback updates positions each frame.
@@ -225,6 +272,69 @@ function togglePresentation() {
                   }*/
                   i+=1;
                 }
+
+
+                for (const value of Object.values(arrowCoords)) {
+
+                  const startLatitude = value.lat1; //27.482140
+                  const startLongitude = value.lon1; //62.272236
+                  const endLatitude = value.lat2; //27.482140
+                  const endLongitude = value.lon2; //62.272236
+
+                  endlatSmaller = startLatitude > endLatitude ? true : false;
+                  endlonSmaller = startLongitude > endLongitude ? true : false;
+
+                  const startTime = Cesium.JulianDate.now();
+                  const isConstant = false;
+
+                  viewer.entities.add({
+                        polyline: {
+                          // This callback updates positions each frame.
+                          positions: new Cesium.CallbackProperty(function (time, result) {
+
+                            current_endlatSmaller = startLatitude > endLatitude ? true : false;
+                            current_endlonSmaller = startLongitude > endLongitude ? true : false;
+
+                            latCompleted = endlatSmaller != current_endlatSmaller ? true : false;
+                            lonCompleted = endlonSmaller != current_endlonSmaller ? true : false;
+
+                            if(!lonCompleted) {
+                              if (endlonSmaller) {
+                                endLongitude = startLongitude + 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
+                              }
+                              else {
+                                endLongitude = startLongitude - 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
+                              }
+                            }
+                            else {
+                              endLongitude = startLongitude;
+                            }
+
+                            if(!latCompleted) {
+                              if (endlatSmaller) {
+                                endLatitude = startLatitude + 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
+                              }
+                              else {
+                                endLatitude = startLatitude - 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
+                              }
+                            }
+                            else {
+                              endLatitude = startLatitude;
+                            }
+
+                            return Cesium.Cartesian3.fromDegreesArray(
+                              [startLongitude, startLatitude, endLongitude, endLatitude],
+                              Cesium.Ellipsoid.WGS84,
+                              result
+                            );
+                          }, isConstant),
+                          width: 15,
+                          material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE),
+                        },
+                      });
+                }
+
+  
 
                 // stop camera rotation
                 //viewer.clock.onTick.removeEventListener(rotateCamera);
