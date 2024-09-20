@@ -297,7 +297,7 @@ function togglePresentation() {
                   viewer.entities.add({
                         polyline: {
                           // This callback updates positions each frame.
-                          positions: new Cesium.CallbackProperty(function (time, result) {
+                          positions: new Cesium.CallbackProperty(function () {
 
                             // Calculate intermediate points based on slope and distance
                             /*const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
@@ -317,14 +317,12 @@ function togglePresentation() {
                             return points;*/
 
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
-                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(time, startTime) / 3, 0, 1);
+                            const growthFactor = Cesium.Math.clamp(viewer.clock.currentTime.seconds / 3, 0, 1);
                             // const growthFactor = Cesium.JulianDate.secondsDifference(time, startTime) / 5; // Adjust growth factor as needed
 
-                            const interpolatedPosition = new Cesium.Cartesian3(); 
-                            
-                            Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, result);
+                            const interpolatedPosition = Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor);
 
-                            return [cartesian1, result];
+                            return [cartesian1, interpolatedPosition];
 
                             /*var current_endlatSmaller = startLatitude > endLatitude ? true : false;
                             var current_endlonSmaller = startLongitude > endLongitude ? true : false;
@@ -394,6 +392,17 @@ function togglePresentation() {
   
     viewer.selectedEntity = undefined;
     myButton.innerHTML = 'Esitys';
+
+    // Animation function
+    function animateLine() {
+        viewer.clock.tick();
+        requestAnimationFrame(animateLine);
+    }
+
+    // Start animation
+    viewer.clock.clockStep = Cesium.ClockStep.Tick;
+    viewer.clock.multiplier = 1; // Adjust multiplier as needed
+    animateLine();
 
     viewer.camera.flyTo({
                     destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
