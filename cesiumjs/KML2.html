@@ -378,7 +378,7 @@ function togglePresentation() {
                             const scratch = new Cesium.Cartographic();
 
                             const endPoint = arrow.polyline.positions.getValue(time, result)[1];
-                            endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
+                            const endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
 
                             geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), endCartographic);
                             const midpointCartographic = geodesic.interpolateUsingFraction(
