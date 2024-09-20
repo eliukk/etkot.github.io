@@ -293,10 +293,10 @@ function togglePresentation() {
                   var startTime = Cesium.JulianDate.now();
                   const isConstant = false;
 
-                  viewer.entities.add({
+                  const arrow = viewer.entities.add({
                         polyline: {
                           // This callback updates positions each frame.
-                          positions: new Cesium.CallbackProperty(function () {
+                          positions: new Cesium.CallbackProperty(function (time, result) {
 
                             // Calculate intermediate points based on slope and distance
                             /*const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
@@ -322,36 +322,15 @@ function togglePresentation() {
                             const interpolatedPosition = new Cesium.Cartesian3();
                             Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
 
-                            const geodesic = new Cesium.EllipsoidGeodesic();
-                            const scratch = new Cesium.Cartographic();
-
-                            geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), Cesium.Cartographic.fromCartesian(interpolatedPosition));
-                            const midpointCartographic = geodesic.interpolateUsingFraction(
-                              0.5,
-                              scratch
-                            );
-                            
-                            const arrowMidpoint = Cesium.Cartesian3.fromRadians(
-                              midpointCartographic.longitude,
-                              midpointCartographic.latitude
-                            );
-
-                            const label = viewer.entities.add({
-                              position: arrowMidpoint,
-                              label: {
-                                text: "Rapion myllylle",
-                                font: "20px sans-serif",
-                                pixelOffset: new Cesium.Cartesian2(0.0, 20),
-                              },
-                            });
-
                             const areEqual = Cesium.Cartesian3.equals(cartesian2, interpolatedPosition);
 
                             if (areEqual) {
                               startTime = Cesium.JulianDate.now();
                             }
 
-                            return [cartesian1, interpolatedPosition];
+                            result = [cartesian1, interpolatedPosition];
+
+                            return result;
 
                             /*var current_endlatSmaller = startLatitude > endLatitude ? true : false;
                             var current_endlonSmaller = startLongitude > endLongitude ? true : false;
@@ -393,6 +372,34 @@ function togglePresentation() {
                           material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE),
                         },
                       });
+
+                        function getArrowMiddlePoint(time, result) {
+                            const geodesic = new Cesium.EllipsoidGeodesic();
+                            const scratch = new Cesium.Cartographic();
+
+                            const endPoint = arrow.polyline.positions.getValue(time, result)[1];
+                            endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
+
+                            geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), endCartographic);
+                            const midpointCartographic = geodesic.interpolateUsingFraction(
+                              0.5,
+                              scratch
+                            );
+                            
+                            const arrowMidpoint = Cesium.Cartesian3.fromRadians(
+                              midpointCartographic.longitude,
+                              midpointCartographic.latitude
+                            );
+                          }
+
+                          const label = viewer.entities.add({
+                              position: new Cesium.CallbackProperty(getArrowMiddlePoint, isConstant),
+                              label: {
+                                text: "Rapion myllylle",
+                                font: "20px sans-serif",
+                                pixelOffset: new Cesium.Cartesian2(0.0, 20),
+                              },
+                            });
                 }
 
   
