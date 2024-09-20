@@ -317,7 +317,7 @@ function togglePresentation() {
                             return points;*/
 
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
-                            const growthFactor = time / 5; // Adjust growth factor as needed
+                            const growthFactor = Cesium.JulianDate.secondsDifference(time, startTime) / 5; // Adjust growth factor as needed
 
                             const interpolatedPosition = new Cesium.Cartesian3(); 
                             
