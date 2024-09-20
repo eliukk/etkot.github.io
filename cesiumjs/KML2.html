@@ -325,7 +325,7 @@ function togglePresentation() {
                             const geodesic = new Cesium.EllipsoidGeodesic();
                             const scratch = new Cesium.Cartographic();
 
-                            geodesic.setEndPoints(cartesian1, interpolatedPosition);
+                            geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), Cesium.Cartographic.fromCartesian(interpolatedPosition));
                             const midpointCartographic = geodesic.interpolateUsingFraction(
                               0.5,
                               scratch
