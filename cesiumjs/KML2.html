@@ -319,7 +319,9 @@ function togglePresentation() {
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
                             const growthFactor = viewer.clock.currentTime.seconds / 5; // Adjust growth factor as needed
 
-                            const interpolatedPosition = Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
+                            const interpolatedPosition = new Cesium.Cartesian3(); 
+                            
+                            Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
 
                             return [cartesian1, interpolatedPosition];
 
