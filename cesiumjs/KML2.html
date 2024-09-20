@@ -280,6 +280,13 @@ function togglePresentation() {
                   var endLatitude = value.lat2; //27.482140
                   var endLongitude = value.lon2; //62.272236
 
+                  // Convert to Cartesian coordinates
+                  const cartesian1 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon1, value.lat1));
+                  const cartesian2 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon2, value.lat2));
+
+                  // Calculate slope
+                  const slope = (cartesian2.y - cartesian1.y) / (cartesian2.x - cartesian1.x);
+
                   var endlatSmaller = startLatitude > endLatitude ? true : false;
                   var endlonSmaller = startLongitude > endLongitude ? true : false;
 
@@ -299,10 +306,10 @@ function togglePresentation() {
 
                             if(!lonCompleted) {
                               if (endlonSmaller) {
-                                endLongitude = startLongitude + 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
+                                endLongitude = startLongitude + (slope * 0.1) * Cesium.JulianDate.secondsDifference(time, startTime);
                               }
                               else {
-                                endLongitude = startLongitude - 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
+                                endLongitude = startLongitude - (slope * 0.1) * Cesium.JulianDate.secondsDifference(time, startTime);
                               }
                             }
                             else {
