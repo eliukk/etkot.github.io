@@ -285,7 +285,8 @@ function togglePresentation() {
                   const cartesian2 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon2, value.lat2));
 
                   // Calculate slope
-                  const slope = (cartesian2.y - cartesian1.y) / (cartesian2.x - cartesian1.x);
+                  const slope = Math.abs((cartesian2.y - cartesian1.y) / (cartesian2.x - cartesian1.x));
+                  alert(slope);
 
                   var endlatSmaller = startLatitude > endLatitude ? true : false;
                   var endlonSmaller = startLongitude > endLongitude ? true : false;
