@@ -299,7 +299,24 @@ function togglePresentation() {
                           // This callback updates positions each frame.
                           positions: new Cesium.CallbackProperty(function (time, result) {
 
-                            var current_endlatSmaller = startLatitude > endLatitude ? true : false;
+                            // Calculate intermediate points based on slope and distance
+                            const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
+                            const numPoints = 100; // Adjust the number of points as needed
+                            const deltaX = (cartesian2.x - cartesian1.x) / numPoints;
+                            const deltaY = (cartesian2.y - cartesian1.y) / numPoints;
+                            const deltaZ = (cartesian2.z - cartesian1.z) / numPoints;
+
+                            const points = [];
+                            for (let i = 0; i <= numPoints; i++) {
+                                points.push(new Cesium.Cartesian3(
+                                    cartesian1.x + i * deltaX,
+                                    cartesian1.y + i * deltaY,
+                                    cartesian1.z + i * deltaZ
+                                ));
+                            }
+                            return points;
+
+                            /*var current_endlatSmaller = startLatitude > endLatitude ? true : false;
                             var current_endlonSmaller = startLongitude > endLongitude ? true : false;
 
                             var latCompleted = endlatSmaller != current_endlatSmaller ? true : false;
@@ -333,7 +350,7 @@ function togglePresentation() {
                               [startLongitude, startLatitude, endLongitude, endLatitude],
                               Cesium.Ellipsoid.WGS84,
                               result
-                            );
+                            );*/
                           }, isConstant),
                           width: 15,
                           material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE),
