@@ -161,7 +161,6 @@ function togglePresentation() {
                 const startLatitude = 62.272236; //27.482140
                 const startLongitude = 27.482140; //62.272236
                 var endLongitude;
-                const startTime = Cesium.JulianDate.now();
                 const isConstant = false;
                 var arrowCoords = {};
 
@@ -291,7 +290,7 @@ function togglePresentation() {
                   var endlatSmaller = startLatitude > endLatitude ? true : false;
                   var endlonSmaller = startLongitude > endLongitude ? true : false;
 
-                  const startTime = Cesium.JulianDate.now();
+                  var startTime = Cesium.JulianDate.now();
                   const isConstant = false;
 
                   viewer.entities.add({
