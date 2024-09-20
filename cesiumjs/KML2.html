@@ -300,7 +300,7 @@ function togglePresentation() {
                           positions: new Cesium.CallbackProperty(function (time, result) {
 
                             // Calculate intermediate points based on slope and distance
-                            const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
+                            /*const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
                             const numPoints = 100; // Adjust the number of points as needed
                             const deltaX = (cartesian2.x - cartesian1.x) / numPoints;
                             const deltaY = (cartesian2.y - cartesian1.y) / numPoints;
@@ -314,7 +314,14 @@ function togglePresentation() {
                                     cartesian1.z + i * deltaZ
                                 ));
                             }
-                            return points;
+                            return points;*/
+
+                            const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
+                            const growthFactor = viewer.clock.currentTime.seconds / 5; // Adjust growth factor as needed
+
+                            const interpolatedPosition = Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor);
+
+                            return [cartesian1, interpolatedPosition];
 
                             /*var current_endlatSmaller = startLatitude > endLatitude ? true : false;
                             var current_endlonSmaller = startLongitude > endLongitude ? true : false;
