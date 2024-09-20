@@ -322,9 +322,9 @@ function togglePresentation() {
 
                             const interpolatedPosition = new Cesium.Cartesian3(); 
                             
-                            Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
+                            Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, result);
 
-                            return [cartesian1, interpolatedPosition];
+                            return result;
 
                             /*var current_endlatSmaller = startLatitude > endLatitude ? true : false;
                             var current_endlonSmaller = startLongitude > endLongitude ? true : false;
