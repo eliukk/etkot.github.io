@@ -315,9 +315,9 @@ function togglePresentation() {
                                 ));
                             }
                             return points;*/
-
+                            const timeNow = Cesium.JulianDate.now();
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
-                            const growthFactor = Cesium.Math.clamp(viewer.clock.currentTime.seconds / 3, 0, 1);
+                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, startTime) / 3, 0, 1);
                             // const growthFactor = Cesium.JulianDate.secondsDifference(time, startTime) / 5; // Adjust growth factor as needed
 
                             const interpolatedPosition = Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor);
