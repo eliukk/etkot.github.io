@@ -322,6 +322,29 @@ function togglePresentation() {
                             const interpolatedPosition = new Cesium.Cartesian3();
                             Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
 
+                            const geodesic = new Cesium.EllipsoidGeodesic();
+                            const scratch = new Cesium.Cartographic();
+
+                            geodesic.setEndPoints(cartesian1, interpolatedPosition);
+                            const midpointCartographic = geodesic.interpolateUsingFraction(
+                              0.5,
+                              scratch
+                            );
+                            
+                            const arrowMidpoint = Cesium.Cartesian3.fromRadians(
+                              midpointCartographic.longitude,
+                              midpointCartographic.latitude
+                            );
+
+                            const label = viewer.entities.add({
+                              position: arrowMidpoint,
+                              label: {
+                                text: "Rapion myllylle",
+                                font: "20px sans-serif",
+                                pixelOffset: new Cesium.Cartesian2(0.0, 20),
+                              },
+                            });
+
                             const areEqual = Cesium.Cartesian3.equals(cartesian2, interpolatedPosition);
 
                             if (areEqual) {
