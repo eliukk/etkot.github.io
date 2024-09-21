@@ -8,7 +8,7 @@
         <color>ffd18802</color>
         <scale>1</scale>
         <Icon>
-          <href503-wht-blank_maps.png</href>
+          <href>503-wht-blank_maps.png</href>
         </Icon>
         <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
       </IconStyle>
@@ -18,7 +18,7 @@
         <color>ff42b37c</color>
         <scale>1</scale>
         <Icon>
-          <href503-wht-blank_maps.png</href>
+          <href>503-wht-blank_maps.png</href>
         </Icon>
         <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
       </IconStyle>
