@@ -161,10 +161,14 @@ function togglePresentation() {
     ).then(function (dataSource) {
                 viewer.clock.shouldAnimate = true;
                 var arrowCoords = {};
+                var isArrowEntity = false;
 
                 var i = 0;
                 while (i < dataSource._entityCollection._entities._array.length) {
                   if (dataSource._entityCollection._entities._array[i]._label) {
+
+                    isArrowEntity = false;
+
                     var currentId = dataSource._entityCollection._entities._array[i]._id;
                     viewer.dataSources.get(0).entities.getById(currentId).label.showBackground = true;
                     //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
@@ -180,6 +184,8 @@ function togglePresentation() {
 
                     //if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
                     if(dataSource._entityCollection._entities._array[i]._billboard._color._value.blue != placeColor.blue){
+
+                      isArrowEntity = true;
 
                       // hide arrow start and end markers
                       dataSource._entityCollection._entities._array[i]._show = false;
@@ -270,10 +276,10 @@ function togglePresentation() {
                     dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
                   }
 
-                  if (i == 0){
+                  if (i == 0) {
                     viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
                   }
-                  else {
+                  else if (!isArrowEntity) {
                     configureTimeout(dataSource._entityCollection._entities._array[i], i);
                   }
                   i+=1;
