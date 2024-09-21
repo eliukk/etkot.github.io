@@ -262,24 +262,6 @@ function togglePresentation() {
                           arrowCoords[arrowName] = newArrowPoints;
                         }
                       }
-
-                      viewer.entities.add({
-                        polyline: {
-                          // This callback updates positions each frame.
-                          positions: new Cesium.CallbackProperty(function (time, result) {
-                            endLongitude =
-                              startLongitude +
-                              0.001 * Cesium.JulianDate.secondsDifference(time, startTime);
-                            return Cesium.Cartesian3.fromDegreesArray(
-                              [startLongitude, startLatitude, endLongitude, startLatitude],
-                              Cesium.Ellipsoid.WGS84,
-                              result
-                            );
-                          }, isConstant),
-                          width: 5,
-                          material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE),
-                        },
-                      });
                     }
                     
 
@@ -345,7 +327,7 @@ function togglePresentation() {
                   var endlatSmaller = startLatitude > endLatitude ? true : false;
                   var endlonSmaller = startLongitude > endLongitude ? true : false;
 
-                  var startTime = Cesium.JulianDate.now();
+                  value.startTime = Cesium.JulianDate.now();
                   const isConstant = false;
 
                   const arrow = viewer.entities.add({
@@ -371,7 +353,7 @@ function togglePresentation() {
                             return points;*/
                             const timeNow = Cesium.JulianDate.now();
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
-                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, startTime) / arrowSpeed, 0, 1);
+                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, value.startTime) / arrowSpeed, 0, 1);
                             //const growthFactor = Cesium.JulianDate.secondsDifference(time, startTime) / 5; // Adjust growth factor as needed
 
                             const interpolatedPosition = new Cesium.Cartesian3();
@@ -380,7 +362,7 @@ function togglePresentation() {
                             const areEqual = Cesium.Cartesian3.equals(cartesian2, interpolatedPosition);
 
                             if (areEqual) {
-                              startTime = Cesium.JulianDate.now();
+                              value.startTime = Cesium.JulianDate.now();
                             }
 
                             result = [cartesian1, interpolatedPosition];
