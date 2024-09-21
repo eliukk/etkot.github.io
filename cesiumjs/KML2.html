@@ -280,6 +280,8 @@ function togglePresentation() {
                 }
 
 
+                viewer.entities.removeAll();
+
                 for (const value of Object.values(arrowCoords)) {
 
                   const startLatitude = value.lat1;
@@ -383,7 +385,7 @@ function togglePresentation() {
       clearTimeout(cameraTimeouts[i]);
     }
 
-    viewer.entities.removeAll()
+    //viewer.entities.removeAll();
   
     viewer.selectedEntity = undefined;
     myButton.innerHTML = 'Esitys';
