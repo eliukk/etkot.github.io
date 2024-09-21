@@ -138,7 +138,7 @@ var isPresentationMode = false;
 
 //viewer.camera.flyHome(0);
 
-togglePresentation();
+//togglePresentation();
 
 function togglePresentation() {
   timeoutCounter = 0;
@@ -159,10 +159,6 @@ function togglePresentation() {
       )
     ).then(function (dataSource) {
                 viewer.clock.shouldAnimate = true;
-                const startLatitude = 62.272236; //27.482140
-                const startLongitude = 27.482140; //62.272236
-                var endLongitude;
-                const isConstant = false;
                 var arrowCoords = {};
 
                 var i = 0;
@@ -272,9 +268,6 @@ function togglePresentation() {
                     dataSource._entityCollection._entities._array[i]._label._pixelOffset._value = new Cesium.Cartesian2(0.0, 30.0);
                     dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
                   }
-                  /*if (dataSource._entityCollection._entities._array[i]._description) {
-                    dataSource._entityCollection._entities._array[i]._description._value = dataSource._entityCollection._entities._array[i]._description._value.replace('<img', '<img crossorigin="anonymous"');
-                  }*/
 
                   if (i == 0){
                     viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
@@ -282,31 +275,16 @@ function togglePresentation() {
                   else {
                     configureTimeout(dataSource._entityCollection._entities._array[i], i);
                   }
-                    /*setTimeout(function() {
-                      const currentEntity = dataSource._entityCollection._entities._array[i];
-                      viewer.flyTo(currentEntity).then(function () {
-                        viewer.trackedEntity = currentEntity;
-                        viewer.selectedEntity = viewer.trackedEntity;
-                      });
-                    }, 15000 * i);*/
-                  /*}
-                  else{
-                    const currentEntity = dataSource._entityCollection._entities._array[i];
-                      viewer.flyTo(currentEntity).then(function () {
-                        viewer.trackedEntity = currentEntity;
-                        viewer.selectedEntity = viewer.trackedEntity;
-                      });
-                  }*/
                   i+=1;
                 }
 
 
                 for (const value of Object.values(arrowCoords)) {
 
-                  const startLatitude = value.lat1; //27.482140
-                  const startLongitude = value.lon1; //62.272236
-                  var endLatitude = value.lat2; //27.482140
-                  var endLongitude = value.lon2; //62.272236
+                  const startLatitude = value.lat1;
+                  const startLongitude = value.lon1;
+                  var endLatitude = value.lat2;
+                  var endLongitude = value.lon2;
 
                   const arrowText = value.arrowText;
                   var arrowColor = value.arrowColor;
@@ -324,12 +302,6 @@ function togglePresentation() {
                   const cartesian1 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon1, value.lat1));
                   const cartesian2 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon2, value.lat2));
 
-                  // Calculate slope
-                  const slope = Math.abs((cartesian2.y - cartesian1.y) / (cartesian2.x - cartesian1.x));
-
-                  var endlatSmaller = startLatitude > endLatitude ? true : false;
-                  var endlonSmaller = startLongitude > endLongitude ? true : false;
-
                   value.startTime = Cesium.JulianDate.now();
                   const isConstant = false;
 
@@ -338,26 +310,9 @@ function togglePresentation() {
                           // This callback updates positions each frame.
                           positions: new Cesium.CallbackProperty(function (time, result) {
 
-                            // Calculate intermediate points based on slope and distance
-                            /*const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
-                            const numPoints = 100; // Adjust the number of points as needed
-                            const deltaX = (cartesian2.x - cartesian1.x) / numPoints;
-                            const deltaY = (cartesian2.y - cartesian1.y) / numPoints;
-                            const deltaZ = (cartesian2.z - cartesian1.z) / numPoints;
-
-                            const points = [];
-                            for (let i = 0; i <= numPoints; i++) {
-                                points.push(new Cesium.Cartesian3(
-                                    cartesian1.x + i * deltaX,
-                                    cartesian1.y + i * deltaY,
-                                    cartesian1.z + i * deltaZ
-                                ));
-                            }
-                            return points;*/
                             const timeNow = Cesium.JulianDate.now();
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
                             const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, value.startTime) / arrowSpeed, 0, 1);
-                            //const growthFactor = Cesium.JulianDate.secondsDifference(time, startTime) / 5; // Adjust growth factor as needed
 
                             const interpolatedPosition = new Cesium.Cartesian3();
                             Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
@@ -371,42 +326,6 @@ function togglePresentation() {
                             result = [cartesian1, interpolatedPosition];
 
                             return result;
-
-                            /*var current_endlatSmaller = startLatitude > endLatitude ? true : false;
-                            var current_endlonSmaller = startLongitude > endLongitude ? true : false;
-
-                            var latCompleted = endlatSmaller != current_endlatSmaller ? true : false;
-                            var lonCompleted = endlonSmaller != current_endlonSmaller ? true : false;
-
-                            if(!lonCompleted) {
-                              if (endlonSmaller) {
-                                endLongitude = startLongitude + (slope * 0.1) * Cesium.JulianDate.secondsDifference(time, startTime);
-                              }
-                              else {
-                                endLongitude = startLongitude - (slope * 0.1) * Cesium.JulianDate.secondsDifference(time, startTime);
-                              }
-                            }
-                            else {
-                              endLongitude = startLongitude;
-                            }
-
-                            if(!latCompleted) {
-                              if (endlatSmaller) {
-                                endLatitude = startLatitude + 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
-                              }
-                              else {
-                                endLatitude = startLatitude - 0.1 * Cesium.JulianDate.secondsDifference(time, startTime);
-                              }
-                            }
-                            else {
-                              endLatitude = startLatitude;
-                            }
-
-                            return Cesium.Cartesian3.fromDegreesArray(
-                              [startLongitude, startLatitude, endLongitude, endLatitude],
-                              Cesium.Ellipsoid.WGS84,
-                              result
-                            );*/
                           }, isConstant),
                           width: 15,
                           material: new Cesium.PolylineArrowMaterialProperty(arrowColor),
@@ -444,11 +363,6 @@ function togglePresentation() {
                             });
                 }
 
-  
-
-                // stop camera rotation
-                //viewer.clock.onTick.removeEventListener(rotateCamera);
-
                 // return camera back to main top coords
                 cameraTimeouts.push(setTimeout(function() {
 
@@ -471,7 +385,7 @@ function togglePresentation() {
     viewer.selectedEntity = undefined;
     myButton.innerHTML = 'Esitys';
 
-    // Animation function
+    /*// Animation function
     function animateLine() {
         viewer.clock.tick();
         requestAnimationFrame(animateLine);
@@ -480,45 +394,13 @@ function togglePresentation() {
     // Start animation
     viewer.clock.clockStep = Cesium.ClockStep.Tick;
     viewer.clock.multiplier = 1; // Adjust multiplier as needed
-    animateLine();
+    animateLine();*/
 
     viewer.camera.flyTo({
                     destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
                   });
   } 
 }
-  /*viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0)
-  }).then(function () {
-    
-    var i = 0;
-    while (i < viewer._dataSourceCollection.get(0)._entityCollection._entities._array.length) {
-    
-      if (viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label) {
-        viewer._dataSourceCollection.get(0)._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
-      }
-    }
-  });
-}*/
-        /*viewer.dataSources
-          .add(
-            Cesium.KmlDataSource.load(
-              "../SampleData/kml/bikeRide.kml",
-              options
-            )
-          )
-          .then(function (dataSource) {
-            viewer.clock.shouldAnimate = false;
-            const rider = dataSource.entities.getById("tour");
-            viewer.flyTo(rider).then(function () {
-              viewer.trackedEntity = rider;
-              // viewer.selectedEntity = viewer.trackedEntity;
-              viewer.clock.multiplier = 30;
-              viewer.clock.shouldAnimate = true;
-            });
-          });
-      },*/
-
 </script>
 </body>
 </html>
