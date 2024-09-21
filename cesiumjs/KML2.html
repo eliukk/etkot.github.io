@@ -23,6 +23,7 @@
 var unsubscribeTicks = null;
 var timeoutCounter = 0;
 var cameraTimeouts = [];
+var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE}
 
 function rotateCamera(clock) {
   viewer.scene.camera.rotateRight(0.0008);
@@ -153,7 +154,7 @@ function togglePresentation() {
     viewer.dataSources.removeAll();
     viewer.dataSources.add(
       Cesium.KmlDataSource.load(
-        "testi4.kml",
+        "testi5.kml",
         options
       )
     ).then(function (dataSource) {
@@ -189,24 +190,67 @@ function togglePresentation() {
                       var lon = Cesium.Math.toDegrees(carto.longitude);
                       var lat = Cesium.Math.toDegrees(carto.latitude);
 
-                      var currentName = dataSource._entityCollection._entities._array[i]._name
-                      var arrowName = currentName.substring(0, 1);
+                      var currentName = dataSource._entityCollection._entities._array[i]._name.split(',')
+                      var arrowName = currentName[0].substring(0, 1);
 
                       var newArrowPoints = {lat1: 0, lon1: 0, lat2:0, lon2:0};
 
-                      if (currentName.endsWith("1")) {
+                      if (currentName[0].endsWith("1")) {
                         if (arrowName in arrowCoords) {
                           arrowCoords[arrowName].lon1 = lon;
                           arrowCoords[arrowName].lat1 = lat;
+
+                          if (currentName[1]) {
+                            arrowCoords[arrowName].arrowText = currentName[1];
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowText = "";
+                          }
+
+                          if (currentName[2]) {
+                            arrowCoords[arrowName].arrowColor = currentName[2];
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowColor = "blue";
+                          }
+
+                          if (currentName[3]) {
+                            arrowCoords[arrowName].arrowSpeed = currentName[3];
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowSpeed = 3;
+                          }
+
                         }
                         else {
                           newArrowPoints.lon1 = lon;
                           newArrowPoints.lat1 = lat;
 
+                          if (currentName[1]) {
+                            newArrowPoints.arrowText = currentName[1];
+                          }
+                          else {
+                            newArrowPoints.arrowText = "";
+                          }
+
+                          if (currentName[2]) {
+                            newArrowPoints.arrowColor = currentName[2];
+                          }
+                          else {
+                            newArrowPoints.arrowColor = "blue";
+                          }
+
+                          if (currentName[3]) {
+                            newArrowPoints.arrowSpeed = currentName[3];
+                          }
+                          else {
+                            newArrowPoints.arrowSpeed = 3;
+                          }
+
                           arrowCoords[arrowName] = newArrowPoints;
                         }
                       }
-                      else if (currentName.endsWith("2")) {
+                      else if (currentName[0].endsWith("2")) {
                         if (arrowName in arrowCoords) {
                           arrowCoords[arrowName].lon2 = lon;
                           arrowCoords[arrowName].lat2 = lat;
@@ -279,13 +323,24 @@ function togglePresentation() {
                   var endLatitude = value.lat2; //27.482140
                   var endLongitude = value.lon2; //62.272236
 
+                  const arrowText = value.arrowText;
+                  const arrowColor = value.arrowColor;
+                  const arrowSpeed = value.arrowSpeed;
+
+                  if (arrowColor in colors) {
+                    arrowColor = colors[arrowColor];
+                  }
+                  else {
+                    arrowColor = colors["blue"];
+                  }
+
+
                   // Convert to Cartesian coordinates
                   const cartesian1 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon1, value.lat1));
                   const cartesian2 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon2, value.lat2));
 
                   // Calculate slope
                   const slope = Math.abs((cartesian2.y - cartesian1.y) / (cartesian2.x - cartesian1.x));
-                  alert(slope);
 
                   var endlatSmaller = startLatitude > endLatitude ? true : false;
                   var endlonSmaller = startLongitude > endLongitude ? true : false;
@@ -316,7 +371,7 @@ function togglePresentation() {
                             return points;*/
                             const timeNow = Cesium.JulianDate.now();
                             const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
-                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, startTime) / 3, 0, 1);
+                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, startTime) / arrowSpeed, 0, 1);
                             //const growthFactor = Cesium.JulianDate.secondsDifference(time, startTime) / 5; // Adjust growth factor as needed
 
                             const interpolatedPosition = new Cesium.Cartesian3();
@@ -369,7 +424,7 @@ function togglePresentation() {
                             );*/
                           }, isConstant),
                           width: 15,
-                          material: new Cesium.PolylineArrowMaterialProperty(Cesium.Color.BLUE),
+                          material: new Cesium.PolylineArrowMaterialProperty(arrowColor),
                         },
                       });
 
@@ -395,7 +450,7 @@ function togglePresentation() {
                           const label = viewer.entities.add({
                               position: new Cesium.CallbackProperty(getArrowMiddlePoint, isConstant),
                               label: {
-                                text: "Rapion myllylle",
+                                text: arrowText,
                                 font: "20px sans-serif",
                                 outlineColor:  Cesium.Color.WHITE,
                                 showBackground: true,

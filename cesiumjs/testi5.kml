@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>testaus</name>
+    <description/>
+    <Style id="icon-1899-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1899-7CB342-labelson-nodesc">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Folder>
+      <name>ETKOT paikat</name>
+      <Placemark>
+        <name>Kommelin luolat</name>
+        <description><![CDATA[Mikkelin Matinmäen länsirinteen alaosassa sijaitsee Kommelinluola, joka  on maakunnallinen nähtävyys. Tarinan mukaan luolassa asuu piruja ja  haltioita, joista tunnetuin on Kommelin ukko.<br><br><br><br>https://retkipaikka.fi/kommelinluola/<br><br>https://www.lansi-savo.fi/paikalliset/4756626]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            27.192004,61.647448,130.54
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rapion mylly</name>
+        <description><![CDATA[Rapion myllärit  ovat jauhaneet suomalaista viljaa jo yli 200 vuoden ajan. Mylly seisoo  kosken partaalla, Rapionjoen varrella. Rauhoittavan solinan lisäksi  koski antaa suuren osan jauhatukseen tarvittavasta energiasta. Rapion vilja on lähiruokaa: kaurasta, rukiista, ohrasta ja vehnästä suurin osa hankitaan lähiseudun viljelijöiltä.<br><br><br><br>https://rapiontuote.fi/tarina/]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            28.118908,61.925654,88.28
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Neitvuori</name>
+        <description><![CDATA[<img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iDARHAmlvkAh74VekHokXqbahfSg0AuJFTWqLv-EhmyopF4e3UPPvpCxg7iRESSz-9LFe6EAVdu_Akhty3io-tMoaxrK5qSqraT1ZpWHDPvBtjrXGaqTnU6I8O_eaFkrCjHjYy7i5UtbHAZTOThNKkmLdt3KTFeTlMHsWm7Glq1Zmz0nGCo5OHjhsIs4xlyQGaqmL8uunrwLmx0tnIZqx_zVP_Eu5Fz7sc_lw-HnNL0uPP0j3ZV3XVM1NU?authuser=0&fife=s16383" height="200" width="auto" /><br><br>Neitvuori on yksi Etelä-Savon korkeimmista vuorista (184 m). Huippu on 110 m Saimaan pintaa korkeammalla. Neitvuorelta on avarat näkymät Luonterin saaristoon ja metsämaisemiin.<br>test<br>Neitvuoreen liittyy kosolti tarinoita. Alun perin sen nimi on ollut Hiidenvuori. <br><br><br><br>https://www.luontoon.fi/neitvuori-luonteri/nahtavyydetjahistoria<br><br><img src="https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iC59WNqFGIMnFRvu5WnBRICyBCeeUy6IBv6lGeOAHoLl9s4ETFuzKHCNXnyuyXqMkcgLlLD2kbBmSNPmXIEIPjABhPB5nOHFJfi5MG34TwxNTxUULoC70AyU0GzkMN1TULCxuT6TVnjkJ0GMsh0x8b2iTX5tjbqzINuz3W9YSAu46OAsUXO6GUDGT3jw7tU20NxICOBEHTuLQiTXG45bAEqlgG6rWv0TTN1YSqAG4HLtFVJQdtrElT-de4?authuser=0&fife=s16383" height="200" width="auto" />]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iDARHAmlvkAh74VekHokXqbahfSg0AuJFTWqLv-EhmyopF4e3UPPvpCxg7iRESSz-9LFe6EAVdu_Akhty3io-tMoaxrK5qSqraT1ZpWHDPvBtjrXGaqTnU6I8O_eaFkrCjHjYy7i5UtbHAZTOThNKkmLdt3KTFeTlMHsWm7Glq1Zmz0nGCo5OHjhsIs4xlyQGaqmL8uunrwLmx0tnIZqx_zVP_Eu5Fz7sc_lw-HnNL0uPP0j3ZV3XVM1NU?authuser=0&fife=s16383 https://mymaps.usercontent.google.com/hostedimage/m/*/3APLA8iC59WNqFGIMnFRvu5WnBRICyBCeeUy6IBv6lGeOAHoLl9s4ETFuzKHCNXnyuyXqMkcgLlLD2kbBmSNPmXIEIPjABhPB5nOHFJfi5MG34TwxNTxUULoC70AyU0GzkMN1TULCxuT6TVnjkJ0GMsh0x8b2iTX5tjbqzINuz3W9YSAu46OAsUXO6GUDGT3jw7tU20NxICOBEHTuLQiTXG45bAEqlgG6rWv0TTN1YSqAG4HLtFVJQdtrElT-de4?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.747831,61.669491,170.38
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kissakoski</name>
+        <description><![CDATA[Teollisuushistoriallisesti merkittävä Kissakoski rakentuu 1850-luvulla  valmistuneen Kissakosken kanavan ympärille. Metsäiseen ympäristöön  1900-luvun alussa syntyneestä laajasta teollisuusyhdyskunnasta on  jäljellä punatiilinen Kissakosken paperitehtaan tuotantorakennus  1920-luvulta, 1932 rakennettu voimalaitos sekä tehtaaseen liittyvät  arkkitehti Waldemar Aspelinin suunnittelemat johtajiston ja työväen  asuinrakennukset sekä 1916 valmistunut kansakoulu.<br><br><br><br>https://www.ravintolakissakoski.fi/historia]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            26.747535,61.624506,95.46
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>a1,Rapion myllylle,red,1</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.784784,61.7120602,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>a2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            28.0841614,61.9099183,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>b1,Kissakoskelle,orange,3</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.1544434,61.656692,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>b2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.7836548,61.629297,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
