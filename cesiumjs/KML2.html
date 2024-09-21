@@ -23,7 +23,7 @@
 var unsubscribeTicks = null;
 var timeoutCounter = 0;
 var cameraTimeouts = [];
-var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
+var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
 
 function rotateCamera(clock) {
   viewer.scene.camera.rotateRight(0.0008);
@@ -182,7 +182,10 @@ function togglePresentation() {
                     };
 
                     //if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
-                      if(dataSource._entityCollection._entities._array[1]._billboard._color != placeColor){
+                    if(dataSource._entityCollection._entities._array[i]._billboard._color != placeColor){
+
+                      // hide arrow start and end markers
+                      dataSource._entityCollection._entities._array[i]._show = false;
 
                       var currentPosition = dataSource._entityCollection._entities._array[i]._position._value;
 
@@ -433,7 +436,7 @@ function togglePresentation() {
                               position: new Cesium.CallbackProperty(getArrowMiddlePoint, isConstant),
                               label: {
                                 text: arrowText,
-                                font: "20px sans-serif",
+                                font: "15px sans-serif",
                                 outlineColor:  Cesium.Color.WHITE,
                                 showBackground: true,
                                 pixelOffset: new Cesium.Cartesian2(0.0, 20),
