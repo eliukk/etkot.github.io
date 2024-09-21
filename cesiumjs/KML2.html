@@ -92,7 +92,7 @@ function configureTimeout(currentEntity, i) {
 
 const viewer = new Cesium.Viewer("cesiumContainer", {
   imageryProvider: false,
-  timeline: true,
+  timeline: false,
   animation: true,
   baseLayerPicker: false,
   selectionIndicator : false,
@@ -279,7 +279,7 @@ function togglePresentation() {
                   i+=1;
                 }
 
-
+                // remove previous arrows and their labels so that there are not multiple entities drawn when presentation is stopped and started again
                 viewer.entities.removeAll();
 
                 for (const value of Object.values(arrowCoords)) {
