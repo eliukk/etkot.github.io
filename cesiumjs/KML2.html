@@ -382,6 +382,8 @@ function togglePresentation() {
     for (var i=0; i<cameraTimeouts.length; i++) {
       clearTimeout(cameraTimeouts[i]);
     }
+
+    viewer.entities.removeAll()
   
     viewer.selectedEntity = undefined;
     myButton.innerHTML = 'Esitys';
