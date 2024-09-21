@@ -138,7 +138,8 @@ var isPresentationMode = false;
 
 //viewer.camera.flyHome(0);
 
-//togglePresentation();
+togglePresentation();
+togglePresentation();
 
 function togglePresentation() {
   timeoutCounter = 0;
@@ -384,17 +385,6 @@ function togglePresentation() {
   
     viewer.selectedEntity = undefined;
     myButton.innerHTML = 'Esitys';
-
-    /*// Animation function
-    function animateLine() {
-        viewer.clock.tick();
-        requestAnimationFrame(animateLine);
-    }
-
-    // Start animation
-    viewer.clock.clockStep = Cesium.ClockStep.Tick;
-    viewer.clock.multiplier = 1; // Adjust multiplier as needed
-    animateLine();*/
 
     viewer.camera.flyTo({
                     destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
