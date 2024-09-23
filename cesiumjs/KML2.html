@@ -23,6 +23,7 @@
 var unsubscribeTicks = null;
 var timeoutCounter = 0;
 var cameraTimeouts = [];
+var arrowsData = [];
 var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
 
 function rotateCamera(clock) {
@@ -45,6 +46,13 @@ function configureTimeout(currentEntity, i) {
                   //viewer.selectedEntity = viewer.trackedEntity;
 
                   viewer.selectedEntity = currentEntity;
+
+                  arrowsData.forEach(function (arrowData) {
+                    if (arrowData.arrowTriggers.includes(currentEntity._name) || arrowData.arrowTriggers.includes("all")) {
+                      arrowData.arrow.show = true;
+                      arrowData.label.show = true;
+                    }
+                  });
 
                   viewer.flyTo(currentEntity, {duration:5.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), 2500)}).then(function () {
                                     //viewer.trackedEntity = currentEntity;
@@ -155,7 +163,7 @@ function togglePresentation() {
     viewer.dataSources.removeAll();
     viewer.dataSources.add(
       Cesium.KmlDataSource.load(
-        "testi5.kml",
+        "testi6.kml",
         options
       )
     ).then(function (dataSource) {
@@ -227,6 +235,13 @@ function togglePresentation() {
                             arrowCoords[arrowName].arrowSpeed = 3;
                           }
 
+                          if (currentName[4]) {
+                            arrowCoords[arrowName].arrowTriggers = currentName[4].split(';');
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowTriggers = ["all"];
+                          }
+
                         }
                         else {
                           newArrowPoints.lon1 = lon;
@@ -251,6 +266,13 @@ function togglePresentation() {
                           }
                           else {
                             newArrowPoints.arrowSpeed = 3;
+                          }
+
+                          if (currentName[4]) {
+                            newArrowPoints.arrowTriggers = currentName[4].split(';');
+                          }
+                          else {
+                            newArrowPoints.arrowTriggers = ["all"];
                           }
 
                           arrowCoords[arrowName] = newArrowPoints;
@@ -298,6 +320,10 @@ function togglePresentation() {
                   const arrowText = value.arrowText;
                   var arrowColor = value.arrowColor;
                   const arrowSpeed = value.arrowSpeed;
+                  const arrowTriggers = value.arrowTriggers;
+
+                  var arrowData = {};
+                  arrowData.arrowTriggers = arrowTriggers;
 
                   if (arrowColor in colors) {
                     arrowColor = colors[arrowColor];
@@ -339,37 +365,44 @@ function togglePresentation() {
                           width: 15,
                           material: new Cesium.PolylineArrowMaterialProperty(arrowColor),
                         },
+                        show: false
                       });
 
-                        function getArrowMiddlePoint(time, result) {
-                            const geodesic = new Cesium.EllipsoidGeodesic();
-                            const scratch = new Cesium.Cartographic();
+                    function getArrowMiddlePoint(time, result) {
+                        const geodesic = new Cesium.EllipsoidGeodesic();
+                        const scratch = new Cesium.Cartographic();
 
-                            const endPoint = arrow.polyline.positions.getValue(time, result)[1];
-                            const endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
+                        const endPoint = arrow.polyline.positions.getValue(time, result)[1];
+                        const endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
 
-                            geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), endCartographic);
-                            const midpointCartographic = geodesic.interpolateUsingFraction(
-                              0.5,
-                              scratch
-                            );
-                            
-                            return Cesium.Cartesian3.fromRadians(
-                              midpointCartographic.longitude,
-                              midpointCartographic.latitude
-                            );
-                          }
+                        geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), endCartographic);
+                        const midpointCartographic = geodesic.interpolateUsingFraction(
+                          0.5,
+                          scratch
+                        );
+                        
+                        return Cesium.Cartesian3.fromRadians(
+                          midpointCartographic.longitude,
+                          midpointCartographic.latitude
+                        );
+                      }
 
-                          const label = viewer.entities.add({
-                              position: new Cesium.CallbackProperty(getArrowMiddlePoint, isConstant),
-                              label: {
-                                text: arrowText,
-                                font: "15px sans-serif",
-                                outlineColor:  Cesium.Color.WHITE,
-                                showBackground: true,
-                                pixelOffset: new Cesium.Cartesian2(0.0, 20),
-                              },
-                            });
+                      const label = viewer.entities.add({
+                          position: new Cesium.CallbackProperty(getArrowMiddlePoint, isConstant),
+                          label: {
+                            text: arrowText,
+                            font: "15px sans-serif",
+                            outlineColor:  Cesium.Color.WHITE,
+                            showBackground: true,
+                            pixelOffset: new Cesium.Cartesian2(0.0, 20),
+                          },
+                          show: false
+                        });
+
+                      arrowData.arrow = arrow;
+                      arrowData.label = label;
+
+                      arrowsData.push(arrowData);
                 }
 
                 // return camera back to main top coords
