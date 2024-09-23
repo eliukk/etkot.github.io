@@ -74,7 +74,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>a1,Rapion myllylle,red,1</name>
+        <name>a1,Rapion myllylle,red,1,Kissakoski</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -92,7 +92,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>b1,Kissakoskelle,orange,3,Kommelin luolat</name>
+        <name>b1,Kissakoskelle,orange,3,Neitvuori</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
