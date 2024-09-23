@@ -147,7 +147,9 @@ var isPresentationMode = false;
 //viewer.camera.flyHome(0);
 
 togglePresentation();
-setTimeout(function(){ togglePresentation(); }, 1000);
+
+// disable presentation start on page startup by uncommenting if needed
+//setTimeout(function(){ togglePresentation(); }, 1000);
 
 function togglePresentation() {
   timeoutCounter = 0;
