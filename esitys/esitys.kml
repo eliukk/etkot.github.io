@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Anttolan asutuksen alku</name>
-    <description/>
+    <description>Tarina pohjautuu vanhaksi kansantaruksi sanottuun kertomukseen Anttolan asuttamisesta</description>
     <Style id="icon-1899-0288D1-labelson">
       <IconStyle>
         <color>ffd18802</color>
@@ -44,7 +44,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>a1,Anttolan Ruokolan kylälle,green,3,Savolahti Mikkeli</name>
+        <name>a1,Anttolan Ruokolan kylälle,green,5,Savolahti Mikkeli</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -77,7 +77,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>b1,Hämytsaareen,green,3,Ruokola</name>
+        <name>b1,Hämytsaareen,green,5,Ruokola</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
