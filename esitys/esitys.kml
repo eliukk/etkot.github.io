@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Anttolan asutuksen alku</name>
+    <description/>
+    <Style id="icon-1899-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1899-7CB342-labelson-nodesc">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Folder>
+      <name>Anttolan asutuksen alku</name>
+      <Placemark>
+        <name>Savolahti Mikkeli</name>
+        <description><![CDATA[<img src="savolahti.gif" height="200" width="auto" /><br><br>Vuonna 1929 Suursavolaisessa julkaistun Anttolan asutuksesta kertovan kansantarun mukaan ihmiset liikkuivat ravinnon perässä<br><br>”katselemaan riistamaita ennen katsomattomia, kokemaan kalavesiä ennen kokemattomia”<br><br>Matkamme Anttolaan alkaa Mikkelistä, jota kutsuttiin ennen Savolahdeksi (tai Savilahdeksi).]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3AEDAZkpTqYGpKcvV8iyzMxAo-wOnp81UBVF3jeamsrXs8LIXJNotrFukEhI1YJ5Gq6-OedrZzOP_RXdZTTs2FwXIx86sDiflF5VJO4FAv24svvhcZOPawgtZDy7EkjxOWYQ7Bi32qfqZBZueWjys-GT4VutB1Qdlnnw5il1InZWzYErRx3zYMCvRC3HHAMRZhb2r2PngASyCuVMtH0WtpaLNOvT3beGH1GT428M3wDNP1_Geu_kkbAIQn7MXUP0?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2886662,61.6822044,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>a1,Anttolan Ruokolan kylälle,green,1,Savolahti Mikkeli</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2893116,61.6821005,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>a2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.6158166,61.6518799,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ruokola</name>
+        <description><![CDATA[<img src="ruokola.gif" height="200" width="auto" /><br><br>Ruokolan kylän nimeen sanotaan liittyvän rannoilla ruokailemiseen ja kenties ruokana olikin rantakalaa]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3AEDAZkovs98Oam7MUHfPM-a3WPP5a0WtdReZ4Ezwr_KBE2PGEWvCrC--qaWFfk9M3g0i2G-zvRfcukzbWXDfRU1yAVMC2iHvfmQNmEC5kE7ZDA_MriVPlkESgN_2F5C0DmZErAMHFHVkcYUEJkgVADRpB03GIZEcXkAAzk1YgepJfGiEnxi0cucy7laaMmElVdl6JD7GOhlQSjlu6FkjyuAezQiXEXPdieQoNi63FELI_Yd_oHTtQeKhcp-5McA?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.6183486,61.6525115,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>b1,Hämytsaareen,green,1,Ruokola</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.6190639,61.6518969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>b2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.6290144,61.6389661,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hämytsaari</name>
+        <description><![CDATA[<img src="hämytsaari.gif" height="200" width="auto" /><br><br>Hämytsaaren kuvataan olevan askeettisen kaunis ja hiekkarantainen. <br>Länsi-Savo, 01.08.1999, nro 206, s. 11<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1020450?page=11<br><br>Hämytsaaresta on kotoisin muuan hiihdon olympiamitalisti Eero Kolehmainen ja myös hänelle Hämytsaaren nimen syntyhistoria on ollut tuttu. <br><br>Länsi-Savo, 24.02.2006, nro 54, s. 18<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1053329?page=18<br><br>Länsi-Savo, 02.03.1958, nro 50, s. 4<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1031621?page=4<br> ]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3AEDAZkpg1sbciVX9E9is37elNlAkp6vatWIK2GFvGhsNKWZ8i7r9fGlZcGaQaOnXTKSWvL2Dk3S9NRFO2KV9ifGgQqQ7TfmKhpj157-FuW6eEtjxmkLlMI1WG3we8A_9WAXnkN-gqyDqtsIirl_8ZcMyDHV00RPe5_yIjiZ2egaaiViHVU1GIU4sWLDqUcQ7FIF3g-Rqpk9v1b2ZZEfO0Q_thjT-LL44fXsATKs0hd98S8PPIoTps-LkUSmaSyg?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.6292429,61.6386732,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
