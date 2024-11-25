@@ -44,7 +44,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>a1,Anttolan Ruokolan kylälle,green,1,Savolahti Mikkeli</name>
+        <name>a1,Anttolan Ruokolan kylälle,green,3,Savolahti Mikkeli</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -77,7 +77,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>b1,Hämytsaareen,green,1,Ruokola</name>
+        <name>b1,Hämytsaareen,green,3,Ruokola</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
