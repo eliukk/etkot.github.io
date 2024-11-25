@@ -32,10 +32,10 @@ function rotateCamera(clock) {
 
 function configureTimeout(currentEntity, i) {
 
-  var timeout = 15000;
+  var timeout = 20000;
 
   if (i == 1) {
-    timeout = 5000;
+    timeout = 8000;
   }
 
   timeoutCounter += timeout;
@@ -417,7 +417,7 @@ function togglePresentation() {
                   viewer.camera.flyTo({
                     destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 145000.0),
                   });
-                }, timeoutCounter + 15000));    
+                }, timeoutCounter + 20000));    
               });
   }
   else {
