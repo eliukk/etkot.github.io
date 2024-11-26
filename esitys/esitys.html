@@ -163,7 +163,7 @@ togglePresentation();
 
 function togglePresentation() {
 
-  GLOBAL_TIMEOUT = speedText.value;
+  GLOBAL_TIMEOUT = parseInt(speedText.value);
 
   timeoutCounter = 0;
   isPresentationMode = !isPresentationMode;
