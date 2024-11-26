@@ -117,6 +117,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
     url : 'https://tile.openstreetmap.org/'
 })),
   geocoder: false,
+  creditContainer: document.createElement("none")
 });
 
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
@@ -426,6 +427,7 @@ function togglePresentation() {
                 cameraTimeouts.push(setTimeout(function() {
 
                   viewer.selectedEntity = undefined;
+                  speedText.style.visibility = 'visible';
                   myButton.innerHTML = 'Esitys';
                   isPresentationMode = false;
 
