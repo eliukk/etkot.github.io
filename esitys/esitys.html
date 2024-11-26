@@ -63,8 +63,8 @@ function configureTimeout(currentEntity, i) {
                                       viewer.selectedEntity = undefined;
 
                                       viewer.camera.flyTo({
-                                        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 100000.0),
-                                        maximumHeight: 100000.0,
+                                        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 80000.0),
+                                        maximumHeight: 80000.0,
                                         duration: 5.0
                                       });
                                     }, 12000));*/
@@ -159,7 +159,7 @@ function togglePresentation() {
     myButton.innerHTML = 'Pysäytä esitys';
  
     viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 100000.0),
+        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 80000.0),
     });
 
     viewer.dataSources.removeAll();
@@ -415,7 +415,7 @@ function togglePresentation() {
                   isPresentationMode = false;
 
                   viewer.camera.flyTo({
-                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 100000.0),
+                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 80000.0),
                   });
                 }, timeoutCounter + 20000));    
               });
@@ -432,7 +432,7 @@ function togglePresentation() {
     myButton.innerHTML = 'Esitys';
 
     viewer.camera.flyTo({
-                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 100000.0),
+                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 80000.0),
                   });
   } 
 }
