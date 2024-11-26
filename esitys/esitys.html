@@ -122,7 +122,8 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
 const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
 const myButton = document.createElement("button");
-const speedText = document.createElement("text");
+const speedText = document.createElement("input");
+speedText.type = "text";
 speedText.title = "Aseta siirtymän nopeus paikkojen välillä sekunteina";
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
@@ -130,7 +131,7 @@ myButton.style = "opacity:0.7";
 speedText.style = "opacity:0.7";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
-toolbar.insertBefore(speedText, modeButton);
+toolbar.insertBefore(speedText, myButton);
 
 /*const scene = viewer.scene;
 scene.globe.depthTestAgainstTerrain = true;
