@@ -13,6 +13,10 @@
   </head>
   <body><style>
       @import url(bucket.css);
+
+      .cesium-infoBox-camera{
+        display: none;
+      }
     </style>
     <div id="cesiumContainer" class="fullSize"></div>
     <div id="loadingOverlay"><h1>Loading...</h1></div>
@@ -22,6 +26,7 @@
 
 var unsubscribeTicks = null;
 var timeoutCounter = 0;
+var GLOBAL_TIMEOUT = 20000;
 var cameraTimeouts = [];
 var arrowsData = [];
 var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
@@ -32,7 +37,7 @@ function rotateCamera(clock) {
 
 function configureTimeout(currentEntity, i) {
 
-  var timeout = 20000;
+  var timeout = GLOBAL_TIMEOUT;
 
   if (i == 1) {
     timeout = 8000;
@@ -117,9 +122,12 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
 const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
 const myButton = document.createElement("button");
+const speedText = document.createElement("text");
+speedText.title = "Aseta siirtymän nopeus paikkojen välillä sekunteina";
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
 myButton.style = "opacity:0.7";
+speedText.style = "opacity:0.7";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
 
@@ -152,11 +160,15 @@ togglePresentation();
 //setTimeout(function(){ togglePresentation(); }, 1000);
 
 function togglePresentation() {
+
+  GLOBAL_TIMEOUT = speedText.value;
+
   timeoutCounter = 0;
   isPresentationMode = !isPresentationMode;
 
   if (isPresentationMode) {
     myButton.innerHTML = 'Pysäytä esitys';
+    speedText.style.visibility = 'hidden';
  
     viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
@@ -417,7 +429,7 @@ function togglePresentation() {
                   viewer.camera.flyTo({
                     destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
                   });
-                }, timeoutCounter + 20000));    
+                }, timeoutCounter + GLOBAL_TIMEOUT));    
               });
   }
   else {
@@ -429,6 +441,7 @@ function togglePresentation() {
     //viewer.entities.removeAll();
   
     viewer.selectedEntity = undefined;
+    speedText.style.visibility = 'visible';
     myButton.innerHTML = 'Esitys';
 
     viewer.camera.flyTo({
