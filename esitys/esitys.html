@@ -124,6 +124,7 @@ const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrap
 const myButton = document.createElement("button");
 const speedText = document.createElement("input");
 speedText.type = "text";
+speedText.value = 15;
 speedText.title = "Aseta siirtymän nopeus paikkojen välillä sekunteina";
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
@@ -163,7 +164,7 @@ togglePresentation();
 
 function togglePresentation() {
 
-  GLOBAL_TIMEOUT = parseInt(speedText.value);
+  GLOBAL_TIMEOUT = parseInt(speedText.value) * 1000;
 
   timeoutCounter = 0;
   isPresentationMode = !isPresentationMode;
