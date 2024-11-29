@@ -49,7 +49,7 @@ function configureTimeout(currentEntity, i) {
 
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;
-                  cameraHeight = 2500;
+                  var cameraHeight = 2500;
 
                   viewer.selectedEntity = currentEntity;
 
@@ -214,8 +214,21 @@ function togglePresentation() {
                         "alpha": 1
                     };
 
+                    const expandedPlaceColor = {
+                        "red": 0.00784313725490196,
+                        "green": 0.5333333333333333,
+                        "blue": 0.8196078431372549,
+                        "alpha": 1
+                    };
+
+                    var isExpandedPlace = false;
+
+                    if (dataSource._entityCollection._entities._array[i]._billboard._color._value.blue == expandedPlaceColor.blue) {
+                      isExpandedPlace = true;
+                    }
+
                     //if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
-                    if(dataSource._entityCollection._entities._array[i]._billboard._color._value.blue != placeColor.blue){
+                    if(dataSource._entityCollection._entities._array[i]._billboard._color._value.blue != placeColor.blue && dataSource._entityCollection._entities._array[i]._billboard._color._value.blue != expandedPlaceColor.blue){
 
                       isArrowEntity = true;
 
@@ -339,7 +352,7 @@ function togglePresentation() {
                   if (i == 0) {
                     viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
                   }
-                  else if (!isArrowEntity) {
+                  else if (!isArrowEntity && !isExpandedPlace) {
                     configureTimeout(dataSource._entityCollection._entities._array[i], i);
                   }
                   i+=1;
