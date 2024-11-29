@@ -188,7 +188,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>e1,Pitkälahteen,green,5,Korvensaari</name>
+        <name>e1,Pitkälahteen,green,5,Korvensaari,15000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
