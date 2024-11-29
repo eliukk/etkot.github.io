@@ -137,7 +137,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>c1,Korvensaareen,green,4,Hämytsaari</name>
+        <name>c1,Korvensaareen,green,5,Hämytsaari</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -170,7 +170,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>d1,Pitkälahteen,green,4,Korvensaari</name>
+        <name>d1,Pitkälahteen,green,5,Korvensaari</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -188,7 +188,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>e1,Pitkälahteen,green,4,Korvensaari</name>
+        <name>e1,Pitkälahteen,green,5,Korvensaari</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -221,7 +221,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>f1,Pilkkarantaan,green,4,Pitkälahti</name>
+        <name>f1,Pilkkarantaan,green,5,Pitkälahti</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -254,7 +254,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>g1,Konttikalliolle,green,4,Pilkkaranta</name>
+        <name>g1,Konttikalliolle,green,5,Pilkkaranta</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -287,7 +287,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>h1,Ikolaan,green,4,Konttikallio</name>
+        <name>h1,Ikolaan,green,5,Konttikallio</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -320,7 +320,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>i1,Hiidenmaalle,green,4,Ikola</name>
+        <name>i1,Hiidenmaalle,green,5,Ikola</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -353,7 +353,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>j1,,green,4,Hiidenmaa</name>
+        <name>j1,,green,5,Hiidenmaa</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -386,7 +386,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>k1,Piskolaan,green,4,Asutus leviää itään</name>
+        <name>k1,Piskolaan,yellow,10,Asutus leviää itään</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -413,7 +413,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>l1,Maljalaan,green,4,Asutus leviää itään</name>
+        <name>l1,Maljalaan,yellow,10,Asutus leviää itään</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -440,7 +440,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>m1,Montolaan,green,4,Asutus leviää itään</name>
+        <name>m1,Montolaan,yellow,10,Asutus leviää itään</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -467,7 +467,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>r1,Kääriälään,green,4,Asutus leviää itään</name>
+        <name>r1,Kääriälään,yellow,10,Asutus leviää itään</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -494,7 +494,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>q1,Kähkölään,green,4,Asutus leviää itään,15000</name>
+        <name>q1,Kähkölään,yellow,10,Asutus leviää itään,25000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -521,7 +521,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>p1,Hylkylään,green,4,Asutus leviää itään</name>
+        <name>p1,Hylkylään,yellow,10,Asutus leviää itään</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -548,7 +548,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>n1,Hauhalaan,green,4,Asutus leviää itään</name>
+        <name>n1,Hauhalaan,yellow,10,Asutus leviää itään</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -575,7 +575,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>o1,Huttulaan,green,4,Asutus leviää itään</name>
+        <name>o1,Huttulaan,yellow,10,Asutus leviää itään,25000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -602,7 +602,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>s1,Anttolaan,green,4,Anttola,15000</name>
+        <name>s1,Anttolaan,green,5,Anttola,25000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
