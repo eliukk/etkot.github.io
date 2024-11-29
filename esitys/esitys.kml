@@ -414,7 +414,7 @@
       </Placemark>
       <Placemark>
         <name>l1,Maljalaan,green,1,Asutus leviää itään</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6932088,61.6104457,0
@@ -441,7 +441,7 @@
       </Placemark>
       <Placemark>
         <name>m1,Montolaan,green,1,Asutus leviää itään</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6929869,61.6103475,0
@@ -468,7 +468,7 @@
       </Placemark>
       <Placemark>
         <name>r1,Kääriälään,green,1,Asutus leviää itään</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6927294,61.610421,0
@@ -495,7 +495,7 @@
       </Placemark>
       <Placemark>
         <name>q1,Kähkölään,green,1,Asutus leviää itään,15000</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6927659,61.6103822,0
@@ -522,7 +522,7 @@
       </Placemark>
       <Placemark>
         <name>p1,Hylkylään,green,1,Asutus leviää itään</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6931856,61.6103977,0
@@ -549,7 +549,7 @@
       </Placemark>
       <Placemark>
         <name>n1,Hauhalaan,green,1,Asutus leviää itään</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6931253,61.6103719,0
@@ -576,7 +576,7 @@
       </Placemark>
       <Placemark>
         <name>o1,Huttulaan,green,1,Asutus leviää itään</name>
-        <styleUrl>#icon-1899-0288D1-labelson-nodesc</styleUrl>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
             27.6928588,61.6103582,0
