@@ -49,7 +49,7 @@ function configureTimeout(currentEntity, i) {
 
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;
-                  var cameraHeight = 2500;
+                  var cameraHeight = 4500;
 
                   viewer.selectedEntity = currentEntity;
 
@@ -280,10 +280,10 @@ function togglePresentation() {
                           }
 
                           if (currentName[5]) {
-                            arrowCoords[arrowName].cameraHeight = currentName[5];
+                            arrowCoords[arrowName].cameraHeight = parseInt(currentName[5]);
                           }
                           else {
-                            arrowCoords[arrowName].cameraHeight = 2500;
+                            arrowCoords[arrowName].cameraHeight = 4500;
                           }
 
                         }
@@ -320,10 +320,10 @@ function togglePresentation() {
                           }
 
                           if (currentName[5]) {
-                            newArrowPoints.cameraHeight = currentName[5];
+                            newArrowPoints.cameraHeight = parseInt(currentName[5]);
                           }
                           else {
-                            newArrowPoints.cameraHeight = 2500;
+                            newArrowPoints.cameraHeight = 4500;
                           }
 
                           arrowCoords[arrowName] = newArrowPoints;
