@@ -60,7 +60,9 @@ function configureTimeout(currentEntity, i) {
                     }
 
                     if (arrowData.arrowTriggers.includes(currentEntity._name)) {
-                      cameraHeight = arrowData.cameraHeight;
+                      if (arrowData.cameraHeight) {
+                        cameraHeight = arrowData.cameraHeight;
+                      }
                     }
                   });
 
