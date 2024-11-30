@@ -183,7 +183,7 @@ function togglePresentation() {
     speedText.style.visibility = 'hidden';
  
     viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
+        destination: Cesium.Cartesian3.fromDegrees(27.6508158,61.5833936, 60000.0),
     });
 
     viewer.dataSources.removeAll();
@@ -469,7 +469,7 @@ function togglePresentation() {
                   isPresentationMode = false;
 
                   viewer.camera.flyTo({
-                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
+                    destination: Cesium.Cartesian3.fromDegrees(27.6508158,61.5833936, 60000.0),
                   });
                 }, timeoutCounter + GLOBAL_TIMEOUT));    
               });
@@ -487,7 +487,7 @@ function togglePresentation() {
     myButton.innerHTML = 'Esitys';
 
     viewer.camera.flyTo({
-                    destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
+                    destination: Cesium.Cartesian3.fromDegrees(27.6508158,61.5833936, 60000.0),
                   });
   } 
 }
