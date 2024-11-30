@@ -374,9 +374,11 @@ function togglePresentation() {
                   var arrowColor = value.arrowColor;
                   const arrowSpeed = value.arrowSpeed;
                   const arrowTriggers = value.arrowTriggers;
+                  const cameraHeight = value.cameraHeight;
 
                   var arrowData = {};
                   arrowData.arrowTriggers = arrowTriggers;
+                  arrowData.cameraHeight = cameraHeight;
 
                   if (arrowColor in colors) {
                     arrowColor = colors[arrowColor];
