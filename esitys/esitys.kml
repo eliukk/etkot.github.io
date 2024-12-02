@@ -476,7 +476,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>q1,Kähkölään,yellow,10,Asutus leviää itään,25000</name>
+        <name>q1,Kähkölään,yellow,10,Asutus leviää itään,36000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -557,7 +557,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>o1,Huttulaan,yellow,10,Asutus leviää itään,35000</name>
+        <name>o1,Huttulaan,yellow,10,Asutus leviää itään,36000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -584,7 +584,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>s1,Anttolaan,green,5,Asutus leviää itään,35000</name>
+        <name>s1,Anttolaan,green,5,Asutus leviää itään,36000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
