@@ -58,6 +58,10 @@ function configureTimeout(currentEntity, i) {
                       arrowData.arrow.show = true;
                       arrowData.label.show = true;
                     }
+                    else{
+                      arrowData.arrow.show = false;
+                      arrowData.label.show = false;
+                    }
 
                     if (arrowData.arrowTriggers.includes(currentEntity._name)) {
                       if (arrowData.cameraHeight) {

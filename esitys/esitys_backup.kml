@@ -353,6 +353,24 @@
         </Point>
       </Placemark>
       <Placemark>
+        <name>j1,,green,5,Hiidenmaa</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.757217,61.6613343,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>j2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.6929567,61.6106666,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>Asutus leviää itään</name>
         <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Asutus lähti leviämään laajasti itään ja paikoin muita ilmansuuntia muodostaen Anttolan.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
