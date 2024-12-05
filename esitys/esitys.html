@@ -42,7 +42,7 @@ function configureTimeout(currentEntity, i) {
   if (i == 1) {
     timeout = 8000;
   }
-  else if (currentEntity._description._value.length > 1000){
+  else if (currentEntity._description._value.length > 1000) {
     timeout = 20000;
   }
 
@@ -61,7 +61,7 @@ function configureTimeout(currentEntity, i) {
                       setTimeout(function showArrow() {
                         arrowData.arrow.show = true;
                         arrowData.label.show = true;
-                      }, timeout -2000);
+                      }, arrowData.arrowTimeout);
                     }
                     else{
                       setTimeout(function hideArrow() {
@@ -303,6 +303,13 @@ function togglePresentation() {
                             arrowCoords[arrowName].cameraHeight = 4500;
                           }
 
+                          if (currentName[6]) {
+                            arrowCoords[arrowName].arrowTimeout = parseInt(currentName[6]);
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowTimeout = GLOBAL_TIMEOUT -2000;
+                          }
+
                         }
                         else {
                           newArrowPoints.lon1 = lon;
@@ -341,6 +348,13 @@ function togglePresentation() {
                           }
                           else {
                             newArrowPoints.cameraHeight = 4500;
+                          }
+
+                          if (currentName[6]) {
+                            newArrowPoints.arrowTimeout = parseInt(currentName[6]);
+                          }
+                          else {
+                            newArrowPoints.arrowTimeout = GLOBAL_TIMEOUT -2000;
                           }
 
                           arrowCoords[arrowName] = newArrowPoints;
@@ -390,10 +404,12 @@ function togglePresentation() {
                   const arrowSpeed = value.arrowSpeed;
                   const arrowTriggers = value.arrowTriggers;
                   const cameraHeight = value.cameraHeight;
+                  const arrowTimeout = value.arrowTimeout;
 
                   var arrowData = {};
                   arrowData.arrowTriggers = arrowTriggers;
                   arrowData.cameraHeight = cameraHeight;
+                  arrowData.arrowTimeout = arrowTimeout;
 
                   if (arrowColor in colors) {
                     arrowColor = colors[arrowColor];
