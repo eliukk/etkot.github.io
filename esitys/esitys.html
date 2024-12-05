@@ -55,12 +55,16 @@ function configureTimeout(currentEntity, i) {
 
                   arrowsData.forEach(function (arrowData) {
                     if (arrowData.arrowTriggers.includes(currentEntity._name) || arrowData.arrowTriggers.includes("all")) {
-                      arrowData.arrow.show = true;
-                      arrowData.label.show = true;
+                      setTimeout(function showArrow() {
+                        arrowData.arrow.show = true;
+                        arrowData.label.show = true;
+                      }, 2000);
                     }
                     else{
-                      arrowData.arrow.show = false;
-                      arrowData.label.show = false;
+                      setTimeout(function hideArrow() {
+                        arrowData.arrow.show = false;
+                        arrowData.label.show = false;
+                        }, 6000);
                     }
 
                     if (arrowData.arrowTriggers.includes(currentEntity._name)) {
