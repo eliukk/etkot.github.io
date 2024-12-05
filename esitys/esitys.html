@@ -58,13 +58,13 @@ function configureTimeout(currentEntity, i) {
                       setTimeout(function showArrow() {
                         arrowData.arrow.show = true;
                         arrowData.label.show = true;
-                      }, 2000);
+                      }, timeout);
                     }
                     else{
                       setTimeout(function hideArrow() {
                         arrowData.arrow.show = false;
                         arrowData.label.show = false;
-                        }, 6000);
+                        }, 5000);
                     }
 
                     if (arrowData.arrowTriggers.includes(currentEntity._name)) {

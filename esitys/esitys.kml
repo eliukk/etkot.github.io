@@ -123,7 +123,7 @@
       </Placemark>
       <Placemark>
         <name>Hämytsaari</name>
-        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Ruokolasta näkyi hämärästi Hämytsaari. <br><br>Hämytsaaren kuvataan olevan askeettisen kaunis ja hiekkarantainen. <br>Länsi-Savo, 01.08.1999, nro 206, s. 11<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1020450?page=11<br><br>Hämytsaaresta on kotoisin muuan hiihdon olympiamitalisti Eero Kolehmainen ja myös hänelle Hämytsaaren nimen syntyhistoria on ollut tuttu. <br><br>Länsi-Savo, 24.02.2006, nro 54, s. 18<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1053329?page=18<br><br>Länsi-Savo, 02.03.1958, nro 50, s. 4<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1031621?page=4]]></description>
+        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Ruokolasta näkyi hämärästi Hämytsaari. <br><br>Hämytsaaren kuvataan olevan askeettisen kaunis ja hiekkarantainen (vähän kuin Puumalan Pistohiekka). <br>Länsi-Savo, 01.08.1999, nro 206, s. 11<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1020450?page=11<br><br>Hämytsaaresta on kotoisin muuan hiihdon olympiamitalisti Eero Kolehmainen ja myös hänelle Hämytsaaren nimen syntyhistoria on ollut tuttu. <br><br>Länsi-Savo, 24.02.2006, nro 54, s. 18<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1053329?page=18<br><br>Länsi-Savo, 02.03.1958, nro 50, s. 4<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1031621?page=4]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -156,7 +156,7 @@
       </Placemark>
       <Placemark>
         <name>Korvensaari</name>
-        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>”Korpi korkea kohosi”, kun ihmiset soutivat saaren ohi ja näin sai nimensä Korvensaari.  ]]></description>
+        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Ihmiset soutivat saaren ohi ja ”Korpi korkea kohosi”. Näin sai nimensä Korvensaari]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -207,7 +207,7 @@
       </Placemark>
       <Placemark>
         <name>Pitkälahti</name>
-        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Pitkälahti sai kansantarussa nimensä siitä, miten pitkä lahti olikaan.  ]]></description>
+        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Pitkälahti sai kansantarussa nimensä siitä, miten pitkä lahti olikaan ja myös sen rannoilla oleva kylä nimettiin sen mukaan.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -273,7 +273,7 @@
       </Placemark>
       <Placemark>
         <name>Konttikallio</name>
-        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Kavuttiin kalliolle ja ”Kontit oksille osoitti”, kun saavuttiin Konttikalliolle.]]></description>
+        <description><![CDATA[<img src="hämytsaari.jpg" height="200" width="auto" /><br><br>Matka jatkui ja kavuttiin kalliolle ja ”Kontit oksille osoitti”, kun saavuttiin Konttikalliolle.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -320,7 +320,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>i1,Hiidenmaalle,red,5,Ikola</name>
+        <name>i1,Hiidenmaalle,red,5,Ikola,36000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
