@@ -61,28 +61,6 @@ function configureTimeout(currentEntity, i) {
                       setTimeout(function showArrow() {
                         arrowData.arrow.show = true;
                         arrowData.label.show = true;
-
-                        if (arrowData.cameraHeight) {
-                          cameraHeight = arrowData.cameraHeight;
-
-                          // Get the current camera position
-                          let currentPosition = viewer.camera.position;
-
-                          // Calculate the current height above the ellipsoid
-                          let currentCartographic = Cesium.Cartographic.fromCartesian(currentPosition);
-                          let currentHeight = currentCartographic.height;
-
-                          // Set the desired height
-                          let desiredHeight = cameraHeight;
-
-                          // Calculate the height difference
-                          let heightDifference = desiredHeight - currentHeight;
-
-                          // Create a new Cartesian3 object by adding the height difference to the current position
-                          let newPosition = Cesium.Cartesian3.add(currentPosition, Cesium.Cartesian3.fromRadians(0, 0, heightDifference), new Cesium.Cartesian3());
-
-                          viewer.camera.position = newPosition;
-                        }
                       }, arrowData.arrowTimeout);
                     }
                     else{
@@ -92,11 +70,11 @@ function configureTimeout(currentEntity, i) {
                         }, 7000);
                     }
 
-                    /*if (arrowData.arrowTriggers.includes(currentEntity._name)) {
+                    if (arrowData.arrowTriggers.includes(currentEntity._name)) {
                       if (arrowData.cameraHeight) {
                         cameraHeight = arrowData.cameraHeight;
                       }
-                    }*/
+                    }
                   });
 
                   viewer.flyTo(currentEntity, {duration:5.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {
