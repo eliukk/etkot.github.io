@@ -64,6 +64,14 @@ function configureTimeout(currentEntity, i) {
 
                         if (arrowData.cameraHeight) {
                           cameraHeight = arrowData.cameraHeight;
+
+                          let currentPosition = viewer.camera.position;
+                          let newPosition = new Cesium.Cartesian3(
+                              currentPosition.x,
+                              currentPosition.y,
+                              cameraHeight
+                          );
+                          viewer.camera.position = newPosition;
                         }
                       }, arrowData.arrowTimeout);
                     }
