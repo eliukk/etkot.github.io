@@ -65,12 +65,22 @@ function configureTimeout(currentEntity, i) {
                         if (arrowData.cameraHeight) {
                           cameraHeight = arrowData.cameraHeight;
 
+                          // Get the current camera position
                           let currentPosition = viewer.camera.position;
-                          let newPosition = new Cesium.Cartesian3(
-                              currentPosition.x,
-                              currentPosition.y,
-                              cameraHeight
-                          );
+
+                          // Calculate the current height above the ellipsoid
+                          let currentCartographic = Cesium.Cartographic.fromCartesian(currentPosition);
+                          let currentHeight = currentCartographic.height;
+
+                          // Set the desired height
+                          let desiredHeight = cameraHeight;
+
+                          // Calculate the height difference
+                          let heightDifference = desiredHeight - currentHeight;
+
+                          // Create a new Cartesian3 object by adding the height difference to the current position
+                          let newPosition = Cesium.Cartesian3.add(currentPosition, Cesium.Cartesian3.fromRadians(0, 0, heightDifference), new Cesium.Cartesian3());
+
                           viewer.camera.position = newPosition;
                         }
                       }, arrowData.arrowTimeout);
