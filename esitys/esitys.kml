@@ -156,7 +156,7 @@
       </Placemark>
       <Placemark>
         <name>Korvensaari</name>
-        <description><![CDATA[<img src="korvensaari.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Anttola, Patalahti. 1900-luvun alkuvuosilta.<br>https://finna.fi/Record/mkm.166867596786200</p><br>Ihmiset soutivat saaren ohi ja ”Korpi korkea kohosi”. Näin sai nimensä Korvensaari.]]></description>
+        <description><![CDATA[<img src="korvensaari.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Anttola. Näköala eversti Emil Lind'in huvilalta Patalahdelle. 1900-luvun alkuvuosilta. Mikkelin kaupungin museot.<br>https://finna.fi/Record/mkm.166867596790400</p><br>Ihmiset soutivat saaren ohi ja ”Korpi korkea kohosi”. Näin sai nimensä Korvensaari.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -354,7 +354,7 @@
       </Placemark>
       <Placemark>
         <name>Asutus leviää itään</name>
-        <description><![CDATA[<img src="itaan.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Anttola. Näköala eversti Emil Lind'in huvilalta Patalahdelle. 1900-luvun alkuvuosilta. Mikkelin kaupungin museot.<br>https://finna.fi/Record/mkm.166867596790400</p><br>Asutus lähti leviämään laajasti itään ja paikoin kohti muita ilmansuuntia muodostaen Anttolan.]]></description>
+        <description><![CDATA[<img src="itaan.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Anttola, Patalahti. 1900-luvun alkuvuosilta. Mikkelin kaupungin museot.<br>https://finna.fi/Record/mkm.166867596786200</p><br>Asutus lähti leviämään laajasti itään ja paikoin kohti muita ilmansuuntia muodostaen Anttolan.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
