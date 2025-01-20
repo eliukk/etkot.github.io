@@ -54,7 +54,7 @@
     </Style>
     <Folder>
       <name>Anttolan asutuksen alku</name>
-      <description><![CDATA[Tarina pohjautuu vanhaksi kansantaruksi sanottuun kertomukseen Anttolan asuttamisesta. Se kertoo syntytarinan monille alueen paikkakunnille.<br><br>Suursavolainen, 27.09.1921, nro 93, s. 2<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1471407/articles/79466871?page=2]]></description>
+      <description><![CDATA[Tarina pohjautuu vanhaksi kansantaruksi sanottuun kertomukseen Anttolan asuttamisesta. Se kertoo syntytarinan monille alueen kylille.<br><br>Suursavolainen, 27.09.1921, nro 93, s. 2<br>https://digi.kansalliskirjasto.fi/sanomalehti/binding/1471407/articles/79466871?page=2]]></description>
       <Placemark>
         <name>Savolahti Mikkeli</name>
         <description><![CDATA[<img src="savolahti.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Näköala Hiihtomäen tornista. Mikkeli. Kuvassa mäntymetsää Kattilansillasta Anttolaan päin. Mikkelin kaupungin museot.<br>https://finna.fi/Record/mkm.166867595862400</p><br>Matkamme Anttolaan alkaa Mikkelistä, jota kutsuttiin ennen Savolahdeksi (tai Savilahdeksi).<br><br>Vuonna 1929 Suursavolaisessa julkaistun Anttolan asutuksesta kertovan kansantarun mukaan ihmiset liikkuivat ravinnon perässä:<br><br>”katselemaan riistamaita ennen katsomattomia, kokemaan kalavesiä ennen kokemattomia”]]></description>
@@ -170,7 +170,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>d1,Pitkälahteen,green,5,Korvensaari</name>
+        <name>d1,Pitkälahdelle,green,5,Korvensaari</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -188,7 +188,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>e1,Pitkälahteen,green,5,Korvensaari,15000</name>
+        <name>e1,Pitkälahdelle,green,5,Korvensaari,15000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
