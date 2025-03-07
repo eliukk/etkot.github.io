@@ -39,14 +39,12 @@ function rotateCamera(clock) {
 function configureTimeout(currentEntity, i) {
 
   var timeout = GLOBAL_TIMEOUT;
-  var cameraHeight = 1500;
 
   if (i == 1) {
     timeout = 8000;
   }
   else if (prevEntityDescription == currentEntity._description._value) {
-    timeout = 3000;
-    cameraHeight = 20000;
+    timeout = 5000;
   }
   else if (currentEntity._description._value.length > 1000) {
     timeout = 20000;
@@ -56,6 +54,8 @@ function configureTimeout(currentEntity, i) {
   timeoutCounter += timeout;
   
   cameraTimeouts.push(setTimeout(function() {
+
+                  var cameraHeight = 500;
 
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;

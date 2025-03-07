@@ -77,12 +77,48 @@
         </Point>
       </Placemark>
       <Placemark>
+        <name>f1,,green,3,Puula</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.6773488,61.7344457,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>f2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.692569,61.703012,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>Suonsalmi</name>
         <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             26.692632,61.7027317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>g1,,green,5,Suonsalmi</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.6926001,61.7025268,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>g2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.7620211,61.6285043,0
           </coordinates>
         </Point>
       </Placemark>
@@ -97,12 +133,48 @@
         </Point>
       </Placemark>
       <Placemark>
+        <name>h1,,green,5,Suonsalmelta Kissakoskelle,30000</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.7617585,61.6280977,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>h2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.66199,61.6023488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>Ripatinkoski</name>
         <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
             26.6610463,61.6018901,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>j1,,green,5,Ripatinkoski,30000</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.6616617,61.6017158,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>j2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            26.6852141,61.5900388,0
           </coordinates>
         </Point>
       </Placemark>
@@ -117,7 +189,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>c1,Mäntyharjulle ja Kymijoelle,green,1,Sämpiä,40000</name>
+        <name>c1,Mäntyharjulle ja Kymijoelle,green,1,Sämpiä,60000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
