@@ -39,24 +39,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>a1,,green,1,Koski</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7502342,61.624319,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>a2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.752594,61.624438,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>Kanava</name>
         <description><![CDATA[<span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
@@ -67,7 +49,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>b1,,green,1,Kanava</name>
+        <name>b1,,green,6,Kanava</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -198,7 +180,7 @@
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            26.7474802,61.6245345,0
+            26.7478155,61.6244363,0
           </coordinates>
         </Point>
       </Placemark>
@@ -208,7 +190,7 @@
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
-            26.7472143,61.6245391,0
+            26.7472197,61.6244907,0
           </coordinates>
         </Point>
       </Placemark>
@@ -223,7 +205,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>d1,Otavaan,green,1,Hinaus Kissakoski - Otava,20000 </name>
+        <name>d1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000 </name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -241,7 +223,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>e1,Otavaan,green,1,Hinaus Kissakoski - Otava,20000</name>
+        <name>e1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -255,6 +237,16 @@
         <Point>
           <coordinates>
             27.0636795,61.6517071,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Otava</name>
+        <description><![CDATA[Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin.<br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            27.0639952,61.6513817,0
           </coordinates>
         </Point>
       </Placemark>
