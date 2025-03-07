@@ -44,7 +44,7 @@ function configureTimeout(currentEntity, i) {
     timeout = 8000;
   }
   else if (prevEntityDescription == currentEntity._description._value) {
-    timeout = 5000;
+    timeout = 8000;
   }
   else if (currentEntity._description._value.length > 1000) {
     timeout = 20000;
@@ -83,7 +83,7 @@ function configureTimeout(currentEntity, i) {
                     }
                   });
 
-                  viewer.flyTo(currentEntity, {duration:5.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {
+                  viewer.flyTo(currentEntity, {duration:8.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {
                                     //viewer.trackedEntity = currentEntity;
                                     //viewer.trackedEntity;
 

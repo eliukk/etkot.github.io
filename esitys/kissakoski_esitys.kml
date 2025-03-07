@@ -2,7 +2,6 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Hirvensalmen Kissakosken vaiheita</name>
-    <description><![CDATA[Kissakoski sijaitsee noin kahden kilometrin päässä Hirvensalmen kirkonkylältä.<br>Esityksen tekstiosuuden lähteet:<br>Kinnunen, E., Puntanen, P., Hangasmaa, L., & Hirvensalmen kunta. (2022). Hirvensalmi 1868-2018: Tervaleppäkunta Puulan rannalla. Hirvensalmen kunta.<br>https://fi.wikipedia.org/wiki/Kissakoski<br>https://www.sssoy.fi/kissakosken-vesivoimalaitos/<br>]]></description>
     <Style id="icon-1899-0288D1-labelson">
       <IconStyle>
         <color>ffd18802</color>
@@ -26,312 +25,309 @@
         <text><![CDATA[<h3>$[name]</h3>]]></text>
       </BalloonStyle>
     </Style>
-    <Folder>
-      <name>Hirvensalmen Kissakosken vaiheita</name>
-      <Placemark>
-        <name>Koski</name>
-        <description>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.</description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7500894,61.6243101,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Kanava</name>
-        <description><![CDATA[<span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7526986,61.6244431,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>b1,,green,6,Kanava</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7527557,61.6245294,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>b2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6777767,61.7347898,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Puula</name>
-        <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.6775316,61.7349893,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>f1,,green,3,Puula</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6773488,61.7344457,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>f2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.692569,61.703012,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Suonsalmi</name>
-        <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.692632,61.7027317,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>g1,,green,5,Suonsalmi</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6926001,61.7025268,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>g2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7620211,61.6285043,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Suonsalmelta Kissakoskelle</name>
-        <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7621058,61.6281731,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>h1,,green,5,Suonsalmelta Kissakoskelle,30000</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7617585,61.6280977,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>h2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.66199,61.6023488,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Ripatinkoski</name>
-        <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.6610463,61.6018901,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>j1,,green,5,Ripatinkoski,30000</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6616617,61.6017158,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>j2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6852141,61.5900388,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Sämpiä</name>
-        <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.6863938,61.589133,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>c1,Mäntyharjulle ja Kymijoelle,green,1,Sämpiä,60000</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6873538,61.588291,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>c2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.679549,61.429691,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Mäntyharjulle ja Kymijoen suuntaan</name>
-        <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.679629,61.4286929,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Paperitehdas</name>
-        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.<br>” Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.” Uusi Aura, 18.02.1909, nro 40, s. 6]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7473998,61.6245495,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Ernst Klaile</name>
-        <description><![CDATA[<span style="color:green">Ernst Klaile</span> toimi tehtaan isännöitsijänä vuosina <span style="color:red">1909-1937</span> ja vuodesta <span style="color:red">1922</span> lähtien myös toimitusjohtajana. <span style="color:green">Klaile</span> osallistui myös aktiivisesti <span style="color:blue">Hirvensalmen</span> yhteiskunnalliseen elämään, vaikuttaen esimerkiksi kunnanvaltuustossa. <span style="color:green">Klaile</span> asui <span style="color:blue">Kanervalan</span> tilalla lähellä kirkonkylää.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7822942,61.6304389,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Kansakoulu</name>
-        <description><![CDATA[ehtaan henkilökunnalle rakennettiin tehtaan lähiympäristöön asuntoja ja vuoteen <span style="color:red">1917</span> mennessä alueelle oli valmistunut 23 asuinrakennusta. Myös oma Kansakoulu valmistui <span style="color:blue">Kissakoskelle</span> vuonna <span style="color:red">1916</span>. Tehtaan ympärille muodostui tehdasyhdyskunta, jossa oli tehtaan työntekijöiden perheenjäsenet mukaan luettuna noin 600 henkeä.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7576388,61.6215832,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Paperitehtaan tulipalo</name>
-        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehdas tuhoutui tulipalossa vuonna <span style="color:red">1920</span>, tehdas oli puurakenteinen.<br>” <span style="color:blue">Kissakoskelta</span> telefonoitiin meille tänään aamupäiwällä: Tänä aamuna kello ½ 7 tienoissa syttyi <span style="color:blue">Kissakosken</span> tehdasrakennuksessa tulipalo, joka wajaassa tunnissa häwitti koko komean tehtaan.<br>Tuli pääsi irti toistaiseksi lähemmin tuntemattomalla tawalla tehdasrakennuksen alakerrassa olewassa konehuoneessa. Kaikki sammutusyritykset oliwat turhia. Kiireimmän kautta koetti tehtaan yläkerrassa työskentelewä henkilökunta pelastautua hyppäämällä ikkunoista pihalle.” Mikkelin Sanomat, 16.04.1920, nro 42, s. 2]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7478155,61.6244363,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Puuhiomo tiilestä</name>
-        <description><![CDATA[Puuhiomo rakennettiin uudelleen tiilestä tulipalon jälkeen. Puuhiomon toiminta aloitettiin marraskuussa <span style="color:red">1920</span>. Paperin valmistaminen lopetettiin täysin tehtaan tulipalon jälkeen ja tuotannossa keskityttiin ainoastaan kosteaan puumassaan. Ennen tulipaloa tehtaalla oli töissä yli 200 henkeä, mutta tulipalon jälkeen vuonna <span style="color:red">1921</span> tehtaan työntekijöiden määrä laski 92 henkeen. Myös <span style="color:blue">Hirvensalmen</span> väkiluku kääntyi laskuun.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7472197,61.6244907,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Hinaus Kissakoski - Otava</name>
-        <description><![CDATA[Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin. <br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7638842,61.6294185,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>d1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000 </name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7639757,61.6296916,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>d2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7010751,61.7378458,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>e1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7077817,61.7386097,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>e2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            27.0636795,61.6517071,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Otava</name>
-        <description><![CDATA[Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin.<br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            27.0639952,61.6513817,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Kissakosken sähköntuotanto</name>
-        <description><![CDATA[Tulipalon jälkeisinä vuosikymmeninä tehdas ja sen vanheneva puuhiomo kohtasivat kannattavuushaasteita. Vähitellen <span style="color:blue">Kissakoskella</span> siirryttiin kehittämään sähköenergiaa, jo vuosina <span style="color:red">1909-1910</span> tehtaan omiin tarpeisiin oli rakennettu voimalaitos. <br><span style="color:blue">Kissakoskelle</span> valmistui vuonna <span style="color:red">1932</span> uusi voimalaitos puuhiomoa vastapäätä. Voimalaitos toimitti sähköä esimerkiksi <span style="color:blue">Mikkelin</span> kaupungille ja myöhemmässä vaiheessa se toimi pääasiassa valtakunnan sähköverkon tasauslaitoksena.<br><span style="color:blue">Kissakoskelle</span> valmistui uusi voimalaitos vuonna <span style="color:red">2012</span>.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7475777,61.6242618,0
-          </coordinates>
-        </Point>
-      </Placemark>
-    </Folder>
+    <Placemark>
+      <name>Koski</name>
+      <description>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.</description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7500894,61.6243101,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kanava v.1831-1854</name>
+      <description><![CDATA[<span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7526986,61.6244431,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>b1,,green,6,Kanava</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.7527557,61.6245294,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>b2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.6777767,61.7347898,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Puula</name>
+      <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.6775316,61.7349893,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>f1,,green,3,Puula</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.6773488,61.7344457,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>f2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.692569,61.703012,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Suonsalmi</name>
+      <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.692632,61.7027317,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>g1,,green,5,Suonsalmi</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.6926001,61.7025268,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>g2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.7620211,61.6285043,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Suonsalmelta Kissakoskelle</name>
+      <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7621058,61.6281731,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>h1,,green,5,Suonsalmelta Kissakoskelle,30000</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.7617585,61.6280977,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>h2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.66199,61.6023488,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ripatinkoski</name>
+      <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.6610463,61.6018901,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>j1,,green,5,Ripatinkoski,30000</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.6616617,61.6017158,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>j2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.6852141,61.5900388,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sämpiä</name>
+      <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.6863938,61.589133,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>c1,Mäntyharjulle ja Kymijoelle,green,1,Sämpiä,60000</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.6873538,61.588291,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>c2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.679549,61.429691,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mäntyharjulle ja Kymijoen suuntaan</name>
+      <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.679629,61.4286929,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Paperitehdas v.1910</name>
+      <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.<br>” Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.” Uusi Aura, 18.02.1909, nro 40, s. 6]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7473998,61.6245495,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ernst Klaile</name>
+      <description><![CDATA[<span style="color:green">Ernst Klaile</span> toimi tehtaan isännöitsijänä vuosina <span style="color:red">1909-1937</span> ja vuodesta <span style="color:red">1922</span> lähtien myös toimitusjohtajana. <span style="color:green">Klaile</span> osallistui myös aktiivisesti <span style="color:blue">Hirvensalmen</span> yhteiskunnalliseen elämään, vaikuttaen esimerkiksi kunnanvaltuustossa. <span style="color:green">Klaile</span> asui <span style="color:blue">Kanervalan</span> tilalla lähellä kirkonkylää.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7822942,61.6304389,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kansakoulu</name>
+      <description><![CDATA[ehtaan henkilökunnalle rakennettiin tehtaan lähiympäristöön asuntoja ja vuoteen <span style="color:red">1917</span> mennessä alueelle oli valmistunut 23 asuinrakennusta. Myös oma Kansakoulu valmistui <span style="color:blue">Kissakoskelle</span> vuonna <span style="color:red">1916</span>. Tehtaan ympärille muodostui tehdasyhdyskunta, jossa oli tehtaan työntekijöiden perheenjäsenet mukaan luettuna noin 600 henkeä.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7576388,61.6215832,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Paperitehtaan tulipalo v.1920</name>
+      <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehdas tuhoutui tulipalossa vuonna <span style="color:red">1920</span>, tehdas oli puurakenteinen.<br>” <span style="color:blue">Kissakoskelta</span> telefonoitiin meille tänään aamupäiwällä: Tänä aamuna kello ½ 7 tienoissa syttyi <span style="color:blue">Kissakosken</span> tehdasrakennuksessa tulipalo, joka wajaassa tunnissa häwitti koko komean tehtaan.<br>Tuli pääsi irti toistaiseksi lähemmin tuntemattomalla tawalla tehdasrakennuksen alakerrassa olewassa konehuoneessa. Kaikki sammutusyritykset oliwat turhia. Kiireimmän kautta koetti tehtaan yläkerrassa työskentelewä henkilökunta pelastautua hyppäämällä ikkunoista pihalle.” Mikkelin Sanomat, 16.04.1920, nro 42, s. 2]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7478155,61.6244363,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Puuhiomo tiilestä v.1920</name>
+      <description><![CDATA[Puuhiomo rakennettiin uudelleen tiilestä tulipalon jälkeen. Puuhiomon toiminta aloitettiin marraskuussa <span style="color:red">1920</span>. Paperin valmistaminen lopetettiin täysin tehtaan tulipalon jälkeen ja tuotannossa keskityttiin ainoastaan kosteaan puumassaan. Ennen tulipaloa tehtaalla oli töissä yli 200 henkeä, mutta tulipalon jälkeen vuonna <span style="color:red">1921</span> tehtaan työntekijöiden määrä laski 92 henkeen. Myös <span style="color:blue">Hirvensalmen</span> väkiluku kääntyi laskuun.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7471982,61.6243785,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Hinaus Kissakoski - Otava</name>
+      <description><![CDATA[Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin. <br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7638842,61.6294185,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>d1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000 </name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.7639757,61.6296916,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>d2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.7010751,61.7378458,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>e1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          26.7077817,61.7386097,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>e2</name>
+      <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          27.0636795,61.6517071,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Otava</name>
+      <description><![CDATA[Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin.<br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          27.0639952,61.6513817,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kissakosken sähköntuotanto</name>
+      <description><![CDATA[Tulipalon jälkeisinä vuosikymmeninä tehdas ja sen vanheneva puuhiomo kohtasivat kannattavuushaasteita. Vähitellen <span style="color:blue">Kissakoskella</span> siirryttiin kehittämään sähköenergiaa, jo vuosina <span style="color:red">1909-1910</span> tehtaan omiin tarpeisiin oli rakennettu voimalaitos. <br><span style="color:blue">Kissakoskelle</span> valmistui vuonna <span style="color:red">1932</span> uusi voimalaitos puuhiomoa vastapäätä. Voimalaitos toimitti sähköä esimerkiksi <span style="color:blue">Mikkelin</span> kaupungille ja myöhemmässä vaiheessa se toimi pääasiassa valtakunnan sähköverkon tasauslaitoksena.<br><span style="color:blue">Kissakoskelle</span> valmistui uusi voimalaitos vuonna <span style="color:red">2012</span>.]]></description>
+      <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+      <Point>
+        <coordinates>
+          26.7475777,61.6242618,0
+        </coordinates>
+      </Point>
+    </Placemark>
   </Document>
 </kml>
