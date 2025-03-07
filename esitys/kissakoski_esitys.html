@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Esitys</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  </head>
+  <body><style>
+      @import url(bucket.css);
+
+      button.cesium-infoBox-camera{
+        display: none;
+      }
+    </style>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="loadingOverlay"><h1>Loading...</h1></div>
+    <div id="toolbar"></div>
+
+<script type="module">
+
+var unsubscribeTicks = null;
+var timeoutCounter = 0;
+var GLOBAL_TIMEOUT = 15000;
+var cameraTimeouts = [];
+var arrowsData = [];
+var prevEntityDescription = "";
+var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
+
+function rotateCamera(clock) {
+  viewer.scene.camera.rotateRight(0.0008);
+};
+
+function configureTimeout(currentEntity, i) {
+
+  var timeout = GLOBAL_TIMEOUT;
+
+  if (i == 1) {
+    timeout = 8000;
+  }
+  else if (prevEntityDescription == currentEntity._description._value) {
+    timeout = 3000;
+  }
+  else if (currentEntity._description._value.length > 1000) {
+    timeout = 20000;
+  }
+
+  timeoutCounter += timeout;
+  
+  cameraTimeouts.push(setTimeout(function() {
+
+                  //viewer.trackedEntity = currentEntity;
+                  //viewer.selectedEntity = viewer.trackedEntity;
+                  var cameraHeight = 4500;
+
+                  viewer.selectedEntity = currentEntity;
+
+                  arrowsData.forEach(function (arrowData) {
+                    if (arrowData.arrowTriggers.includes(currentEntity._name) || arrowData.arrowTriggers.includes("all")) {
+                      setTimeout(function showArrow() {
+                        arrowData.arrow.show = true;
+                        arrowData.label.show = true;
+                      }, arrowData.arrowTimeout);
+                    }
+                    else{
+                      setTimeout(function hideArrow() {
+                        arrowData.arrow.show = false;
+                        arrowData.label.show = false;
+                        }, 7000);
+                    }
+
+                    if (arrowData.arrowTriggers.includes(currentEntity._name)) {
+                      if (arrowData.cameraHeight) {
+                        cameraHeight = arrowData.cameraHeight;
+                      }
+                    }
+                  });
+
+                  viewer.flyTo(currentEntity, {duration:5.0, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {
+                                    //viewer.trackedEntity = currentEntity;
+                                    //viewer.trackedEntity;
+
+                                    /*cameraTimeouts.push(setTimeout(function() {
+
+                                      viewer.selectedEntity = undefined;
+
+                                      viewer.camera.flyTo({
+                                        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
+                                        maximumHeight: 60000.0,
+                                        duration: 5.0
+                                      });
+                                    }, 12000));*/
+                                });
+
+                  /*if (i == 3) {
+                    viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
+                      //viewer.trackedEntity = currentEntity;
+                      viewer.selectedEntity = viewer.trackedEntity;
+
+                      //viewer.clock.onTick.removeEventListener(rotateCamera);
+                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                    });
+                  }
+                  else {
+                      viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1500)}).then(function () {
+                      viewer.trackedEntity = currentEntity;
+                      viewer.selectedEntity = viewer.trackedEntity;
+
+                      //viewer.clock.onTick.removeEventListener(rotateCamera);
+                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
+                      });
+                  }*/
+                }, timeoutCounter));
+
+  // clear timeoutCounter after first entity, so that timeout is 25 seconds between each entity
+  /*if (i == 1) {
+    timeoutCounter = 0;
+  }*/
+
+}
+
+
+const viewer = new Cesium.Viewer("cesiumContainer", {
+  imageryProvider: false,
+  timeline: false,
+  animation: false,
+  baseLayerPicker: false,
+  selectionIndicator : false,
+  homeButton: false,
+  navigationHelpButton: false,
+  sceneModePicker: false,
+  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
+    new Cesium.OpenStreetMapImageryProvider({
+    url : 'https://tile.openstreetmap.org/'
+})),
+  geocoder: false,
+  creditContainer: document.createElement("none")
+});
+
+viewer.infoBox.frame.removeAttribute("sandbox");
+viewer.infoBox.frame.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms');
+viewer.infoBox.frame.src = "about:blank";
+
+const toolbar = document.querySelector("div.cesium-viewer-toolbar");
+const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
+const myButton = document.createElement("button");
+const speedText = document.createElement("input");
+speedText.type = "text";
+speedText.size = "2";
+speedText.value = 15;
+speedText.title = "Aseta siirtymän nopeus paikkojen välillä sekunteina";
+//myButton.classList.add("cesium-button", "cesium-toolbar-button");
+myButton.innerHTML = "Esitys";
+myButton.style = "opacity:0.7";
+speedText.style = "opacity:0.7";
+myButton.onclick = function(){togglePresentation();};
+toolbar.insertBefore(myButton, modeButton);
+toolbar.insertBefore(speedText, myButton);
+
+/*const scene = viewer.scene;
+scene.globe.depthTestAgainstTerrain = true;
+
+let worldTerrain;
+try {
+  worldTerrain = await Cesium.createWorldTerrainAsync();
+  viewer.scene.terrainProvider = worldTerrain;
+} catch (error) {
+  window.alert(`There was an error creating world terrain. ${error}`);
+}*/
+
+const options = {
+  camera: viewer.scene.camera,
+  canvas: viewer.scene.canvas,
+  screenOverlayContainer: viewer.container,
+  clampToGround: true
+};
+
+var itemCounter = 0;
+var isPresentationMode = false;
+
+//viewer.camera.flyHome(0);
+
+togglePresentation();
+
+// disable presentation start on page startup by uncommenting if needed
+//setTimeout(function(){ togglePresentation(); }, 1000);
+
+function togglePresentation() {
+
+  GLOBAL_TIMEOUT = parseInt(speedText.value) * 1000;
+
+  timeoutCounter = 0;
+  isPresentationMode = !isPresentationMode;
+
+  if (isPresentationMode) {
+    myButton.innerHTML = 'Pysäytä esitys';
+    speedText.style.visibility = 'hidden';
+ 
+    viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(27.6508158,61.5833936, 60000.0),
+    });
+
+    viewer.dataSources.removeAll();
+    viewer.dataSources.add(
+      Cesium.KmlDataSource.load(
+        "kissakoski_esitys.kml",
+        options
+      )
+    ).then(function (dataSource) {
+                viewer.clock.shouldAnimate = true;
+                var arrowCoords = {};
+                var isArrowEntity = false;
+
+                var i = 0;
+                while (i < dataSource._entityCollection._entities._array.length) {
+                  if (dataSource._entityCollection._entities._array[i]._label) {
+
+                    isArrowEntity = false;
+
+                    var currentId = dataSource._entityCollection._entities._array[i]._id;
+                    viewer.dataSources.get(0).entities.getById(currentId).label.showBackground = true;
+                    //viewer.dataSources.get(0).entities.getById(currentId).label.fillColor = Cesium.Color.BLACK;
+                    viewer.dataSources.get(0).entities.getById(currentId).label.outlineColor = Cesium.Color.WHITE;
+                    //dataSource._entityCollection._entities._array[i]._label._fillColor = new Cesium.Color(1, 1, 1, 1);
+
+                    const placeColor = {
+                        "red": 0.00784313725490196,
+                        "green": 0.5333333333333333,
+                        "blue": 0.8196078431372549,
+                        "alpha": 1
+                    };
+
+                    const expandedPlaceColor = {
+                        "red": 1,
+                        "green": 0.3215686274509804,
+                        "blue": 0.3215686274509804,
+                        "alpha": 1
+                    };
+
+                    var isExpandedPlace = false;
+
+                    if (dataSource._entityCollection._entities._array[i]._billboard._color._value.blue == expandedPlaceColor.blue) {
+                      isExpandedPlace = true;
+                    }
+
+                    //if(dataSource._entityCollection._entities._array[i]._billboard._image._value._url.endsWith(".png")){
+                    if(dataSource._entityCollection._entities._array[i]._billboard._color._value.blue != placeColor.blue && dataSource._entityCollection._entities._array[i]._billboard._color._value.blue != expandedPlaceColor.blue){
+
+                      isArrowEntity = true;
+
+                      // hide arrow start and end markers
+                      dataSource._entityCollection._entities._array[i]._show = false;
+
+                      var currentPosition = dataSource._entityCollection._entities._array[i]._position._value;
+
+                      var carto = Cesium.Ellipsoid.WGS84.cartesianToCartographic(currentPosition);
+                      var lon = Cesium.Math.toDegrees(carto.longitude);
+                      var lat = Cesium.Math.toDegrees(carto.latitude);
+
+                      var currentName = dataSource._entityCollection._entities._array[i]._name.split(',')
+                      var arrowName = currentName[0].substring(0, 1);
+
+                      var newArrowPoints = {lat1: 0, lon1: 0, lat2:0, lon2:0};
+
+                      if (currentName[0].endsWith("1")) {
+                        if (arrowName in arrowCoords) {
+                          arrowCoords[arrowName].lon1 = lon;
+                          arrowCoords[arrowName].lat1 = lat;
+
+                          if (currentName[1]) {
+                            arrowCoords[arrowName].arrowText = currentName[1];
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowText = "";
+                          }
+
+                          if (currentName[2]) {
+                            arrowCoords[arrowName].arrowColor = currentName[2];
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowColor = "blue";
+                          }
+
+                          if (currentName[3]) {
+                            arrowCoords[arrowName].arrowSpeed = currentName[3];
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowSpeed = 3;
+                          }
+
+                          if (currentName[4]) {
+                            arrowCoords[arrowName].arrowTriggers = currentName[4].split(';');
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowTriggers = ["all"];
+                          }
+
+                          if (currentName[5]) {
+                            arrowCoords[arrowName].cameraHeight = parseInt(currentName[5]);
+                          }
+                          else {
+                            arrowCoords[arrowName].cameraHeight = 4500;
+                          }
+
+                          if (currentName[6]) {
+                            arrowCoords[arrowName].arrowTimeout = parseInt(currentName[6]);
+                          }
+                          else {
+                            arrowCoords[arrowName].arrowTimeout = GLOBAL_TIMEOUT -2000;
+                          }
+
+                        }
+                        else {
+                          newArrowPoints.lon1 = lon;
+                          newArrowPoints.lat1 = lat;
+
+                          if (currentName[1]) {
+                            newArrowPoints.arrowText = currentName[1];
+                          }
+                          else {
+                            newArrowPoints.arrowText = "";
+                          }
+
+                          if (currentName[2]) {
+                            newArrowPoints.arrowColor = currentName[2];
+                          }
+                          else {
+                            newArrowPoints.arrowColor = "blue";
+                          }
+
+                          if (currentName[3]) {
+                            newArrowPoints.arrowSpeed = currentName[3];
+                          }
+                          else {
+                            newArrowPoints.arrowSpeed = 3;
+                          }
+
+                          if (currentName[4]) {
+                            newArrowPoints.arrowTriggers = currentName[4].split(';');
+                          }
+                          else {
+                            newArrowPoints.arrowTriggers = ["all"];
+                          }
+
+                          if (currentName[5]) {
+                            newArrowPoints.cameraHeight = parseInt(currentName[5]);
+                          }
+                          else {
+                            newArrowPoints.cameraHeight = 4500;
+                          }
+
+                          if (currentName[6]) {
+                            newArrowPoints.arrowTimeout = parseInt(currentName[6]);
+                          }
+                          else {
+                            newArrowPoints.arrowTimeout = GLOBAL_TIMEOUT -2000;
+                          }
+
+                          arrowCoords[arrowName] = newArrowPoints;
+                        }
+                      }
+                      else if (currentName[0].endsWith("2")) {
+                        if (arrowName in arrowCoords) {
+                          arrowCoords[arrowName].lon2 = lon;
+                          arrowCoords[arrowName].lat2 = lat;
+                        }
+                        else {
+                          newArrowPoints.lon2 = lon;
+                          newArrowPoints.lat2 = lat;
+
+                          arrowCoords[arrowName] = newArrowPoints;
+                        }
+                      }
+                    }
+                    
+
+                    dataSource._entityCollection._entities._array[i]._billboard._pixelOffset._value = new Cesium.Cartesian2(0.0, 0.0);
+                    dataSource._entityCollection._entities._array[i]._label._pixelOffset._value = new Cesium.Cartesian2(0.0, 30.0);
+                    dataSource._entityCollection._entities._array[i]._label._horizontalOrigin._value = Cesium.HorizontalOrigin.CENTER;
+                  }
+
+                  if (i == 0) {
+                    viewer.selectedEntity = dataSource._entityCollection._entities._array[0];
+                  }
+                  else if (!isArrowEntity && !isExpandedPlace) {
+                    configureTimeout(dataSource._entityCollection._entities._array[i], i);
+                  }
+                  i+=1;
+                }
+
+                // remove previous arrows and their labels so that there are not multiple entities drawn when presentation is stopped and started again
+                viewer.entities.removeAll();
+
+                for (const value of Object.values(arrowCoords)) {
+
+                  const startLatitude = value.lat1;
+                  const startLongitude = value.lon1;
+                  var endLatitude = value.lat2;
+                  var endLongitude = value.lon2;
+
+                  const arrowText = value.arrowText;
+                  var arrowColor = value.arrowColor;
+                  const arrowSpeed = value.arrowSpeed;
+                  const arrowTriggers = value.arrowTriggers;
+                  const cameraHeight = value.cameraHeight;
+                  const arrowTimeout = value.arrowTimeout;
+
+                  var arrowData = {};
+                  arrowData.arrowTriggers = arrowTriggers;
+                  arrowData.cameraHeight = cameraHeight;
+                  arrowData.arrowTimeout = arrowTimeout;
+
+                  if (arrowColor in colors) {
+                    arrowColor = colors[arrowColor];
+                  }
+                  else {
+                    arrowColor = colors["blue"];
+                  }
+
+
+                  // Convert to Cartesian coordinates
+                  const cartesian1 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon1, value.lat1));
+                  const cartesian2 = Cesium.Ellipsoid.WGS84.cartographicToCartesian(Cesium.Cartographic.fromDegrees(value.lon2, value.lat2));
+
+                  value.startTime = Cesium.JulianDate.now();
+                  const isConstant = false;
+
+                  const arrow = viewer.entities.add({
+                        polyline: {
+                          // This callback updates positions each frame.
+                          positions: new Cesium.CallbackProperty(function (time, result) {
+
+                            const timeNow = Cesium.JulianDate.now();
+                            const distance = Cesium.Cartesian3.distance(cartesian1, cartesian2);
+                            const growthFactor = Cesium.Math.clamp(Cesium.JulianDate.secondsDifference(timeNow, value.startTime) / arrowSpeed, 0, 1);
+
+                            const interpolatedPosition = new Cesium.Cartesian3();
+                            Cesium.Cartesian3.lerp(cartesian1, cartesian2, growthFactor, interpolatedPosition);
+
+                            const areEqual = Cesium.Cartesian3.equals(cartesian2, interpolatedPosition);
+
+                            if (areEqual) {
+                              value.startTime = Cesium.JulianDate.now();
+                            }
+
+                            result = [cartesian1, interpolatedPosition];
+
+                            return result;
+                          }, isConstant),
+                          width: 15,
+                          material: new Cesium.PolylineArrowMaterialProperty(arrowColor),
+                        },
+                        show: false
+                      });
+
+                    function getArrowMiddlePoint(time, result) {
+                        const geodesic = new Cesium.EllipsoidGeodesic();
+                        const scratch = new Cesium.Cartographic();
+
+                        const endPoint = arrow.polyline.positions.getValue(time, result)[1];
+                        const endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
+
+                        geodesic.setEndPoints(Cesium.Cartographic.fromCartesian(cartesian1), endCartographic);
+                        const midpointCartographic = geodesic.interpolateUsingFraction(
+                          0.5,
+                          scratch
+                        );
+                        
+                        return Cesium.Cartesian3.fromRadians(
+                          midpointCartographic.longitude,
+                          midpointCartographic.latitude
+                        );
+                      }
+
+                      const label = viewer.entities.add({
+                          position: new Cesium.CallbackProperty(getArrowMiddlePoint, isConstant),
+                          label: {
+                            text: arrowText,
+                            font: "15px sans-serif",
+                            outlineColor:  Cesium.Color.WHITE,
+                            showBackground: true,
+                            pixelOffset: new Cesium.Cartesian2(0.0, 20),
+                          },
+                          show: false
+                        });
+
+                      arrowData.arrow = arrow;
+                      arrowData.label = label;
+
+                      arrowsData.push(arrowData);
+                }
+
+                // return camera back to main top coords
+                cameraTimeouts.push(setTimeout(function() {
+
+                  viewer.selectedEntity = undefined;
+                  speedText.style.visibility = 'visible';
+                  myButton.innerHTML = 'Esitys';
+                  isPresentationMode = false;
+
+                  viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(27.6508158,61.5833936, 60000.0),
+                  });
+                }, timeoutCounter + GLOBAL_TIMEOUT));    
+              });
+  }
+  else {
+
+    for (var i=0; i<cameraTimeouts.length; i++) {
+      clearTimeout(cameraTimeouts[i]);
+    }
+
+    //viewer.entities.removeAll();
+  
+    viewer.selectedEntity = undefined;
+    speedText.style.visibility = 'visible';
+    myButton.innerHTML = 'Esitys';
+
+    viewer.camera.flyTo({
+                    destination: Cesium.Cartesian3.fromDegrees(27.6508158,61.5833936, 60000.0),
+                  });
+  } 
+}
+</script>
+</body>
+</html>
