@@ -49,7 +49,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>b1,,green,6,Kanava,1500,1000</name>
+        <name>b1,,green,10,Kanava,1500,1000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -77,7 +77,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>f1,,green,3,Puula</name>
+        <name>f1,,green,4,Puula,10000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -105,7 +105,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>g1,,green,5,Suonsalmi</name>
+        <name>g1,,green,6,Suonsalmi,10000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -133,7 +133,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>h1,,green,5,Suonsalmelta Kissakoskelle,30000</name>
+        <name>h1,,green,5,Suonsalmelta Kissakoskelle,20000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -161,7 +161,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>j1,,green,5,Ripatinkoski,30000</name>
+        <name>j1,,green,5,Ripatinkoski,25000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -189,7 +189,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>c1,Mäntyharjulle ja Kymijoelle,green,1,Sämpiä,60000</name>
+        <name>c1,Mäntyharjulle ja Kymijoelle,green,5,Sämpiä,60000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>

@@ -30,6 +30,8 @@ var GLOBAL_TIMEOUT = 15000;
 var cameraTimeouts = [];
 var arrowsData = [];
 var prevEntityDescription = "";
+var prevCameraHeight = 500;
+var lowCameraHeightEntities = ["Paperitehdas v.1910", "Kissakosken sähköntuotanto"];
 var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
 
 function rotateCamera(clock) {
@@ -55,7 +57,7 @@ function configureTimeout(currentEntity, i) {
   
   cameraTimeouts.push(setTimeout(function() {
 
-                  var cameraHeight = 500;
+                  var cameraHeight = prevCameraHeight;
 
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;
@@ -79,7 +81,11 @@ function configureTimeout(currentEntity, i) {
                     if (arrowData.arrowTriggers.includes(currentEntity._name)) {
                       if (arrowData.cameraHeight) {
                         cameraHeight = arrowData.cameraHeight;
+                        prevCameraHeight = cameraHeight;
                       }
+                    }
+                    else if (lowCameraHeightEntities.includes(currentEntity._name)){
+                        cameraHeight = 500;
                     }
                   });
 
