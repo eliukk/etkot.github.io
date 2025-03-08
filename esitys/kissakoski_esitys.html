@@ -78,10 +78,10 @@ function configureTimeout(currentEntity, i) {
                   };
 
                   viewer.selectedEntity = currentEntity;
-                  currentEntity._billboard._color._value = selectedColor;
+                  currentEntity._billboard._color.setValue(selectedColor);
 
                   if (prevEntity != null) {
-                    prevEntity._billboard._color._value = blueColor;
+                    prevEntity._billboard._color.setValue(blueColor);
                   }
 
                   prevEntity = currentEntity;
