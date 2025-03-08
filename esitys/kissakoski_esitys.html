@@ -86,6 +86,7 @@ function configureTimeout(currentEntity, i) {
                     }
                     else if (lowCameraHeightEntities.includes(currentEntity._name)){
                         cameraHeight = 500;
+                        prevCameraHeight = cameraHeight;
                     }
                   });
 
@@ -312,7 +313,7 @@ function togglePresentation() {
                             arrowCoords[arrowName].cameraHeight = parseInt(currentName[5]);
                           }
                           else {
-                            arrowCoords[arrowName].cameraHeight = 4500;
+                            arrowCoords[arrowName].cameraHeight = 500;
                           }
 
                           if (currentName[6]) {
