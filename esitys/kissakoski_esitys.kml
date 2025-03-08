@@ -28,7 +28,6 @@
     </Style>
     <Folder>
       <name>Hirvensalmen Kissakosken vaiheita</name>
-      <description><![CDATA[Kissakoski sijaitsee noin kahden kilometrin päässä Hirvensalmen kirkonkylältä.<br>Esityksen tekstiosuuden lähteet:<br>Kinnunen, E., Puntanen, P., Hangasmaa, L., & Hirvensalmen kunta. (2022). Hirvensalmi 1868-2018: Tervaleppäkunta Puulan rannalla. Hirvensalmen kunta.<br>https://fi.wikipedia.org/wiki/Kissakoski<br>https://www.sssoy.fi/kissakosken-vesivoimalaitos/<br>]]></description>
       <Placemark>
         <name>Koski</name>
         <description>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.</description>
@@ -40,7 +39,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>Kanava v.1831-1854</name>
+        <name>Kanava</name>
         <description><![CDATA[<span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
