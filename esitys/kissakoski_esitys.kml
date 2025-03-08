@@ -87,7 +87,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>g1,,green,6,Suonsalmi,10000,500</name>
+        <name>g1,,green,6,Suonsalmi,8000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -259,7 +259,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>d1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000 </name>
+        <name>d1,Otavaan,green,5,Hinaus Kissakoski - Otava,50000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -277,7 +277,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>e1,Otavaan,green,1,Hinaus Kissakoski - Otava,50000</name>
+        <name>e1,Otavaan,green,5,Hinaus Kissakoski - Otava,50000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
