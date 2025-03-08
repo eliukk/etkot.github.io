@@ -87,7 +87,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>g1,,green,6,Suonsalmi,8000,500</name>
+        <name>g1,,green,6,Suonsalmi,5000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -115,7 +115,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>h1,,green,5,Suonsalmelta Kissakoskelle,20000,500</name>
+        <name>h1,,green,5,Suonsalmelta Kissakoskelle,5000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -143,7 +143,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>j1,,green,5,Ripatinkoski,35000,500</name>
+        <name>j1,,green,5,Ripatinkoski,25000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -171,7 +171,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>c1,Mäntyharjulle ja Kymijoelle,green,5,Sämpiä,60000,500</name>
+        <name>c1,Mäntyharjulle ja Kymijoelle,green,5,Sämpiä,30000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -199,7 +199,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>Paperitehdas v.1910</name>
+        <name>Paperitehdas</name>
         <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.\n<br><p style="font-style: italic; font-size: 10px;">”Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.”</p> Uusi Aura, 18.02.1909, nro 40, s. 6]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
@@ -229,7 +229,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>Paperitehtaan tulipalo v.1920</name>
+        <name>Paperitehtaan tulipalo</name>
         <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehdas tuhoutui tulipalossa vuonna <span style="color:red">1920</span>, tehdas oli puurakenteinen.<br>” <span style="color:blue">Kissakoskelta</span> telefonoitiin meille tänään aamupäiwällä: Tänä aamuna kello ½ 7 tienoissa syttyi <span style="color:blue">Kissakosken</span> tehdasrakennuksessa tulipalo, joka wajaassa tunnissa häwitti koko komean tehtaan.<br>Tuli pääsi irti toistaiseksi lähemmin tuntemattomalla tawalla tehdasrakennuksen alakerrassa olewassa konehuoneessa. Kaikki sammutusyritykset oliwat turhia. Kiireimmän kautta koetti tehtaan yläkerrassa työskentelewä henkilökunta pelastautua hyppäämällä ikkunoista pihalle.” Mikkelin Sanomat, 16.04.1920, nro 42, s. 2]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
@@ -239,7 +239,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>Puuhiomo tiilestä v.1920</name>
+        <name>Puuhiomo tiilestä</name>
         <description><![CDATA[Puuhiomo rakennettiin uudelleen tiilestä tulipalon jälkeen. Puuhiomon toiminta aloitettiin marraskuussa <span style="color:red">1920</span>. Paperin valmistaminen lopetettiin täysin tehtaan tulipalon jälkeen ja tuotannossa keskityttiin ainoastaan kosteaan puumassaan. Ennen tulipaloa tehtaalla oli töissä yli 200 henkeä, mutta tulipalon jälkeen vuonna <span style="color:red">1921</span> tehtaan työntekijöiden määrä laski 92 henkeen. Myös <span style="color:blue">Hirvensalmen</span> väkiluku kääntyi laskuun.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
