@@ -49,24 +49,6 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>b1,,green,10,Kanava,1500,1000</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.7527557,61.6245294,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>b2</name>
-        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
-        <Point>
-          <coordinates>
-            26.6777767,61.7347898,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
         <name>Puula</name>
         <description><![CDATA[Kanavan rakentamisen seurauksena puiden uittaminen <span style="color:blue">Puulalta</span> <span style="color:blue">Suonsalmen</span> ja <span style="color:blue">Kissakosken</span> ja siitä <span style="color:blue">Ripatinkoskien</span> kautta <span style="color:blue">Sämpiään</span> tuli mahdolliseksi. <span style="color:blue">Sämpiästä</span> uittamista oli mahdollista jatkaa <span style="color:blue">Mäntyharjun</span> suuntaan ja sitä myöten aina <span style="color:blue">Kymijokeen</span>.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
@@ -161,7 +143,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>j1,,green,5,Ripatinkoski,60000,500</name>
+        <name>j1,,green,5,Ripatinkoski,35000,500</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>
@@ -218,7 +200,7 @@
       </Placemark>
       <Placemark>
         <name>Paperitehdas v.1910</name>
-        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.<br>” Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.” Uusi Aura, 18.02.1909, nro 40, s. 6]]></description>
+        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.\n<br><p style="font-style: italic; font-size: 10px;">”Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.”</p> Uusi Aura, 18.02.1909, nro 40, s. 6]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
