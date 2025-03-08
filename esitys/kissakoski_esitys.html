@@ -48,8 +48,7 @@ function configureTimeout(currentEntity, i) {
     timeout = 8000;
   }
   else if (prevEntityDescription == currentEntity._description._value) {
-    timeout = 5000;
-    flyDuration = 2.0;
+    timeout = 2000;
   }
   else if (currentEntity._description._value.length > 300) {
     timeout = 20000;
