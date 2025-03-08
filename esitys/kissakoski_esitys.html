@@ -63,20 +63,6 @@ function configureTimeout(currentEntity, i) {
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;
 
-                  const selectedColor = {
-                        "red": 255,
-                        "green": 255,
-                        "blue": 0,
-                        "alpha": 1
-                    };
-
-                  const blueColor = {
-                      "red": 0.00784313725490196,
-                      "green": 0.5333333333333333,
-                      "blue": 0.8196078431372549,
-                      "alpha": 1
-                  };
-
                   viewer.selectedEntity = currentEntity;
                   viewer.selectedEntity.billboard.color = Cesium.Color.RED;
 
@@ -233,7 +219,7 @@ function togglePresentation() {
     speedText.style.visibility = 'hidden';
  
     viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 10000.0),
+        destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 6000.0),
     });
 
     viewer.dataSources.removeAll();
@@ -535,7 +521,7 @@ function togglePresentation() {
                   isPresentationMode = false;
 
                   viewer.camera.flyTo({
-                    destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 10000.0),
+                    destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 6000.0),
                   });
                 }, timeoutCounter + GLOBAL_TIMEOUT));    
               });
@@ -553,7 +539,7 @@ function togglePresentation() {
     myButton.innerHTML = 'Esitys';
 
     viewer.camera.flyTo({
-                    destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 10000.0),
+                    destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 6000.0),
                   });
   } 
 }
