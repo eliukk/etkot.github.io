@@ -78,10 +78,10 @@ function configureTimeout(currentEntity, i) {
                   };
 
                   viewer.selectedEntity = currentEntity;
-                  viewer.selectedEntity._billboard._color.setValue(selectedColor);
+                  viewer.selectedEntity._billboard._color = Cesium.Color.RED;
 
                   if (prevEntity != null) {
-                    prevEntity._billboard._color.setValue(blueColor);
+                    prevEntity._billboard._color = new Cesium.Color(0.00784313725490196, 0.5333333333333333, 0.8196078431372549, 1);//blueColor;
                   }
 
                   prevEntity = viewer.selectedEntity;
