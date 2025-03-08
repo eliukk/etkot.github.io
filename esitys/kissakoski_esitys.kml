@@ -46,7 +46,7 @@
       </Point>
     </Placemark>
     <Placemark>
-      <name>b1,,green,6,Kanava</name>
+      <name>b1,,green,6,Kanava,1500,1000</name>
       <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
       <Point>
         <coordinates>
@@ -219,7 +219,7 @@
       <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
       <Point>
         <coordinates>
-          26.7473998,61.6245495,0
+          26.7475017,61.6246183,0
         </coordinates>
       </Point>
     </Placemark>
@@ -249,7 +249,7 @@
       <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
       <Point>
         <coordinates>
-          26.7478155,61.6244363,0
+          26.7480891,61.6244822,0
         </coordinates>
       </Point>
     </Placemark>
@@ -259,7 +259,7 @@
       <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
       <Point>
         <coordinates>
-          26.7471982,61.6243785,0
+          26.7470051,61.6243989,0
         </coordinates>
       </Point>
     </Placemark>
@@ -325,7 +325,7 @@
       <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
       <Point>
         <coordinates>
-          26.7475777,61.6242618,0
+          26.7476206,61.6241369,0
         </coordinates>
       </Point>
     </Placemark>
