@@ -78,13 +78,13 @@ function configureTimeout(currentEntity, i) {
                   };
 
                   viewer.selectedEntity = currentEntity;
-                  currentEntity._billboard._color.setValue(selectedColor);
+                  viewer.selectedEntity._billboard._color.setValue(selectedColor);
 
                   if (prevEntity != null) {
                     prevEntity._billboard._color.setValue(blueColor);
                   }
 
-                  prevEntity = currentEntity;
+                  prevEntity = viewer.selectedEntity;
 
                   arrowsData.forEach(function (arrowData) {
                     if (arrowData.arrowTriggers.includes(currentEntity._name) || arrowData.arrowTriggers.includes("all")) {
