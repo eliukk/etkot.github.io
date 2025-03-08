@@ -219,6 +219,16 @@
         </Point>
       </Placemark>
       <Placemark>
+        <name>Kansakoulu</name>
+        <description><![CDATA[Henkilökunnalle rakennettiin tehtaan lähiympäristöön asuntoja ja vuoteen <span style="color:red">1917</span> mennessä alueelle oli valmistunut 23 asuinrakennusta. Myös oma Kansakoulu valmistui <span style="color:blue">Kissakoskelle</span> vuonna <span style="color:red">1916</span>. Tehtaan ympärille muodostui tehdasyhdyskunta, jossa oli tehtaan työntekijöiden perheenjäsenet mukaan luettuna noin 600 henkeä.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <Point>
+          <coordinates>
+            26.7576388,61.6215832,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
         <name>Paperitehtaan tulipalo</name>
         <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehdas tuhoutui tulipalossa vuonna <span style="color:red">1920</span>, tehdas oli puurakenteinen.<br>” <span style="color:blue">Kissakoskelta</span> telefonoitiin meille tänään aamupäiwällä: Tänä aamuna kello ½ 7 tienoissa syttyi <span style="color:blue">Kissakosken</span> tehdasrakennuksessa tulipalo, joka wajaassa tunnissa häwitti koko komean tehtaan.<br>Tuli pääsi irti toistaiseksi lähemmin tuntemattomalla tawalla tehdasrakennuksen alakerrassa olewassa konehuoneessa. Kaikki sammutusyritykset oliwat turhia. Kiireimmän kautta koetti tehtaan yläkerrassa työskentelewä henkilökunta pelastautua hyppäämällä ikkunoista pihalle.” Mikkelin Sanomat, 16.04.1920, nro 42, s. 2]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
@@ -301,16 +311,6 @@
         <Point>
           <coordinates>
             26.7476206,61.6241369,0
-          </coordinates>
-        </Point>
-      </Placemark>
-      <Placemark>
-        <name>Kansakoulu</name>
-        <description><![CDATA[Henkilökunnalle rakennettiin tehtaan lähiympäristöön asuntoja ja vuoteen <span style="color:red">1917</span> mennessä alueelle oli valmistunut 23 asuinrakennusta. Myös oma Kansakoulu valmistui <span style="color:blue">Kissakoskelle</span> vuonna <span style="color:red">1916</span>. Tehtaan ympärille muodostui tehdasyhdyskunta, jossa oli tehtaan työntekijöiden perheenjäsenet mukaan luettuna noin 600 henkeä.]]></description>
-        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
-        <Point>
-          <coordinates>
-            26.7576388,61.6215832,0
           </coordinates>
         </Point>
       </Placemark>
