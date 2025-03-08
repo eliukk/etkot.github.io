@@ -30,6 +30,7 @@ var GLOBAL_TIMEOUT = 15000;
 var cameraTimeouts = [];
 var arrowsData = [];
 var prevEntityDescription = "";
+var prevEntity = null;
 var prevCameraHeight = 500;
 var lowCameraHeightEntities = ["Paperitehdas v.1910", "Kissakosken sähköntuotanto"];
 var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
@@ -62,7 +63,28 @@ function configureTimeout(currentEntity, i) {
                   //viewer.trackedEntity = currentEntity;
                   //viewer.selectedEntity = viewer.trackedEntity;
 
+                  const selectedColor = {
+                        "red": 255,
+                        "green": 255,
+                        "blue": 0,
+                        "alpha": 1
+                    };
+
+                  const blueColor = {
+                      "red": 0.00784313725490196,
+                      "green": 0.5333333333333333,
+                      "blue": 0.8196078431372549,
+                      "alpha": 1
+                  };
+
                   viewer.selectedEntity = currentEntity;
+                  currentEntity._billboard._color._value = selectedColor;
+
+                  if (prevEntity != null) {
+                    prevEntity._billboard._color._value = blueColor;
+                  }
+
+                  prevEntity = currentEntity;
 
                   arrowsData.forEach(function (arrowData) {
                     if (arrowData.arrowTriggers.includes(currentEntity._name) || arrowData.arrowTriggers.includes("all")) {
