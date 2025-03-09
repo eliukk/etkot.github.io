@@ -52,6 +52,9 @@ function configureTimeout(currentEntity, i) {
   else if (prevEntityDescription == currentEntity._description._value || smallTransitionTime.includes(currentEntity._name)) {
     timeout = 8000;
   }
+  else if (prevEntity != null && prevEntity._description._value.length > 200 <= 300) {
+    timeout = 21000;
+  }
   else if (prevEntity != null && prevEntity._description._value.length > 300 <= 400) {
     timeout = 35000;
   }
