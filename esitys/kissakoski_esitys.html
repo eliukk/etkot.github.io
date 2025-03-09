@@ -53,16 +53,16 @@ function configureTimeout(currentEntity, i) {
     timeout = 8000;
     alert(timeout + ":" + currentEntity._name);
   }
-  else if (prevEntity != null && prevEntity._description._value.length > 200 <= 300) {
+  else if (prevEntity != null && prevEntityDescription.length > 200 <= 300) {
     timeout = 23000;
     alert(timeout + ":" + currentEntity._name);
   }
-  else if (prevEntity != null && prevEntity._description._value.length > 300 <= 400) {
-    timeout = 36000;
+  else if (prevEntity != null && prevEntityDescription.length > 300 <= 400) {
+    timeout = 28000;
     alert(timeout + ":" + currentEntity._name);
   }
-  else if (prevEntity != null && prevEntity._description._value.length > 400) {
-    timeout = 51000;
+  else if (prevEntity != null && prevEntityDescription.length > 400) {
+    timeout = 35000;
     alert(timeout + ":" + currentEntity._name);
   }
 
