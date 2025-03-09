@@ -26,7 +26,7 @@
 
 var unsubscribeTicks = null;
 var timeoutCounter = 0;
-var GLOBAL_TIMEOUT = 15000;
+var GLOBAL_TIMEOUT = 12000;
 var cameraTimeouts = [];
 var arrowsData = [];
 var prevEntityDescription = "";
@@ -63,7 +63,7 @@ function configureTimeout(currentEntity, i) {
     alert(timeout + ":" + currentEntity._name);
   }
   else if (currenDescriptionLength > 200 && currenDescriptionLength <= 300) {
-    timeout = 18000;
+    timeout = 15000;
     alert(timeout + ":" + currentEntity._name);
   }
   else if (currenDescriptionLength > 300 && currenDescriptionLength <= 400) {
