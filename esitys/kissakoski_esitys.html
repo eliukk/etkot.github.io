@@ -53,13 +53,13 @@ function configureTimeout(currentEntity, i) {
     timeout = 8000;
   }
   else if (prevEntity != null && prevEntity._description._value.length > 200 <= 300) {
-    timeout = 21000;
+    timeout = 23000;
   }
   else if (prevEntity != null && prevEntity._description._value.length > 300 <= 400) {
-    timeout = 35000;
+    timeout = 36000;
   }
   else if (prevEntity != null && prevEntity._description._value.length > 400) {
-    timeout = 45000;
+    timeout = 51000;
   }
 
   prevEntityDescription = currentEntity._description._value;
