@@ -46,13 +46,16 @@ function configureTimeout(currentEntity, i) {
   var flyDuration = 5.0;
 
   if (i == 1) {
-    timeout = 15000;
+    timeout = 20000;
+    alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription == currentEntity._description._value) {
     timeout = 8000;
+    alert(timeout + ":" + currentEntity._name);
   }
   else if (currentEntity._description._value.length > 300) {
     timeout = 25000;
+    alert(timeout + ":" + currentEntity._name);
   }
 
   prevEntityDescription = currentEntity._description._value;
