@@ -51,15 +51,19 @@ function configureTimeout(currentEntity, i) {
   }
   else if (prevEntityDescription == currentEntity._description._value || smallTransitionTime.includes(currentEntity._name)) {
     timeout = 8000;
+    alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntity != null && prevEntity._description._value.length > 200 <= 300) {
     timeout = 23000;
+    alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntity != null && prevEntity._description._value.length > 300 <= 400) {
     timeout = 36000;
+    alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntity != null && prevEntity._description._value.length > 400) {
     timeout = 51000;
+    alert(timeout + ":" + currentEntity._name);
   }
 
   prevEntityDescription = currentEntity._description._value;
