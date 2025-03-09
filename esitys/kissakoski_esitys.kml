@@ -30,8 +30,13 @@
       <name>Hirvensalmen Kissakosken vaiheita</name>
       <Placemark>
         <name>Koski</name>
-        <description>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.</description>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><br>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[kissakoski_kanava.jpg]]></value>
+          </Data>
+        </ExtendedData>
         <Point>
           <coordinates>
             26.7500894,61.6243101,0
@@ -40,8 +45,13 @@
       </Placemark>
       <Placemark>
         <name>Kanava</name>
-        <description><![CDATA[<span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><br><span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[kissakoski_kanava.jpg]]></value>
+          </Data>
+        </ExtendedData>
         <Point>
           <coordinates>
             26.7526986,61.6244431,0
@@ -200,7 +210,7 @@
       </Placemark>
       <Placemark>
         <name>Paperitehdas</name>
-        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.\n<br><p style="font-style: italic; font-size: 10px;">”Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.”</p> Uusi Aura, 18.02.1909, nro 40, s. 6]]></description>
+        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehtaan rakentaminen aloitettiin vuonna <span style="color:red">1909</span> ja tehdas valmistui helmi-maaliskuussa <span style="color:red">1910</span>.<br><p style="font-style: italic; font-size: 12px;">”Kowaa työnpuutetta osottaa m. m. se, että kun <span style="color:blue">Kissakosken</span> paperitehdas <span style="color:blue">Hirwikoskella</span> alkoi työnsä tulwi töihin semmoinen työttömäin lauma, että sinne <span style="color:blue">Kouwolasta</span> menewät junat oliwat ääriään myöten täynnö työttömiä. <span style="color:blue">Kotkasta</span> ja lähiseuduilta matkusti sinne myöskin paljon työttömiä, mutta useimmat saiwat tyhjin toimin palata takaisin.”</p> <p style="font-style: italic; font-size: 10px;">Uusi Aura, 18.02.1909, nro 40, s. 6</p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -230,7 +240,7 @@
       </Placemark>
       <Placemark>
         <name>Paperitehtaan tulipalo</name>
-        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehdas tuhoutui tulipalossa vuonna <span style="color:red">1920</span>, tehdas oli puurakenteinen.<br>” <span style="color:blue">Kissakoskelta</span> telefonoitiin meille tänään aamupäiwällä: Tänä aamuna kello ½ 7 tienoissa syttyi <span style="color:blue">Kissakosken</span> tehdasrakennuksessa tulipalo, joka wajaassa tunnissa häwitti koko komean tehtaan.<br>Tuli pääsi irti toistaiseksi lähemmin tuntemattomalla tawalla tehdasrakennuksen alakerrassa olewassa konehuoneessa. Kaikki sammutusyritykset oliwat turhia. Kiireimmän kautta koetti tehtaan yläkerrassa työskentelewä henkilökunta pelastautua hyppäämällä ikkunoista pihalle.” Mikkelin Sanomat, 16.04.1920, nro 42, s. 2]]></description>
+        <description><![CDATA[<span style="color:blue">Kissakosken</span> paperitehdas tuhoutui tulipalossa vuonna <span style="color:red">1920</span>, tehdas oli puurakenteinen.<br><p style="font-style: italic; font-size: 12px;">”<span style="color:blue">Kissakoskelta</span> telefonoitiin meille tänään aamupäiwällä: Tänä aamuna kello ½ 7 tienoissa syttyi <span style="color:blue">Kissakosken</span> tehdasrakennuksessa tulipalo, joka wajaassa tunnissa häwitti koko komean tehtaan.<br>Tuli pääsi irti toistaiseksi lähemmin tuntemattomalla tawalla tehdasrakennuksen alakerrassa olewassa konehuoneessa. Kaikki sammutusyritykset oliwat turhia. Kiireimmän kautta koetti tehtaan yläkerrassa työskentelewä henkilökunta pelastautua hyppäämällä ikkunoista pihalle.”</p><p style="font-style: italic; font-size: 10px;">Mikkelin Sanomat, 16.04.1920, nro 42, s. 2</p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
@@ -250,8 +260,13 @@
       </Placemark>
       <Placemark>
         <name>Hinaus Kissakoski - Otava</name>
-        <description><![CDATA[Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin. <br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
+        <description><![CDATA[<img src="hinaus.jpg" height="200" width="auto" /><br><br>Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue">Kissakoskelta</span> <span style="color:blue">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin. <br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[hinaus.jpg]]></value>
+          </Data>
+        </ExtendedData>
         <Point>
           <coordinates>
             26.7638842,61.6294185,0
