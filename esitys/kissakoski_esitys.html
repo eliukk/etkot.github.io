@@ -56,7 +56,7 @@ function configureTimeout(currentEntity, i) {
   if (i == 1) {
     timeout = 20000;
   }
-  else if (prevEntityDescription == currentEntity._description._value || smallTransitionTime.includes(currentEntity._name)) {
+  else if (prevEntityDescription ==  createElementText(currentEntity._description._value) || smallTransitionTime.includes(currentEntity._name)) {
     timeout = 8000;
     alert(timeout + ":" + currentEntity._name);
   }
