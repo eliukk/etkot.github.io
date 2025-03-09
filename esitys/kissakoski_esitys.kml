@@ -30,7 +30,7 @@
       <name>Hirvensalmen Kissakosken vaiheita</name>
       <Placemark>
         <name>Koski</name>
-        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><br>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.]]></description>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Kuva: Liisa Näpärä</p><br>Paikalla oli ennen kanavan kaivamista koski, jonka putouskorkeuden kerrotaan olleen yli 4 metriä.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -45,7 +45,7 @@
       </Placemark>
       <Placemark>
         <name>Kanava</name>
-        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><br><span style="color:blue">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Kuva: Liisa Näpärä</p><br><span style="color:blue; font-weight:bold;">Kissakoskelle</span> rakennettiin vuosien <span style="color:red">1831</span> ja <span style="color:red">1854</span> välillä 1,1 kilometrin pituinen kanava. Kanavan valmistumisen jälkeen kosken putouskorkeus oli 5,2 metriä ja sen kerrotaan kehittäneen 2000 hevosvoimaa. <span style="color:red">1850</span>-luvun lopulta lähtien koskessa oli ollut tullimylly.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
