@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>Hirvensalmen Kissakosken vaiheita</name>
-    <description><![CDATA[Kissakoski sijaitsee noin kahden kilometrin päässä Hirvensalmen kirkonkylältä.<br>Esityksen tekstiosuuden lähteet:<br>Kinnunen, E., Puntanen, P., Hangasmaa, L., & Hirvensalmen kunta. (2022). Hirvensalmi 1868-2018: Tervaleppäkunta Puulan rannalla. Hirvensalmen kunta.<br>https://fi.wikipedia.org/wiki/Kissakoski<br>https://www.sssoy.fi/kissakosken-vesivoimalaitos/<br>]]></description>
+    <description><![CDATA[Kissakoski sijaitsee noin kahden kilometrin päässä Hirvensalmen kirkonkylältä.<br>Esityksen tekstiosuuden lähteet:<p style="font-style: italic; font-size: 10px;"><br>Kinnunen, E., Puntanen, P., Hangasmaa, L., & Hirvensalmen kunta. (2022). Hirvensalmi 1868-2018: Tervaleppäkunta Puulan rannalla. Hirvensalmen kunta.<br>https://fi.wikipedia.org/wiki/Kissakoski<br>https://www.sssoy.fi/kissakosken-vesivoimalaitos/<br></p>]]></description>
     <Style id="icon-1899-0288D1-labelson">
       <IconStyle>
         <color>ffd18802</color>
@@ -261,7 +261,7 @@
       </Placemark>
       <Placemark>
         <name>Hinaus Kissakoski - Otava</name>
-        <description><![CDATA[<img src="hinaus.jpg" height="200" width="auto" /><br><br>Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue; font-weight:bold;">Kissakoskelta</span> <span style="color:blue; font-weight:bold;">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue; font-weight:bold;">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin. <br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue; font-weight:bold;">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
+        <description><![CDATA[<img src="hinaus.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Kuva: Liisa Näpärä</p><br>Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue; font-weight:bold;">Kissakoskelta</span> <span style="color:blue; font-weight:bold;">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue; font-weight:bold;">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin. <br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue; font-weight:bold;">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -312,7 +312,7 @@
       </Placemark>
       <Placemark>
         <name>Otava</name>
-        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Kuva: Liisa Näpärä</p><br>Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue; font-weight:bold;">Kissakoskelta</span> <span style="color:blue; font-weight:bold;">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue; font-weight:bold;">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin.<br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue; font-weight:bold;">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
+        <description><![CDATA[<img src="hinaus.jpg" height="200" width="auto" /><br><p style="font-style: italic; font-size: 10px;">Kuva: Liisa Näpärä</p><br>Puuhiomon valmistamat tuotteet hinattiin proomuilla <span style="color:blue; font-weight:bold;">Kissakoskelta</span> <span style="color:blue; font-weight:bold;">Otavaan</span>. Täyttä proomua hinattaessa matkaan on voinut kulua 5-8 tuntia. <span style="color:blue; font-weight:bold;">Otavassa</span> tuotteet purettiin rautatievaunuihin tai varastoitiin.<br>Talvisin puumassan kuljetus tapahtui hevosilla <span style="color:blue; font-weight:bold;">Hietasen</span> asemalle esimerkiksi jääteitä hyödyntäen. Kuljetuksiin osallistui jopa 80 hevosta.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <Point>
           <coordinates>
