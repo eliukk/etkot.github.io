@@ -60,19 +60,19 @@ function configureTimeout(currentEntity, i) {
   }
   else if (prevEntityDescription ==  createElementText(currentEntity._description._value) || smallTransitionTime.includes(currentEntity._name)) {
     timeout = 8000;
-    alert(timeout + ":" + currentEntity._name);
+    //alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription != "" && prevEntityDescription.length > 200 && prevEntityDescription.length <= 300) {
     timeout = 15000;
-    alert(timeout + ":" + currentEntity._name);
+    //alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription != "" && prevEntityDescription.length > 300 && prevEntityDescription.length <= 400) {
     timeout = 24000;
-    alert(timeout + ":" + currentEntity._name);
+    //alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription != "" && prevEntityDescription.length > 400) {
     timeout = 30000;
-    alert(timeout + ":" + currentEntity._name);
+    //alert(timeout + ":" + currentEntity._name);
   }
 
   if (i != 1) {
@@ -548,7 +548,7 @@ function togglePresentation() {
                   viewer.camera.flyTo({
                     destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 5000.0),
                   });
-                }, timeoutCounter + GLOBAL_TIMEOUT));    
+                }, timeoutCounter + (GLOBAL_TIMEOUT * 2)));    
               });
   }
   else {
