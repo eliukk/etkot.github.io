@@ -53,6 +53,8 @@ function configureTimeout(currentEntity, i) {
   var timeout = GLOBAL_TIMEOUT;
   var flyDuration = 5.0;
 
+  var currenDescriptionLength = createElementText(currentEntity._description._value).length;
+
   if (i == 1) {
     timeout = 20000;
   }
@@ -60,15 +62,15 @@ function configureTimeout(currentEntity, i) {
     timeout = 8000;
     alert(timeout + ":" + currentEntity._name);
   }
-  else if (prevEntityDescription != "" && prevEntityDescription.length > 200 && prevEntityDescription.length <= 300) {
+  else if (currenDescriptionLength > 200 && currenDescriptionLength <= 300) {
     timeout = 18000;
     alert(timeout + ":" + currentEntity._name);
   }
-  else if (prevEntityDescription != "" && prevEntityDescription.length > 300 && prevEntityDescription.length <= 400) {
+  else if (currenDescriptionLength > 300 && currenDescriptionLength <= 400) {
     timeout = 25000;
     alert(timeout + ":" + currentEntity._name);
   }
-  else if (prevEntityDescription != "" && prevEntityDescription.length > 400) {
+  else if (currenDescriptionLength > 400) {
     timeout = 30000;
     alert(timeout + ":" + currentEntity._name);
   }
