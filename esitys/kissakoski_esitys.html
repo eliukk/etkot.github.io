@@ -41,6 +41,13 @@ function rotateCamera(clock) {
   viewer.scene.camera.rotateRight(0.0008);
 };
 
+function createElementText(str)
+{
+  var div = document.createElement('div');
+  div.innerHTML = str;
+  return div.textContent;
+}
+
 function configureTimeout(currentEntity, i) {
 
   var timeout = GLOBAL_TIMEOUT;
@@ -67,7 +74,7 @@ function configureTimeout(currentEntity, i) {
   }
 
   if (i != 1) {
-    prevEntityDescription = currentEntity._description._value.textContent;
+    prevEntityDescription = createElementText(currentEntity._description._value);
   }
 
   timeoutCounter += timeout;
