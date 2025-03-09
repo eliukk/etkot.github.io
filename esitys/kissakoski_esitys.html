@@ -67,9 +67,9 @@ function configureTimeout(currentEntity, i) {
   }
 
   if (i != 1) {
-    prevEntityDescription = currentEntity._description._value;
+    prevEntityDescription = currentEntity._description._value.textContent;
   }
-  
+
   timeoutCounter += timeout;
   
   cameraTimeouts.push(setTimeout(function() {
