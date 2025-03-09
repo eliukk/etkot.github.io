@@ -51,7 +51,7 @@ function configureTimeout(currentEntity, i) {
   else if (prevEntityDescription == currentEntity._description._value) {
     timeout = 8000;
   }
-  else if (currentEntity._description._value.length > 300) {
+  else if (prevEntity != null && prevEntity._description._value.length > 300) {
     timeout = 25000;
   }
 
