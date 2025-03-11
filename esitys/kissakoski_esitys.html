@@ -65,7 +65,7 @@ function configureTimeout(currentEntity, i) {
     //alert(timeout + ":" + currentEntity._name);
   }
   else if (middleTransitionTime.includes(currentEntity._name)) {
-    timeout = 11000;
+    timeout = 12000;
     //alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription != "" && prevEntityDescription.length > 200 && prevEntityDescription.length <= 300) {
@@ -549,6 +549,11 @@ function togglePresentation() {
                 // return camera back to main top coords
                 cameraTimeouts.push(setTimeout(function() {
 
+                  // clear possible last selected entity red color and change it to blue
+                  if (prevEntity != null) {
+                    prevEntity.billboard.color = new Cesium.Color(0.00784313725490196, 0.5333333333333333, 0.8196078431372549, 1);//blueColor;
+                  }
+
                   viewer.selectedEntity = undefined;
                   speedText.style.visibility = 'visible';
                   myButton.innerHTML = 'Esitys';
@@ -567,6 +572,11 @@ function togglePresentation() {
     }
 
     //viewer.entities.removeAll();
+
+    // clear possible last selected entity red color and change it to blue
+    if (prevEntity != null) {
+      prevEntity.billboard.color = new Cesium.Color(0.00784313725490196, 0.5333333333333333, 0.8196078431372549, 1);//blueColor;
+    }
   
     viewer.selectedEntity = undefined;
     speedText.style.visibility = 'visible';
