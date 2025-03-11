@@ -33,8 +33,9 @@ var prevEntityDescription = "";
 var prevEntity = null;
 var prevCameraHeight = 500;
 var lowCameraHeightEntities = ["Paperitehdas", "Kissakosken sähköntuotanto"];
-var skippedEntities = ["Otava"];
-var smallTransitionTime = ["Paperitehdas"];
+var middleCameraHeightEntities = ["Paperitehdas", "Kissakosken sähköntuotanto"];
+var skippedEntities = [];
+var smallTransitionTime = ["Paperitehdas","Otava"];
 var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
 
 function rotateCamera(clock) {
@@ -121,6 +122,9 @@ function configureTimeout(currentEntity, i) {
                         cameraHeight = 500;
                         prevCameraHeight = cameraHeight;
                     }
+                    else if (middleCameraHeightEntities.includes(currentEntity._name)){
+                      cameraHeight = 5000;
+                    }  
                   });
 
                   viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {
