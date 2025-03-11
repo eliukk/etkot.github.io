@@ -35,7 +35,7 @@ var prevCameraHeight = 500;
 var lowCameraHeightEntities = ["Paperitehdas", "Kissakosken sähköntuotanto"];
 var middleCameraHeightEntities = ["Ernst Klaile", "Kansakoulu"];
 var skippedEntities = [];
-var smallTransitionTime = ["Ripatinkoski","Paperitehdas","Otava"];
+var smallTransitionTime = ["Ripatinkoski","Paperitehdas","Otava", "Kissakosken sähköntuotanto"];
 var colors = {"blue": Cesium.Color.BLUE, "red": Cesium.Color.RED, "green": Cesium.Color.GREEN, "yellow": Cesium.Color.YELLOW, "orange": Cesium.Color.ORANGE, "violet": Cesium.Color.VIOLET, "black": Cesium.Color.BLACK, "white": Cesium.Color.WHITE};
 
 function rotateCamera(clock) {
@@ -57,7 +57,7 @@ function configureTimeout(currentEntity, i) {
   var currenDescriptionLength = createElementText(currentEntity._description._value).length;
 
   if (i == 1) {
-    timeout = 25000;
+    timeout = 24000;
   }
   else if (prevEntityDescription ==  createElementText(currentEntity._description._value) || smallTransitionTime.includes(currentEntity._name)) {
     timeout = 8000;
