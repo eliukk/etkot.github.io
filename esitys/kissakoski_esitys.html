@@ -141,7 +141,7 @@ function configureTimeout(currentEntity, i) {
 
                   if ("Paperitehtaan tulipalo" == currentEntity._name){
                     toggleFlame();
-                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-35), 500)}).then(function () {});
+                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-30), 300)}).then(function () {});
                   }  
                   else {
                     if (flameVisible){
@@ -263,6 +263,9 @@ function addFactoryFlame() {
           emissionDirection: new Cesium.Cartesian3(0, 0, 1),
       })
   );
+
+  //hide flame when created
+  particleSystem.show = false;
 
   const gravityScratch = new Cesium.Cartesian3();
 
