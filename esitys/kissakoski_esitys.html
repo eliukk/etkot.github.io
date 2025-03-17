@@ -138,40 +138,13 @@ function configureTimeout(currentEntity, i) {
                     }  
                   });
 
-                  viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {
-                                    //viewer.trackedEntity = currentEntity;
-                                    //viewer.trackedEntity;
-
-                                    /*cameraTimeouts.push(setTimeout(function() {
-
-                                      viewer.selectedEntity = undefined;
-
-                                      viewer.camera.flyTo({
-                                        destination: Cesium.Cartesian3.fromDegrees(27.27227, 61.68857, 60000.0),
-                                        maximumHeight: 60000.0,
-                                        duration: 5.0
-                                      });
-                                    }, 12000));*/
-                                });
-
-                  /*if (i == 3) {
-                    viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, 90, 1500)}).then(function () {
-                      //viewer.trackedEntity = currentEntity;
-                      viewer.selectedEntity = viewer.trackedEntity;
-
-                      //viewer.clock.onTick.removeEventListener(rotateCamera);
-                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
-                    });
-                  }
+                  if ("Paperitehtaan tulipalo" == currentEntity._name){
+                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-45), cameraHeight)}).then(function () {});
+                  }  
                   else {
-                      viewer.flyTo(currentEntity, {duration:5.0, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 8, 1500)}).then(function () {
-                      viewer.trackedEntity = currentEntity;
-                      viewer.selectedEntity = viewer.trackedEntity;
-
-                      //viewer.clock.onTick.removeEventListener(rotateCamera);
-                      //unsubscribeTicks = viewer.clock.onTick.addEventListener(rotateCamera);
-                      });
-                  }*/
+                  viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
+                  }
+                
                 }, timeoutCounter));
 
   // clear timeoutCounter after first entity, so that timeout is 25 seconds between each entity
@@ -207,7 +180,7 @@ function addFactoryFlame() {
       maximumSpeed: 5.0, // Increased speed
       startScale: 1.0,
       endScale: 3.0, // Reduced end scale
-      particleSize: 60.0, // Reduced particle size
+      particleSize: 70.0, // Reduced particle size
   };
  
   const firePosition = Cesium.Cartesian3.fromDegrees(26.74755,61.62442, 0);
