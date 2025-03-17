@@ -350,7 +350,7 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
                   })
                   .catch((error) => {
                     // Auto-play was prevented
-                    //console.error("Audio playback failed:", error);
+                    console.error("Audio playback failed:", error);
                     audioButton.style.display = 'block'; // Show the button if playback failed
                   });
             }
@@ -388,6 +388,7 @@ audioButton.style = "opacity:0.7";
 speedText.style = "opacity:0.7";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
+toolbar.insertBefore(audioButton, myButton);
 toolbar.insertBefore(speedText, myButton);
 
 audioButton.style.display = 'none';
