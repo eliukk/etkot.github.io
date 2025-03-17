@@ -339,7 +339,21 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
             audioElement.src = "koski.mp3";
             audioElement.volume = 0.1;
             audioElement.load();
-            audioElement.play();
+            const playPromise = audioElement.play();
+
+            if (playPromise !== undefined) {
+                playPromise
+                  .then(() => {
+                    // Automatic playback started!
+                    console.log("Audio playback started.");
+                    audioButton.style.display = 'none'; // Hide the button if playback succeeded
+                  })
+                  .catch((error) => {
+                    // Auto-play was prevented
+                    console.error("Audio playback failed:", error);
+                    audioButton.style.display = 'block'; // Show the button if playback failed
+                  });
+            }
           }
         }
         else{
@@ -360,6 +374,7 @@ viewer.infoBox.frame.src = "about:blank";
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
 const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
 const myButton = document.createElement("button");
+const audioButton = document.createElement("button");
 const speedText = document.createElement("input");
 speedText.type = "text";
 speedText.size = "2";
@@ -372,6 +387,15 @@ speedText.style = "opacity:0.7";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
 toolbar.insertBefore(speedText, myButton);
+
+audioButton.style.display = 'none';
+// Event listener for the play button
+audioButton.addEventListener('click', () => {
+  audioElement.play().then(() => {
+    console.log("Audio started from button click");
+    audioButton.style.display = 'none';
+  }).catch((e)=>{console.log(e)});
+});
 
 /*const scene = viewer.scene;
 scene.globe.depthTestAgainstTerrain = true;
