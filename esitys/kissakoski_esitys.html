@@ -30,6 +30,7 @@
 <script type="module">
 
 var unsubscribeTicks = null;
+var particleSystem = null;
 var timeoutCounter = 0;
 var GLOBAL_TIMEOUT = 12000;
 var cameraTimeouts = [];
@@ -232,19 +233,10 @@ function addFactoryFlame() {
       return Cesium.Matrix4.fromTranslationRotationScale(trs, emitterModelMatrix);
   }
 
-  const entity = viewer.entities.add({
-      position: firePosition, // Static position
-      billboard: {
-          image: "../images/Cesium_Logo_overlay.png",
-          scale: 1.0,
-      },
-  });
-  viewer.trackedEntity = entity;
-
   const scene = viewer.scene;
-  const particleSystem = scene.primitives.add(
+  particleSystem = scene.primitives.add(
       new Cesium.ParticleSystem({
-          image: "../SampleData/fire.png", // Fire image
+          image: "fire.png", // Fire image
 
           startColor: Cesium.Color.YELLOW.withAlpha(0.7),
           endColor: Cesium.Color.RED.withAlpha(0.0),
@@ -315,6 +307,12 @@ function addFactoryFlame() {
       particleSystem.emitterModelMatrix = computeEmitterModelMatrix();
   });
 
+}
+
+function toggleFlame() {
+  if (particleSystem != null) {
+    particleSystem.show = !particleSystem.show;   
+  } 
 }
 
 
