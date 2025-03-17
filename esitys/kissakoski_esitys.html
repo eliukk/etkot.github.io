@@ -12,7 +12,7 @@
     <link href="https://cesium.com/downloads/cesiumjs/releases/1.120/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
   </head>
   <body>
-    <audio controls autoplay>
+    <audio id='audioElement' controls autoplay>
       <source src="koski.mp3" type="audio/mp3">
     Your browser does not support the audio element.
     </audio>
@@ -29,7 +29,7 @@
 
 <script type="module">
 
-var unsubscribeTicks = null;
+var audioElement = document.getElementById('audioElement');
 var particleSystem = null;
 var flameVisible = false;
 var timeoutCounter = 0;
@@ -143,7 +143,7 @@ function configureTimeout(currentEntity, i) {
                     viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-30), 300)}).then(function () {});
                   }  
                   else {
-                  viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
+                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
                   }
                 
                 }, timeoutCounter));
@@ -326,11 +326,22 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
   if (Cesium.defined(selectedEntity)) {
       if (Cesium.defined(selectedEntity.name)) {
         if (selectedEntity.name == "Paperitehtaan tulipalo"){
+          audioElement.src = "tulipalo.mp3";
+          audioElement.load();
+          audioElement.play();
+
           if (!flameVisible){
             toggleFlame();
           }
         }
+        else if (["Koski", "Kanava", "Puula", "Suonsalmi", "Suonsalmelta Kissakoskelle", "Ripatinkoski", "Sämpiä", "Mäntyharjulle ja Kymijoen suuntaan"].includes(selectedEntity._name) && audioElement.src != "koski.mp3"){
+          audioElement.src = "koski.mp3";
+          audioElement.load();
+          audioElement.play();
+        }
         else{
+          audioElement.pause();
+          audioElement.currentTime = 0;
           if (flameVisible){
             toggleFlame();
           }
