@@ -336,6 +336,13 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
         }
         else if (["Hirvensalmen Kissakosken vaiheita", "Koski", "Kanava", "Puula", "Suonsalmi", "Suonsalmelta Kissakoskelle", "Ripatinkoski", "Sämpiä", "Mäntyharjulle ja Kymijoen suuntaan"].includes(selectedEntity.name)){
           if (audioElement.src != 'https://eliukk.github.io/etkot.github.io/esitys/koski.mp3'){
+
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            if (flameVisible){
+              toggleFlame();
+            }
+
             audioElement.src = "koski.mp3";
             audioElement.volume = 0.1;
             audioElement.load();
