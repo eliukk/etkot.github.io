@@ -365,6 +365,7 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
         }
         else{
           audioElement.pause();
+          audioElement.src = "";
           audioElement.currentTime = 0;
           if (flameVisible){
             toggleFlame();
