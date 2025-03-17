@@ -334,7 +334,7 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
             toggleFlame();
           }
         }
-        else if (["Hirvensalmen Kissakosken vaiheita", "Koski", "Kanava", "Puula", "Suonsalmi", "Suonsalmelta Kissakoskelle", "Ripatinkoski", "Sämpiä", "Mäntyharjulle ja Kymijoen suuntaan"].includes(selectedEntity._name) && audioElement.src.endsWith != "koski.mp3"){
+        else if (["Hirvensalmen Kissakosken vaiheita", "Koski", "Kanava", "Puula", "Suonsalmi", "Suonsalmelta Kissakoskelle", "Ripatinkoski", "Sämpiä", "Mäntyharjulle ja Kymijoen suuntaan"].includes(selectedEntity.name) && audioElement.src.endsWith != "koski.mp3"){
           audioElement.src = "koski.mp3";
           audioElement.load();
           audioElement.play();
