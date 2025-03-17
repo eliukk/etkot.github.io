@@ -140,13 +140,9 @@ function configureTimeout(currentEntity, i) {
                   });
 
                   if ("Paperitehtaan tulipalo" == currentEntity._name){
-                    toggleFlame();
                     viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-30), 300)}).then(function () {});
                   }  
                   else {
-                    if (flameVisible){
-                      toggleFlame();
-                    }
                   viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
                   }
                 
