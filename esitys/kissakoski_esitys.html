@@ -372,6 +372,7 @@ viewer.infoBox.frame.setAttribute('sandbox', 'allow-same-origin allow-scripts al
 viewer.infoBox.frame.src = "about:blank";
 
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
+toolbar.style.display = 'flex';
 const modeButton = document.querySelector("span.cesium-navigationHelpButton-wrapper");
 const myButton = document.createElement("button");
 const audioButton = document.createElement("button");
@@ -437,7 +438,7 @@ function togglePresentation() {
 
   if (isPresentationMode) {
     myButton.innerHTML = 'Pysäytä esitys';
-    speedText.style.visibility = 'hidden';
+    speedText.style.display = 'none';
  
     viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(26.75008,61.62431, 5000.0),
@@ -742,7 +743,7 @@ function togglePresentation() {
                   }
 
                   viewer.selectedEntity = undefined;
-                  speedText.style.visibility = 'visible';
+                  speedText.style.display = 'block';
                   myButton.innerHTML = 'Esitys';
                   isPresentationMode = false;
 
@@ -766,7 +767,7 @@ function togglePresentation() {
     }
   
     viewer.selectedEntity = undefined;
-    speedText.style.visibility = 'visible';
+    speedText.style.display = 'block';
     myButton.innerHTML = 'Esitys';
 
     viewer.camera.flyTo({
