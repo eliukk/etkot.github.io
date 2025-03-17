@@ -388,8 +388,8 @@ audioButton.style = "opacity:0.7";
 speedText.style = "opacity:0.7";
 myButton.onclick = function(){togglePresentation();};
 toolbar.insertBefore(myButton, modeButton);
-toolbar.insertBefore(audioButton, myButton);
 toolbar.insertBefore(speedText, myButton);
+toolbar.insertBefore(audioButton, speedText);
 
 audioButton.style.display = 'none';
 // Event listener for the play button
