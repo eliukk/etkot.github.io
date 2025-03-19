@@ -22,6 +22,32 @@
       button.cesium-infoBox-camera{
         display: none;
       }
+
+      .cesium-infoBox {
+        /* Allow the infobox to grow in width and height */
+        max-width: none;
+        max-height: none;
+        width: auto;
+        height: auto;
+        /* Ensure the content can flow and wrap */
+        white-space: normal;
+        overflow: auto; /* Important: Allow scrolling if content overflows */
+      }
+
+      .cesium-infoBox-description {
+        /* Allow the description area to grow */
+        max-width: none;
+        max-height: none;
+        width: auto;
+        height: auto;
+      }
+
+      .cesium-infoBox-description img {
+        /* Allow images to scale and fit within the infobox */
+        max-width: 100%; /* Important: Prevent images from exceeding the infobox width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure images behave as block-level elements */
+      }
     </style>
     <div id="cesiumContainer" class="fullSize"></div>
     <div id="loadingOverlay"><h1>Loading...</h1></div>
@@ -378,7 +404,6 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
 viewer.infoBox.frame.removeAttribute("sandbox");
 //viewer.infoBox.frame.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms');
 viewer.infoBox.frame.src = "about:blank";
-viewer.infoBox.style.maxWidth ="none";
 
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
 toolbar.style.display = 'flex';
