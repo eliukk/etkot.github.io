@@ -93,12 +93,12 @@ function updateInfoboxOnImageLoad(viewer, entity) {
 
     if (image) {
       image.onload = function() {
-        if (image.naturalWidth) { // Check if naturalWidth is available
+        if (image.width) { // Check if naturalWidth is available
           // Get the infobox element
           const infobox = document.querySelector('.cesium-infoBox');
           if (infobox) {
             // Set infobox width to image width
-            infobox.style.width = image.naturalWidth + 'px';
+            infobox.style.width = image.width + 'px';
 
             // Force infobox update to apply the new width
             viewer.selectedEntity = entity;
@@ -106,7 +106,7 @@ function updateInfoboxOnImageLoad(viewer, entity) {
           }
         }
       };
-      if (image.complete && image.naturalWidth) {
+      if (image.complete && image.width) {
         image.onload();
       }
     }
