@@ -56,28 +56,6 @@
   padding: 10px;
 }
 
-/* Optional: If you need to constrain the initial size but allow expansion, use min-width/min-height */
-.cesium-infoBox {
-  min-width: 200px; /* Example: Set a minimum width */
-  min-height: 100px; /* Example: Set a minimum height */
-}
-
-/* optional: if you have a lot of large images, and want to limit the maximum size of the infobox to prevent it from taking over the entire screen, you can use these settings. */
-.cesium-infoBox {
-  max-width: 80%; /* Example: Limit maximum width to 80% of the viewport */
-  max-height: 80%; /* Example: Limit maximum height to 80% of the viewport */
-}
-
-/* optional: if you are using tables in the infobox, make sure they are also responsive */
-.cesium-infoBox-description table {
-  max-width: 100%;
-  width: auto;
-}
-
-.cesium-infoBox-description table img{
-  max-width: 100%;
-  height: auto;
-}
     </style>
     <div id="cesiumContainer" class="fullSize"></div>
     <div id="loadingOverlay"><h1>Loading...</h1></div>
