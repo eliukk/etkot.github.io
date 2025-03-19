@@ -92,29 +92,37 @@ function updateInfoboxOnImageLoad(viewer, entity) {
     const image = descriptionElement.querySelector('img');
 
     if (image) {
-      image.onload = function() {
-        const infobox = document.querySelector('.cesium-infoBox');
-        if (infobox) {
-          if (image.width) {
-            infobox.style.width = (parseInt(image.width) + 30) + 'px';
-          } else if (image.naturalWidth) {
-            infobox.style.width = (image.naturalWidth + 30) + 'px';
+      let checkInterval = setInterval(function() {
+        if (image.complete) {
+          clearInterval(checkInterval);
+          const infobox = document.querySelector('.cesium-infoBox');
+          if (infobox) {
+            if(image.width){
+              infobox.style.width = (parseInt(image.width) + 20) + 'px';
+            } else if (image.naturalWidth){
+              infobox.style.width = (image.naturalWidth + 20) + 'px';
+            }
+            viewer.selectedEntity = entity;
+            viewer.selectedEntity = entity;
           }
-          viewer.selectedEntity = entity;
-          viewer.selectedEntity = entity;
-          viewer.selectedEntity = entity;
-          viewer.selectedEntity = entity;
         }
-      };
+      }, 50);
 
       if (image.complete) {
-        image.onload(); // Trigger onload if image is already cached
+        clearInterval(checkInterval);
+        const infobox = document.querySelector('.cesium-infoBox');
+          if (infobox) {
+            if(image.width){
+              infobox.style.width = (parseInt(image.width) + 20) + 'px';
+            } else if (image.naturalWidth){
+              infobox.style.width = (image.naturalWidth + 20) + 'px';
+            }
+            viewer.selectedEntity = entity;
+            viewer.selectedEntity = entity;
+          }
       }
     }
 
-    entity.description = new Cesium.CallbackProperty(function() {
-      return descriptionElement.innerHTML;
-    }, false);
   }
 }
 
