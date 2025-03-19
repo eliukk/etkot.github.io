@@ -95,8 +95,9 @@ function updateInfoboxOnImageLoad(viewer, entity) {
       let checkInterval = setInterval(function() {
         if (image.complete) {
           clearInterval(checkInterval); // Stop the interval
-          viewer.selectedEntity = entity;
-          viewer.selectedEntity = entity; // Force redraw
+          entity.description = new Cesium.CallbackProperty(function() {
+            return descriptionElement.innerHTML;
+          }, false);
         }
       }, 50); // Check every 50 milliseconds (adjust as needed)
 
@@ -109,9 +110,6 @@ function updateInfoboxOnImageLoad(viewer, entity) {
 
     }
 
-    entity.description = new Cesium.CallbackProperty(function() {
-      return descriptionElement.innerHTML;
-    }, false);
   }
 }
 
