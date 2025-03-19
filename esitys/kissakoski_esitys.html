@@ -84,6 +84,31 @@ function createElementText(str)
   return div.textContent;
 }
 
+function updateInfoboxOnImageLoad(viewer, entity) {
+  if (entity && entity.description) {
+    const descriptionElement = document.createElement('div');
+    descriptionElement.innerHTML = entity.description.getValue(viewer.clock.currentTime);
+
+    const image = descriptionElement.querySelector('img'); // Find the image
+
+    if (image) {
+      image.onload = function() {
+        // Force infobox update by triggering selectedEntityChanged
+        viewer.selectedEntity = entity;
+        viewer.selectedEntity = entity; //setting it twice is important to force a redraw.
+      };
+      //if the image is already loaded, then trigger the onload event manually.
+      if (image.complete) {
+        image.onload();
+      }
+    }
+
+    entity.description = new Cesium.CallbackProperty(function() {
+      return descriptionElement.innerHTML;
+    }, false);
+  }
+}
+
 function configureTimeout(currentEntity, i) {
 
   var timeout = GLOBAL_TIMEOUT;
@@ -350,6 +375,9 @@ addFactoryFlame();
 
 // hide or show fire if selected entity is changed
 viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
+
+  updateInfoboxOnImageLoad(viewer, selectedEntity);
+
   if (Cesium.defined(selectedEntity)) {
       if (Cesium.defined(selectedEntity.name)) {
         if (selectedEntity.name == "Paperitehtaan tulipalo"){
