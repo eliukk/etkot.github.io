@@ -89,31 +89,17 @@ function updateInfoboxOnImageLoad(viewer, entity) {
     const descriptionElement = document.createElement('div');
     descriptionElement.innerHTML = entity.description.getValue(viewer.clock.currentTime);
 
-    const image = descriptionElement.querySelector('img');
+    const image = descriptionElement.querySelector('img'); // Find the image
 
-    if (image && image.width) { // Check if the image tag has a width attribute
-      const infobox = document.querySelector('.cesium-infoBox');
-      if (infobox) {
-        infobox.style.width = image.width + 'px'; // Use the width attribute value
+    if (image) {
+      image.onload = function() {
+        // Force infobox update by triggering selectedEntityChanged
         viewer.selectedEntity = entity;
-        viewer.selectedEntity = entity;
-      }
-    } else {
-      // If no width attribute, try to use naturalWidth after load
-      if (image){
-        image.onload = function(){
-          if (image.naturalWidth){
-            const infobox = document.querySelector('.cesium-infoBox');
-            if (infobox) {
-              infobox.style.width = image.naturalWidth + 'px';
-              viewer.selectedEntity = entity;
-              viewer.selectedEntity = entity;
-            }
-          }
-        };
-        if (image.complete && image.naturalWidth) {
-          image.onload();
-        }
+        viewer.selectedEntity = entity; //setting it twice is important to force a redraw.
+      };
+      //if the image is already loaded, then trigger the onload event manually.
+      if (image.complete) {
+        image.onload();
       }
     }
 
