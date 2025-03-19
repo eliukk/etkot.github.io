@@ -104,8 +104,9 @@ function updateInfoboxOnImageLoad(viewer, entity) {
             }
             infobox.style.height = "auto";
 
-            viewer.selectedEntity = entity;
-            viewer.selectedEntity = entity;
+            entity.description = new Cesium.CallbackProperty(function() {
+            return descriptionElement.innerHTML;
+            }, false);
           }
         }
       }, 50);
@@ -121,8 +122,9 @@ function updateInfoboxOnImageLoad(viewer, entity) {
             }
             infobox.style.height = "auto";
 
-            viewer.selectedEntity = entity;
-            viewer.selectedEntity = entity;
+            entity.description = new Cesium.CallbackProperty(function() {
+            return descriptionElement.innerHTML;
+            }, false);
           }
       }
     }
