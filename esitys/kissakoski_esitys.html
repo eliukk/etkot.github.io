@@ -102,6 +102,11 @@ function updateInfoboxOnImageLoad(viewer, entity) {
             } else if (image.naturalWidth){
               infobox.style.width = (image.naturalWidth + 20) + 'px';
             }
+
+            entity.description = new Cesium.CallbackProperty(function() {
+              return descriptionElement.innerHTML;
+            }, false);
+
             viewer.selectedEntity = entity;
             viewer.selectedEntity = entity;
           }
@@ -117,12 +122,20 @@ function updateInfoboxOnImageLoad(viewer, entity) {
             } else if (image.naturalWidth){
               infobox.style.width = (image.naturalWidth + 20) + 'px';
             }
+
+            entity.description = new Cesium.CallbackProperty(function() {
+              return descriptionElement.innerHTML;
+            }, false);
+            
             viewer.selectedEntity = entity;
             viewer.selectedEntity = entity;
           }
       }
     }
 
+    entity.description = new Cesium.CallbackProperty(function() {
+      return descriptionElement.innerHTML;
+    }, false);
   }
 }
 
