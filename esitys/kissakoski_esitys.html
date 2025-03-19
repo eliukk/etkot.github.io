@@ -98,9 +98,9 @@ function updateInfoboxOnImageLoad(viewer, entity) {
           const infobox = document.querySelector('.cesium-infoBox');
           if (infobox) {
             if(image.width){
-              infobox.style.width = (parseInt(image.width) + 20) + 'px';
+              infobox.style.width = (parseInt(image.width) + 30) + 'px';
             } else if (image.naturalWidth){
-              infobox.style.width = (image.naturalWidth + 20) + 'px';
+              infobox.style.width = (image.naturalWidth + 30) + 'px';
             }
             viewer.selectedEntity = entity;
             viewer.selectedEntity = entity;
