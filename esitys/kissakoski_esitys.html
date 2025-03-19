@@ -100,8 +100,12 @@ function updateInfoboxOnImageLoad(viewer, entity) {
           } else if (image.naturalWidth) {
             infobox.style.width = (image.naturalWidth + 30) + 'px';
           }
-          viewer.selectedEntity = entity;
-          viewer.selectedEntity = entity;
+
+          entity.description = new Cesium.CallbackProperty(function() {
+            return descriptionElement.innerHTML;
+          }, false);
+          //viewer.selectedEntity = entity;
+          //viewer.selectedEntity = entity;
         }
       };
 
@@ -109,10 +113,6 @@ function updateInfoboxOnImageLoad(viewer, entity) {
         image.onload(); // Trigger onload if image is already cached
       }
     }
-
-    entity.description = new Cesium.CallbackProperty(function() {
-      return descriptionElement.innerHTML;
-    }, false);
   }
 }
 
