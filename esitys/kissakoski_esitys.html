@@ -110,49 +110,23 @@ function updateInfoboxOnImageLoad(viewer, entity) {
     const descriptionElement = document.createElement('div');
     descriptionElement.innerHTML = entity.description.getValue(viewer.clock.currentTime);
 
-    const image = descriptionElement.querySelector('img');
+    const image = descriptionElement.querySelector('img'); // Find the image
 
     if (image) {
-      let checkInterval = setInterval(function() {
-        if (image.complete) {
-          clearInterval(checkInterval);
-          const infobox = document.querySelector('.cesium-infoBox');
-          if (infobox) {
-            if(image.width){
-              infobox.style.width = (parseInt(image.width) + 40) + 'px';
-            } else if (image.naturalWidth){
-              infobox.style.width = (image.naturalWidth + 40) + 'px';
-            }
-            //infobox.style.height = "auto";
-
-            /*entity.description = new Cesium.CallbackProperty(function() {
-            return descriptionElement.innerHTML;
-            }, false);*/
-          }
-        }
-      }, 50);
-
+      image.onload = function() {
+        // Force infobox update by triggering selectedEntityChanged
+        viewer.selectedEntity = entity;
+        viewer.selectedEntity = entity; //setting it twice is important to force a redraw.
+      };
+      //if the image is already loaded, then trigger the onload event manually.
       if (image.complete) {
-        clearInterval(checkInterval);
-        const infobox = document.querySelector('.cesium-infoBox');
-          if (infobox) {
-            if(image.width){
-              infobox.style.width = (parseInt(image.width) + 40) + 'px';
-            } else if (image.naturalWidth){
-              infobox.style.width = (image.naturalWidth + 40) + 'px';
-            }
-            /*infobox.style.height = "auto";
-
-            entity.description = new Cesium.CallbackProperty(function() {
-            return descriptionElement.innerHTML;
-            }, false);*/
-          }
+        image.onload();
       }
     }
 
-    /*entity.description = new Cesium.CallbackProperty(function() {
+    entity.description = new Cesium.CallbackProperty(function() {
       return descriptionElement.innerHTML;
-    }, false);*/
+    }, false);
   }
 }
 
@@ -423,7 +397,7 @@ addFactoryFlame();
 // hide or show fire if selected entity is changed
 viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
 
-  //updateInfoboxOnImageLoad(viewer, selectedEntity);
+  updateInfoboxOnImageLoad(viewer, selectedEntity);
 
   if (Cesium.defined(selectedEntity)) {
       if (Cesium.defined(selectedEntity.name)) {
