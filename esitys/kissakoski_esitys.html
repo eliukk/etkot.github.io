@@ -85,22 +85,28 @@ function createElementText(str)
 }
 
 function updateInfoboxOnImageLoad(viewer, entity) {
-  if (entity && entity.description) {
+  f (entity && entity.description) {
     const descriptionElement = document.createElement('div');
     descriptionElement.innerHTML = entity.description.getValue(viewer.clock.currentTime);
 
-    const image = descriptionElement.querySelector('img'); // Find the image
+    const image = descriptionElement.querySelector('img');
 
     if (image) {
-      image.onload = function() {
-        // Force infobox update by triggering selectedEntityChanged
-        viewer.selectedEntity = entity;
-        viewer.selectedEntity = entity; //setting it twice is important to force a redraw.
-      };
-      //if the image is already loaded, then trigger the onload event manually.
+      let checkInterval = setInterval(function() {
+        if (image.complete) {
+          clearInterval(checkInterval); // Stop the interval
+          viewer.selectedEntity = entity;
+          viewer.selectedEntity = entity; // Force redraw
+        }
+      }, 50); // Check every 50 milliseconds (adjust as needed)
+
+      // If the image is already complete, just fire the redraw
       if (image.complete) {
-        image.onload();
+        clearInterval(checkInterval);
+        viewer.selectedEntity = entity;
+        viewer.selectedEntity = entity;
       }
+
     }
 
     entity.description = new Cesium.CallbackProperty(function() {
