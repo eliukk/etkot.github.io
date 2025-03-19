@@ -378,6 +378,7 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
 viewer.infoBox.frame.removeAttribute("sandbox");
 //viewer.infoBox.frame.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms');
 viewer.infoBox.frame.src = "about:blank";
+viewer.infoBox.style.maxWidth ="none";
 
 const toolbar = document.querySelector("div.cesium-viewer-toolbar");
 toolbar.style.display = 'flex';
