@@ -102,6 +102,7 @@ function updateInfoboxOnImageLoad(viewer, entity) {
             } else if (image.naturalWidth){
               infobox.style.width = (image.naturalWidth + 40) + 'px';
             }
+            infobox.style.height = "auto";
 
             /*entity.description = new Cesium.CallbackProperty(function() {
               return descriptionElement.innerHTML;
@@ -122,6 +123,7 @@ function updateInfoboxOnImageLoad(viewer, entity) {
             } else if (image.naturalWidth){
               infobox.style.width = (image.naturalWidth + 40) + 'px';
             }
+            infobox.style.height = "auto";
 
             /*entity.description = new Cesium.CallbackProperty(function() {
               return descriptionElement.innerHTML;
