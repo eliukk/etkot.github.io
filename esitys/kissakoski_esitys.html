@@ -85,7 +85,7 @@ function createElementText(str)
 }
 
 function updateInfoboxOnImageLoad(viewer, entity) {
-  f (entity && entity.description) {
+  if (entity && entity.description) {
     const descriptionElement = document.createElement('div');
     descriptionElement.innerHTML = entity.description.getValue(viewer.clock.currentTime);
 
