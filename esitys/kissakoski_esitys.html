@@ -24,31 +24,52 @@
       }
 
       .cesium-infoBox {
-        /* Allow the infobox to grow in width and height */
-        min-width: 470px;
-        max-width: none;
-        max-height: none;
-        width: auto;
-        height: auto;
-        /* Ensure the content can flow and wrap */
-        white-space: normal;
-        overflow: auto; /* Important: Allow scrolling if content overflows */
-      }
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  white-space: normal;
+  overflow: auto;
+  min-width: 200px; /* Optional: Set a minimum width */
+  min-height: 100px; /* Optional: Set a minimum height */
+}
 
-      .cesium-infoBox-description {
-        /* Allow the description area to grow */
-        max-width: none;
-        max-height: none;
-        width: auto;
-        height: auto;
-      }
+.cesium-infoBox-description {
+  flex: 1; /* Allow the description to grow and take available space */
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  overflow: auto; /* Allow scrolling if content overflows */
+  padding: 10px; /* Optional padding */
+}
 
-      .cesium-infoBox-description img {
-        /* Allow images to scale and fit within the infobox */
-        max-width: 100%; /* Important: Prevent images from exceeding the infobox width */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Ensure images behave as block-level elements */
-      }
+.cesium-infoBox-description img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  align-self: center; /* Center the image horizontally */
+}
+
+/* Optional: If you have other elements in the infobox, you can use flexbox to control their layout */
+/* Example: For a title element */
+.cesium-infoBox-title {
+  padding: 5px;
+  text-align: center;
+}
+
+/* Optional: if you have a table */
+.cesium-infoBox-description table{
+  max-width: 100%;
+  width: auto;
+}
+
+.cesium-infoBox-description table img{
+  max-width: 100%;
+  height: auto;
+}
     </style>
     <div id="cesiumContainer" class="fullSize"></div>
     <div id="loadingOverlay"><h1>Loading...</h1></div>
@@ -402,7 +423,7 @@ addFactoryFlame();
 // hide or show fire if selected entity is changed
 viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
 
-  updateInfoboxOnImageLoad(viewer, selectedEntity);
+  //updateInfoboxOnImageLoad(viewer, selectedEntity);
 
   if (Cesium.defined(selectedEntity)) {
       if (Cesium.defined(selectedEntity.name)) {
