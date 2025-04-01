@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ostospäivä 1920-luvun Mikkelissä</name>
+    <description>Tarina on laadittu ChatGPT-pohjaisella tekoälyllä.</description>
+    <Style id="icon-1899-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+    </Style>
+    <Style id="icon-1899-7CB342-labelson-nodesc">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Folder>
+      <name>Ostospäivä 1920-luvun Mikkelissä</name>
+      <description><![CDATA[Tarina on laadittu ChatGPT-pohjaisella tekoälyllä.<br><br><p style="font-style: italic; font-size: 12px;">Lähteet:<br><br>Suomen liikekalenteri, 01.01.1926, nro 1926-1927, s. 206<br>https://digi.kansalliskirjasto.fi/aikakausi/binding/1722069?page=206<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:01.04.2025<br><br>Mikkelin kaupungin asemakartta 1900-luvun alusta, Posti- ja lennätinhallituksen liikenneosaston kartat, Kansallisarkisto, Helsinki</p>]]></description>
+      <Placemark>
+        <name>Mekaanillinen korjauspaja, Juutinen A.V.</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Herra Hokkanen on saapunut Mikkeliin huoltamaan autonsa A. V. Juutisen omistamalle mekaaniselle korjauspajalle. Paja sijaitsee Mikonkatu 3:ssa, ja sen maine kaupungissa on erinomainen. Juutinen tervehtii Hokkasen ystävällisesti ja lupaa, että auto on valmis iltapäivään mennessä. Herra Hokkanen päättää käyttää odotusajan hyödyksi ja käydä muutamissa kaupungin liikkeissä.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAUGQ2ptn2bAP0GeaZW7ZBZqmh9DNZeGmi_hCMM1v6yT6y2P4NuPzT9pVWagi-ISiYcj06WVBmXBnDEzBoOJsFQrWHbI2VzsBROxOyXpX8mF23FSxw3YBlwCgXoEquKioyDnnUOjY_aY1D520ujAIYpu7V9kLX6AZfuFMvBukd5VgoE1pG4nYr4Ld_RAeZJhpauyAcVQspFE9sQqLpWAuG1_cncshFS4AfiNR-SBvOF9Vo78Y1R90BFqcN0?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2692372,61.6870025,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>a1,,green,5,Mekaanillinen korjauspaja Juutinen A.V.,1000,12000</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2693788,61.6871134,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>a2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2717538,61.6889893,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kellosepänliike, Laitinen O., Aleksanterinkatu 18</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Ensimmäisenä Hokkanen suuntaa O. Laitisen kellosepänliikkeeseen, joka sijaitsee Aleksanterinkatu 18:ssa. Hänellä on vanha taskukello, joka on toiminut moitteettomasti jo vuosikymmeniä, mutta nyt se on alkanut jätättää. Laitinen, kaupungin arvostettu kelloseppä, ottaa kellon tutkittavakseen ja lupaa sen olevan kunnossa parin tunnin kuluttua. Samalla Hokkanen ihailee liikkeen valikoimaa, joka sisältää toinen toistaan kauniimpia kelloja.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAWdzygSY4fs_M5a6qwIOwUtTxSzPhKgbHop5SCZhhbpBRR47uxcj-3iHQDc2y7AiP5IwfgA17xqtOaAMvBgRw0x6x691PN9JHirjtbEw6WwFad6lHK300O0SvFoMtbrTKmtr_puNVW17REUSPBFTeEIVPNwFd1XnBfatbrPidaHe0WGpS6FMxAONYn57hPCHMy08LuouAJuvz2csHyW_4if62ZbASZk87nO60cOp4xRa4L0zjl-RD8ZCxk?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2718378,61.689058,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vaate- ja lyhyttavaraliike, Kantanen A., Hallituskatu 9</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Seuraavaksi Herra Hokkanen suuntaa A. Kantasen vaate- ja lyhyttavaraliikkeeseen Hallituskatu 9:ään. Hän tarvitsee uuden hatun ja parin sukkia. Liikkeen valikoima on laaja ja monipuolinen, ja Kantanen itse avustaa Hokkasen valinnoissa. Hokkanen päätyy ostamaan tyylikkään huopahatun sekä laadukkaat villasukat, jotka sopivat hyvin tulevaan talvikauteen.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAWZG-caa94JOIdoxZYG9Qpv2B9eCEEXlfnHWvs_zZReO6hxztaARGAZFYwb29qzMp3WwJ-a-5Cm-e_SaHNl673jTgcqDjZaUf48fWxvp5jHo7-Ewee2tt9Nn_z-wfoBSMNMivtzOs3AQLifLQ6zcRHNaF5uDNNdI40l73eKzS1_StX-iyVFvLr7ZhqxuUUE2OID5aQmi1crA6ww6RIXKH1UHwXnVXCOP-PbcfDJ98Ra-n8eDcwrB0LRII0?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2711833,61.6888438,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>b1,,green,5,Vaate- ja lyhyttavaraliike Kantanen A. Hallituskatu 9,1500,12000</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.27102,61.68888
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>b2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2631682,61.6908642,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ompeluliike, Holm Ester, Kirkkokatu 26</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Ostosten jälkeen Hokkanen kävelee Kirkkokatu 26:een, jossa sijaitsee Ester Holmin ompeluliike. Hänellä on vanha takki, joka kaipaa pientä korjausta ja päivitystä. Holm ottaa takin vastaan ja ehdottaa muutamia parannuksia, jotka tekevät siitä jälleen tyylikkään ja käyttökelpoisen. Hokkanen kiittää ja lupaa tulla hakemaan takin seuraavalla käynnillään Mikkeliin.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAWLc8JDZjtlJaWk8OmX9SVQBwav01uTuT1wr9hXmrcbLyvR3XEF7SoQGCGXo7mjFbFbRb--U0dbxmmS0lAoGAlRHp7pQ6j8cS_ORyzaopTVd03ozZ9ze5ORRy7YmCGrgX79c-HvzF9kQUMqq3WkzQ5YRL5f93ZKikYdv_GQ_Z-BGgMnGaJp80TNdaPemjdTxeIBD4P8IAlZhcS_QWBgdDlaRh9SinXw1OHmjTNuzYhcxsa1agHccp7hOXU?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2630578,61.6909214,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>c1,,green,5,Ompeluliike Holm Ester Kirkkokatu 26,1500,12000</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.263138,61.6909068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>c2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2744137,61.6892653,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kansallis-Osake-Pankki, Mikkelin konttori, Nikolainkatu 20</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Kun korjaukset on sovittu, Hokkanen suuntaa Kansallis-Osake-Pankin Mikkelin konttoriin, joka sijaitsee Nikolainkatu 20:ssa. Hänellä on muutamia pankkiasioita hoidettavanaan, ja konttorissa työskentelevä pankkivirkailija auttaa häntä ystävällisesti. Hokkanen nostaa hieman rahaa ja varmistaa, että hänen tililleen on tehty tarvittavat muutokset.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAVKwoAutixlo9r7u8zgdPus9hZk9uyrv60iCXBen43IXuqURs4-8_j1EJLgE4wVj1ewFneTDzK0Xg0xp2hJYsNokiabYe0awPQNbCmzymZj223M9nilWrtN68k3taDyYbOokJrS2KigsNKmCmmrQQvMl0gcyKQU-3dnSZOZB3OD51BC5G7GShSnf84aK4hdhUmR2Fpf8JeDfkWPUzYn1ZJQFKtSiD-bbJe_FXBHBWYBkzpPubR7VyYq1bU?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2744985,61.6892265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centrum, kahvila ja ruokasali, Aleksanterinkatu 13</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Pankkiasioiden jälkeen Hokkanen tuntee nälkää ja päättää käydä Centrumissa, kahvilassa ja ruokasalissa, joka sijaitsee Aleksanterinkatu 13:ssa. Hän tilaa kupin kahvia ja maukkaan voileivän, ja nauttii hetken rauhasta ja kaupungin vilinästä. Kahvila on kodikas ja sen ilmapiiri rentouttava.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAWQb86_Elmv7JCNUi3w8uOQuHlE1a2O5wLMyLw3RsfmQW57B2O0w0wCBX-YjR08j3wMVt0n8k8dCRYr2QlOR0pSw6lKWiyqaDZLSOq7Ejogz6ML_f6r75y8wvU7PXfCwDN3TWnasMG28WixuWuUVWk408fvSKOZdjOmpgmEDzjMER1FfGL0AOJpB69xNF_fMuWBMefNFPQQ3rhhntgAHwvwY4RuudZMrnuDLBp0t5lm2wNvPXYMC8DGahk?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2739197,61.6889461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Carlsonin kukka ja siemenkauppa, Aleksanterinkatu 22</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Viimeisenä Hokkanen vierailee Carlsonin kukka- ja siemenkaupassa, joka sijaitsee Aleksanterinkatu 22:ssa. Hän haluaa ostaa muutamia kauniita kukkia kotiin vietäväksi. Kaupan valikoima on runsas ja värikäs, ja Hokkanen valitsee muutaman upean ruusun sekä liljan. Kaupan omistaja pakkaa kukat huolellisesti mukaan.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAVClXuFjzgQwvMJJr7ArL3GaZf-7tHSXAlnKRbGS_9FdnjQvKEMrEfDAOp5N3j9kiNmO03QKNYFf_7Agqgicf7daoHdzwHznBI1W669X4mwqXqFISew_Wb2d1lE8SP34MUeyrePHyqlR022U2_XUuU5x6R6Ekox-4Iw3pLmgFh-YrkD_OB4hxr4I10a_SIW7-xEi-iQJyp_-x_PG34PhiIpegZaAlghCirpDPjT0vjY7DZu-mTR_n3Qc2U?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.2721157,61.6896119,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kotimatkalle</name>
+        <description><![CDATA[<img src="kissakoski_kanava.jpg" height="400" width="600"/><br><p style="font-style: italic; font-size: 12px;">Kuva: Liisa Näpärä</p><br>Kun kaikki asiat on hoidettu, Hokkanen palaa A. V. Juutisen korjauspajalle. Auto on nyt kunnossa ja valmiina matkaa varten. Hokkanen kiittää Juutista ja suuntaa tyytyväisenä kotiin, mukanaan päivän aikana hankitut ostokset ja korjatut tavarat. Päivä Mikkelissä on ollut onnistunut ja antoisa.]]></description>
+        <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="gx_media_links">
+            <value><![CDATA[https://mymaps.usercontent.google.com/hostedimage/m/*/3APRDMAUiabPNJ_XBS1rgoWPXcLMDqy0gti67aXm9CXrifUz8WFydIRBm5zM128z5p8ViwTPv1lm50yPGVBJAApL_456ATF_O174oIxd88myUQ1jRhdNUlUGOCqkt80mBv3Th2r_Gi9wLzGbbtWL_5k5_QTDFFQTUJVQf8WhtYlbuyYEVvazJY5EUGY9bTrzCNv9hKNMe8LkyoqfUkCkY4Lkab1lvfMHvZcibmC7dqI4vWDIbHiiCOj0l2GdMxjk?authuser=0&fife=s16383]]></value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            27.26855,61.68678
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>d1,,green,5,Carlsonin kukka ja siemenkauppa Aleksanterinkatu 22,1500,12000</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2719496,61.6896048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>d2</name>
+        <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            27.2687657,61.6869622,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
