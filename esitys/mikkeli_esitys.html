@@ -66,8 +66,7 @@
 //servu käyntiin:python -m http.server -b 127.0.0.1 8080
 //qgis 
 var audioElement = document.getElementById('audioElement');
-var particleSystem = null;
-var flameVisible = false;
+var carModelEntity = null;
 var timeoutCounter = 0;
 var GLOBAL_TIMEOUT = 12000;
 var cameraTimeouts = [];
@@ -286,9 +285,29 @@ function configureTimeout(currentEntity, i) {
                     }    
                   });
 
-                  if ("Paperitehtaan tulipalo" == currentEntity._name){
-                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-30), 300)}).then(function () {});
+                  if ("Mekaanillinen korjauspaja, Juutinen A.V." == currentEntity._name){
+                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(Cesium.Math.toRadians(-30), Cesium.Math.toRadians(-30), 350)}).then(function () {});
                   }  
+                  else if ("Kotimatkalle" == currentEntity._name){  
+                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
+
+                    setTimeout(function endCar() {
+                      const modelUrl = "ford_model_t_v2_downloadable2.glb"; // Replace with your model URL
+                      const gpsCoordinates = [
+                      [27.26866, 61.68701], [27.27123, 61.69131]
+                      ];
+
+                      let heading = 3.15 * (Math.PI / 2);
+
+                      viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), 1500)}).then(function () {
+
+                      moveModelAlongPath(viewer, modelUrl, gpsCoordinates, heading, 26, true);
+                        //Zoom to model.
+                      viewer.trackedEntity = carModelEntity;
+                      });
+                      }, 7000);
+
+                  }
                   else {
                     viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
                   }
@@ -302,141 +321,203 @@ function configureTimeout(currentEntity, i) {
 
 }
 
-function addFactoryFlame() {
-
-  // Set bounds of our simulation time
-  const start = Cesium.JulianDate.fromDate(new Date(2015, 2, 25, 16));
-  var stop = Cesium.JulianDate.addSeconds(start, 360, new Cesium.JulianDate());
-
-  // Make sure viewer is at the desired time.
-  viewer.clock.startTime = start.clone();
-  viewer.clock.stopTime = stop.clone();
-  viewer.clock.currentTime = start.clone();
-  viewer.clock.clockRange = Cesium.ClockRange.LOOP_STOP;
-  viewer.clock.multiplier = 1;
-  viewer.clock.shouldAnimate = true;
-
-  // Set timeline to simulation bounds
-  viewer.timeline.zoomTo(start, stop);
-
-  const viewModel = {
-      emissionRate: 100.0, // Increased emission rate
-      gravity: 20.0,
-      minimumParticleLife: 1.0, // Shortened life
-      maximumParticleLife: 2.0, // Shortened life
-      minimumSpeed: 2.0, // Increased speed
-      maximumSpeed: 5.0, // Increased speed
-      startScale: 1.0,
-      endScale: 3.0, // Reduced end scale
-      particleSize: 70.0, // Reduced particle size
-  };
- 
-  const firePosition = Cesium.Cartesian3.fromDegrees(26.74755,61.62442, 0);
-  const entityOrientation = new Cesium.Quaternion();
-  const rotationMatrix = new Cesium.Matrix3();
-  const modelMatrix = new Cesium.Matrix4();
-
-  function computeModelMatrix(entity, time) {
-      return entity.computeModelMatrix(time, new Cesium.Matrix4());
+function moveModelAlongPath(viewer, modelUrl, gpsCoordinates, heading, durationValue, setViewFrom) {
+  if (!gpsCoordinates || gpsCoordinates.length < 2) {
+    console.error("At least two GPS coordinates are required.");
+    return;
   }
 
-  const emitterModelMatrix = new Cesium.Matrix4();
-  const translation = new Cesium.Cartesian3();
-  const rotation = new Cesium.Quaternion();
-  let hpr = new Cesium.HeadingPitchRoll();
-  const trs = new Cesium.TranslationRotationScale();
-
-  function computeEmitterModelMatrix() {
-      hpr = Cesium.HeadingPitchRoll.fromDegrees(0.0, 0.0, 0.0, hpr);
-      trs.translation = Cesium.Cartesian3.fromElements(0.0, 0.0, 0.0, translation);
-      trs.rotation = Cesium.Quaternion.fromHeadingPitchRoll(hpr, rotation);
-
-      return Cesium.Matrix4.fromTranslationRotationScale(trs, emitterModelMatrix);
-  }
-
-  const scene = viewer.scene;
-  particleSystem = scene.primitives.add(
-      new Cesium.ParticleSystem({
-          image: "fire.png", // Fire image
-
-          startColor: Cesium.Color.YELLOW.withAlpha(0.7),
-          endColor: Cesium.Color.RED.withAlpha(0.0),
-
-          startScale: viewModel.startScale,
-          endScale: viewModel.endScale,
-
-          minimumParticleLife: viewModel.minimumParticleLife,
-          maximumParticleLife: viewModel.maximumParticleLife,
-
-          minimumSpeed: viewModel.minimumSpeed,
-          maximumSpeed: viewModel.maximumSpeed,
-
-          imageSize: new Cesium.Cartesian2(
-              viewModel.particleSize,
-              viewModel.particleSize
-          ),
-
-          emissionRate: viewModel.emissionRate,
-
-          bursts: [
-              new Cesium.ParticleBurst({
-                  time: 5.0,
-                  minimum: 10,
-                  maximum: 50,
-              }),
-              new Cesium.ParticleBurst({
-                  time: 10.0,
-                  minimum: 20,
-                  maximum: 70,
-              }),
-              new Cesium.ParticleBurst({
-                  time: 15.0,
-                  minimum: 50,
-                  maximum: 100,
-              }),
-          ],
-
-          lifetime: 16.0,
-
-          emitter: new Cesium.CircleEmitter(2.0),
-
-          emitterModelMatrix: computeEmitterModelMatrix(),
-
-          updateCallback: applyGravity,
-          emissionDirection: new Cesium.Cartesian3(0, 0, 1),
-      })
+  // Convert GPS coordinates to Cartesian3 (without terrain consideration)
+  const cartesianPath = gpsCoordinates.map((coord) =>
+    Cesium.Cartesian3.fromDegrees(coord[0], coord[1], coord[2] || 0) // Default height to 0 if not provided
   );
 
-  //hide flame when created
-  particleSystem.show = false;
+  // Calculate the heading based on the last two points
+  const lastPoint = cartesianPath[cartesianPath.length - 1];
+  const secondLastPoint = cartesianPath[cartesianPath.length - 2];
+  //const heading = calculateHeading(secondLastPoint, lastPoint) - Math.PI / 2;
 
-  const gravityScratch = new Cesium.Cartesian3();
+  var orientation = new Cesium.Quaternion(0, 0, 0, 0);
 
-  function applyGravity(p, dt) {
-      const position = p.position;
-
-      Cesium.Cartesian3.normalize(position, gravityScratch);
-      Cesium.Cartesian3.multiplyByScalar(
-          gravityScratch,
-          viewModel.gravity * dt,
-          gravityScratch
-      );
-
-      p.velocity = Cesium.Cartesian3.add(p.velocity, gravityScratch, p.velocity);
+  //remove previous if exists
+  if (carModelEntity != null){
+    viewer.entities.remove(carModelEntity);
   }
 
-  viewer.scene.preUpdate.addEventListener(function (scene, time) {
-      particleSystem.modelMatrix = Cesium.Matrix4.fromTranslation(firePosition); // Static position
-
-      particleSystem.emitterModelMatrix = computeEmitterModelMatrix();
+  if (setViewFrom) {
+    // Create the model entity
+    carModelEntity = viewer.entities.add({
+      model: {
+        uri: modelUrl,
+        scale: 0.04
+      },
+      position: cartesianPath[0],
+      orientation: Cesium.Transforms.headingPitchRollQuaternion(
+        cartesianPath[0],
+        new Cesium.HeadingPitchRoll(heading , 0, 0) // Apply calculated heading
+      ),
+      viewFrom: new Cesium.Cartesian3(0, 0, 1500)
+    });
+  }
+  else {
+    // Create the model entity
+    carModelEntity = viewer.entities.add({
+    model: {
+      uri: modelUrl,
+      scale: 0.04
+    },
+    position: cartesianPath[0],
+    orientation: Cesium.Transforms.headingPitchRollQuaternion(
+      cartesianPath[0],
+      new Cesium.HeadingPitchRoll(heading , 0, 0) // Apply calculated heading
+    )
   });
-
 }
 
-function toggleFlame() {
-  if (particleSystem != null) {
-    particleSystem.show = !particleSystem.show;
-    flameVisible = particleSystem.show;   
+  // Create a SampledPositionProperty for animation
+  const positionProperty = new Cesium.SampledPositionProperty();
+  var orientationProperty = new Cesium.SampledProperty(Cesium.Quaternion);
+
+  const time = Cesium.JulianDate.now();
+  const duration = durationValue;
+  const samples = [];
+
+  for (let i = 0; i < cartesianPath.length; i++) {
+    const pointTime = Cesium.JulianDate.addSeconds(time, (duration * i) / (cartesianPath.length - 1), new Cesium.JulianDate());
+    positionProperty.addSample(pointTime, cartesianPath[i]);
+    samples.push({time:pointTime, position: cartesianPath[i]});
+
+        // Calculate heading if it's not the first point
+    let heading = 0;
+    if (i > 0) {
+      heading = calculateHeading(cartesianPath[i - 1], cartesianPath[i]);
+      // Adjust heading for Cesium's frame (subtract 90 degrees)
+      heading -= Math.PI / 2;
+    } else {
+      // Set an initial heading (e.g., based on the first two points or a default)
+      /*if (cartesianPath.length > 1) {
+        heading = calculateHeading(cartesianPath[0], cartesianPath[1]) - Math.PI / 2;
+      }*/
+    }
+
+    // Create the orientation quaternion
+    /*Cesium.Transforms.headingPitchRollQuaternion(
+      cartesianPath[i], // Origin for the orientation
+      new Cesium.HeadingPitchRoll(heading, 0, 0),
+      orientation
+    );*/
+    //orientationProperty.addSample(pointTime, orientation);
+  }
+
+  carModelEntity.position = positionProperty;
+  //carModelEntity.orientation = orientationProperty;
+
+  let previousOrientation = Cesium.Quaternion.IDENTITY; // Start with no rotation
+
+viewer.clock.onTick.addEventListener(function(clock) {
+  const currentTime = clock.currentTime;
+  const currentPosition = carModelEntity.position.getValue(currentTime);
+
+  if (currentPosition) {
+    let index = -1;
+    for (let i = 0; i < samples.length - 1; i++) {
+      if (Cesium.JulianDate.lessThanOrEquals(samples[i].time, currentTime) && Cesium.JulianDate.greaterThanOrEquals(samples[i + 1].time, currentTime)) {
+        index = i;
+        break;
+      }
+    }
+
+    if (index >= 0) {
+      const targetHeading = calculateHeading(samples[index].position, samples[index + 1].position) - Math.PI / 2;
+
+      // Get the current heading from the previous orientation (approximation)
+      const currentHPR = Cesium.HeadingPitchRoll.fromQuaternion(previousOrientation);
+      const currentHeading = currentHPR.heading;
+
+      // Calculate the *change* in heading
+      const deltaHeading = targetHeading - currentHeading;
+
+      // Create a quaternion representing the incremental rotation
+      const incrementalRotation = Cesium.Transforms.headingPitchRollQuaternion(
+        currentPosition, // Origin
+        new Cesium.HeadingPitchRoll(deltaHeading, 0, 0) // Apply only heading change
+      );
+
+      // Multiply the previous orientation by the incremental rotation
+      const newOrientation = Cesium.Quaternion.multiply(
+        previousOrientation,
+        incrementalRotation,
+        new Cesium.Quaternion()
+      );
+
+      //carModelEntity.orientation = newOrientation;
+      previousOrientation = newOrientation; // Update the previous orientation
+    }
+  }
+});
+
+
+
+  // Add an event listener to update heading during animation
+  /*viewer.clock.onTick.addEventListener(function(clock) {
+    const currentTime = clock.currentTime;
+    const currentPosition = positionProperty.getValue(currentTime);
+
+    if (currentPosition) {
+      // Find the two points that the model is currently between
+      let index = -1;
+      for (let i = 0; i < samples.length - 1; i++) {
+          if (Cesium.JulianDate.lessThanOrEquals(samples[i].time, currentTime) && Cesium.JulianDate.greaterThanOrEquals(samples[i + 1].time, currentTime)) {
+              index = i;
+              break;
+          }
+      }
+
+      if (index >= 0) {
+        const heading = calculateHeading(samples[index].position, samples[index + 1].position) - Math.PI / 2;
+        //setModelOrientationWithRotationMatrix(carModelEntity, currentPosition, heading);
+        carModelEntity.orientation = Cesium.Transforms.headingPitchRollQuaternion(
+          currentPosition,
+          new Cesium.HeadingPitchRoll(heading, 0, 0)
+        );
+      }
+    }
+  });*/
+
+  //carModelEntity.position = positionProperty;
+
+  // Set the viewer's clock to control the animation
+  viewer.clock.startTime = time;
+  viewer.clock.stopTime = Cesium.JulianDate.addSeconds(time, duration, new Cesium.JulianDate());
+  viewer.clock.currentTime = time;
+  viewer.clock.clockRange = Cesium.ClockRange.CLAMPED;
+  viewer.clock.clockStep = Cesium.ClockStep.SYSTEM_CLOCK_MULTIPLIER;
+  viewer.clock.multiplier = 1;
+
+  //Zoom to model.
+  viewer.trackedEntity = carModelEntity;
+}
+
+function calculateHeading(startPoint, endPoint) {
+  const startCartographic = Cesium.Cartographic.fromCartesian(startPoint);
+  const endCartographic = Cesium.Cartographic.fromCartesian(endPoint);
+
+  const startLon = startCartographic.longitude;
+  const startLat = startCartographic.latitude;
+  const endLon = endCartographic.longitude;
+  const endLat = endCartographic.latitude;
+
+  const y = Math.sin(endLon - startLon) * Math.cos(endLat);
+  const x = Math.cos(startLat) * Math.sin(endLat) - Math.sin(startLat) * Math.cos(endLat) * Math.cos(endLon - startLon);
+  const heading = Math.atan2(y, x);
+
+  return heading; // Returns the heading in radians
+}
+
+
+function toggleCar() {
+  if (carModelEntity != null) {
+    carModelEntity.show = !carModelEntity.show;
   } 
 }
 
@@ -466,7 +547,6 @@ if (timelineContainer) {
 // Set the random number seed for consistent results.
 Cesium.Math.setRandomNumberSeed(3);
 
-addFactoryFlame();
 
 // hide or show fire if selected entity is changed
 viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
@@ -475,53 +555,41 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
 
   if (Cesium.defined(selectedEntity)) {
       if (Cesium.defined(selectedEntity.name)) {
-        if (selectedEntity.name == "Paperitehtaan tulipalo"){
-          audioElement.src = "tulipalo.mp3";
+        if (selectedEntity.name == "Mekaanillinen korjauspaja, Juutinen A.V."){
+          /*audioElement.src = "tulipalo.mp3";
           audioElement.load();
-          audioElement.play();
+          audioElement.play();*/
 
-          if (!flameVisible){
-            toggleFlame();
-          }
+
+          const modelUrl = "ford_model_t_v2_downloadable2.glb"; // Replace with your model URL
+          const gpsCoordinates = [
+          [27.26975, 61.68882], [27.26866, 61.68701]
+          ];
+
+          let heading = 2.85 * (- Math.PI / 2);
+
+          moveModelAlongPath(viewer, modelUrl, gpsCoordinates, heading, 10, false);
+          //toggleCar();
         }
-        else if (["Hirvensalmen Kissakosken vaiheita", "Koski", "Kanava", "Puula", "Suonsalmi", "Suonsalmelta Kissakoskelle", "Ripatinkoski", "Sämpiä", "Mäntyharjulle ja Kymijoen suuntaan"].includes(selectedEntity.name)){
-          if (audioElement.src != 'https://eliukk.github.io/etkot.github.io/esitys/koski.mp3'){
+        else if (selectedEntity.name == "Kotimatkalle"){
+          /*audioElement.src = "tulipalo.mp3";
+          audioElement.load();
+          audioElement.play();*/
 
-            audioElement.pause();
-            audioElement.currentTime = 0;
-            if (flameVisible){
-              toggleFlame();
-            }
 
-            audioElement.src = "koski.mp3";
-            audioElement.volume = 0.1;
-            audioElement.load();
-            const playPromise = audioElement.play();
+          /*const modelUrl = "ford_model_t_v2_downloadable.glb"; // Replace with your model URL
+          const gpsCoordinates = [
+          [27.26866, 61.68701], [27.27123, 61.69131]
+          ];
 
-            if (playPromise !== undefined) {
-                playPromise
-                  .then(() => {
-                    // Automatic playback started!
-                    console.log("Audio playback started.");
-                    audioButton.style.display = 'none'; // Hide the button if playback succeeded
-                  })
-                  .catch((error) => {
-                    // Auto-play was prevented
-                    console.error("Audio playback failed:", error);
-                    audioButton.style.display = 'block'; // Show the button if playback failed
-                  });
-            }
-          }
+          let heading = 3.15 * (Math.PI / 2);
+
+          moveModelAlongPath(viewer, modelUrl, gpsCoordinates, heading, 20);
+            //Zoom to model.
+          viewer.trackedEntity = carModelEntity;
+          //toggleCar();*/
         }
-        else{
-          audioElement.pause();
-          audioElement.src = "";
-          audioElement.currentTime = 0;
-          if (flameVisible){
-            toggleFlame();
-          }
-        }
-    }
+      }
   }
 });
 
@@ -929,6 +997,11 @@ function togglePresentation() {
                     prevEntity.billboard.color = new Cesium.Color(0.00784313725490196, 0.5333333333333333, 0.8196078431372549, 1);//blueColor;
                   }
 
+                  // remove car if exists
+                  if (carModelEntity != null){
+                    viewer.entities.remove(carModelEntity);
+                  }
+
                   viewer.selectedEntity = undefined;
                   speedText.style.display = 'block';
                   myButton.innerHTML = 'Esitys';
@@ -951,6 +1024,11 @@ function togglePresentation() {
     // clear possible last selected entity red color and change it to blue
     if (prevEntity != null) {
       prevEntity.billboard.color = new Cesium.Color(0.00784313725490196, 0.5333333333333333, 0.8196078431372549, 1);//blueColor;
+    }
+
+    // remove car if exists
+    if (carModelEntity != null){
+      viewer.entities.remove(carModelEntity);
     }
   
     viewer.selectedEntity = undefined;
