@@ -30,7 +30,7 @@
       <name>Ostospäivä 1920-luvun Mikkelissä</name>
       <description><![CDATA[Tarina on laadittu ChatGPT-pohjaisella tekoälyllä.<br><br><p style="font-style: italic; font-size: 12px;">Lähteet:<br><br>Suomen liikekalenteri, 01.01.1926, nro 1926-1927, s. 206<br>https://digi.kansalliskirjasto.fi/aikakausi/binding/1722069?page=206<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:01.04.2025<br><br>Mikkelin kaupungin asemakartta 1900-luvun alusta, Posti- ja lennätinhallituksen liikenneosaston kartat, Kansallisarkisto, Helsinki<br><br>Auton 3d-malli:"Ford Model T v2 Downloadable" (https://skfb.ly/o6TMW) by Libau Media is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>]]></description>
       <Placemark>
-        <name>Mekaanillinen korjauspaja, Juutinen A.V.</name>
+        <name>Mekaanillinen korjauspaja, Juutinen A.V., Mikonkatu 3</name>
         <description><![CDATA[<img src="juutinen.jpg" height="584" width="600"/><br><p style="font-style: italic; font-size: 12px;">Mikkelin Sanomat, 09.09.1911, nro 101, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1270714/articles/81695811?page=4">Kansalliskirjaston digitaaliset aineistot</a></p><br>Herra Hokkanen on saapunut Mikkeliin huoltamaan autonsa A. V. Juutisen omistamalle mekaaniselle korjauspajalle. Paja sijaitsee Mikonkatu 3:ssa, ja sen maine kaupungissa on erinomainen. Juutinen tervehtii Hokkasen ystävällisesti ja lupaa, että auto on valmis iltapäivään mennessä. Herra Hokkanen päättää käyttää odotusajan hyödyksi ja käydä muutamissa kaupungin liikkeissä.]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
@@ -45,7 +45,7 @@
         </Point>
       </Placemark>
       <Placemark>
-        <name>a1,,green,5,Mekaanillinen korjauspaja Juutinen A.V.,1000,12000</name>
+        <name>a1,,green,5,Mekaanillinen korjauspaja Juutinen A.V. Mikonkatu 3,1000,12000</name>
         <styleUrl>#icon-1899-7CB342-labelson-nodesc</styleUrl>
         <Point>
           <coordinates>

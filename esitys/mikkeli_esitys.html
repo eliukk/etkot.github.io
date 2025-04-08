@@ -283,7 +283,7 @@ function configureTimeout(currentEntity, i) {
                     }    
                   });
 
-                  if ("Mekaanillinen korjauspaja, Juutinen A.V." == currentEntity._name){
+                  if ("Mekaanillinen korjauspaja, Juutinen A.V., Mikonkatu 3" == currentEntity._name){
                     viewer.flyTo(currentEntity, {duration:flyDuration, offset: new Cesium.HeadingPitchRange(Cesium.Math.toRadians(-30), Cesium.Math.toRadians(-30), 350)}).then(function () {});
                   }  
                   else if ("Kotimatkalle" == currentEntity._name){  
@@ -553,7 +553,7 @@ viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
 
   if (Cesium.defined(selectedEntity)) {
       if (Cesium.defined(selectedEntity.name)) {
-        if (selectedEntity.name == "Mekaanillinen korjauspaja, Juutinen A.V."){
+        if (selectedEntity.name == "Mekaanillinen korjauspaja, Juutinen A.V., Mikonkatu 3"){
           /*audioElement.src = "tulipalo.mp3";
           audioElement.load();
           audioElement.play();*/
