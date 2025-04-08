@@ -995,6 +995,11 @@ function togglePresentation() {
                     prevEntity.billboard.color = new Cesium.Color(0.00784313725490196, 0.5333333333333333, 0.8196078431372549, 1);//blueColor;
                   }
 
+                  // remove car if exists
+                  if (carModelEntity != null){
+                    viewer.entities.remove(carModelEntity);
+                  }
+
                   viewer.selectedEntity = undefined;
                   speedText.style.display = 'block';
                   myButton.innerHTML = 'Esitys';
@@ -1004,10 +1009,6 @@ function togglePresentation() {
                     destination: Cesium.Cartesian3.fromDegrees(27.26923,61.687, 4000.0),
                   });
 
-                  // remove car if exists
-                  if (carModelEntity != null){
-                    viewer.entities.remove(carModelEntity);
-                  }
                 }, timeoutCounter + (GLOBAL_TIMEOUT * 2)));    
               });
   }
