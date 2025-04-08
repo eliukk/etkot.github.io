@@ -208,7 +208,7 @@ function configureTimeout(currentEntity, i) {
   var currenDescriptionLength = createElementText(currentEntity._description._value).length;
 
   if (i == 1) {
-    timeout = 24000;
+    timeout = 21000;
   }
   else if (prevEntityDescription ==  createElementText(currentEntity._description._value) || smallTransitionTime.includes(currentEntity._name)) {
     timeout = 8000;
@@ -223,11 +223,11 @@ function configureTimeout(currentEntity, i) {
     //alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription != "" && prevEntityDescription.length > 300 && prevEntityDescription.length <= 400) {
-    timeout = 24000;
+    timeout = 30000;
     //alert(timeout + ":" + currentEntity._name);
   }
   else if (prevEntityDescription != "" && prevEntityDescription.length > 400) {
-    timeout = 30000;
+    timeout = 35000;
     //alert(timeout + ":" + currentEntity._name);
   }
 
@@ -284,10 +284,10 @@ function configureTimeout(currentEntity, i) {
                   });
 
                   if ("Mekaanillinen korjauspaja, Juutinen A.V." == currentEntity._name){
-                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(Cesium.Math.toRadians(-30), Cesium.Math.toRadians(-30), 350)}).then(function () {});
+                    viewer.flyTo(currentEntity, {duration:flyDuration, offset: new Cesium.HeadingPitchRange(Cesium.Math.toRadians(-30), Cesium.Math.toRadians(-30), 350)}).then(function () {});
                   }  
                   else if ("Kotimatkalle" == currentEntity._name){  
-                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
+                    viewer.flyTo(currentEntity, {duration:flyDuration, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
 
                     setTimeout(function endCar() {
                       const modelUrl = "ford_model_t_v2_downloadable2.glb"; // Replace with your model URL
@@ -297,7 +297,7 @@ function configureTimeout(currentEntity, i) {
 
                       let heading = 3.15 * (Math.PI / 2);
 
-                      viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), 1500)}).then(function () {
+                      viewer.flyTo(currentEntity, {duration:flyDuration, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), 1500)}).then(function () {
 
                       moveModelAlongPath(viewer, modelUrl, gpsCoordinates, heading, 26, true);
                         //Zoom to model.
@@ -307,7 +307,7 @@ function configureTimeout(currentEntity, i) {
 
                   }
                   else {
-                    viewer.flyTo(currentEntity, {duration:flyDuration, flyOverLongitude: 61.68857, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
+                    viewer.flyTo(currentEntity, {duration:flyDuration, offset: new Cesium.HeadingPitchRange(0, Cesium.Math.toRadians(-90), cameraHeight)}).then(function () {});
                   }
                 
                 }, timeoutCounter));
