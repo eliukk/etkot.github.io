@@ -528,6 +528,7 @@ const viewer = new Cesium.Viewer("cesiumContainer", {
   homeButton: false,
   navigationHelpButton: false,
   sceneModePicker: false,
+  fullscreenButton: false,
   baseLayer: Cesium.ImageryLayer.fromProviderAsync(
     new Cesium.OpenStreetMapImageryProvider({
     url : 'https://tile.openstreetmap.org/'
@@ -608,6 +609,7 @@ speedText.title = "Aseta siirtymän nopeus paikkojen välillä sekunteina";
 //myButton.classList.add("cesium-button", "cesium-toolbar-button");
 myButton.innerHTML = "Esitys";
 myButton.style = "opacity:0.7";
+myButton.style.display = 'none';
 audioButton.innerHTML = "Toista ääni";
 audioButton.style = "opacity:0.7";
 speedText.style = "opacity:0.7";
@@ -1001,7 +1003,7 @@ function togglePresentation() {
                   }
 
                   viewer.selectedEntity = undefined;
-                  speedText.style.display = 'block';
+                  //speedText.style.display = 'block';
                   myButton.innerHTML = 'Esitys';
                   isPresentationMode = false;
 
@@ -1031,7 +1033,7 @@ function togglePresentation() {
     }
   
     viewer.selectedEntity = undefined;
-    speedText.style.display = 'block';
+    //speedText.style.display = 'block';
     myButton.innerHTML = 'Esitys';
 
     viewer.camera.flyTo({

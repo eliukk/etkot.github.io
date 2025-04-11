@@ -28,10 +28,10 @@
     </Style>
     <Folder>
       <name>Ostospäivä 1920-luvun Mikkelissä</name>
-      <description><![CDATA[<p style="font-weight: bold; font-size: 16px;">Lähteet<br><p style="font-size: 14px;">Suomen liikekalenteri, 01.01.1926, nro 1926-1927, s. 206<br>https://digi.kansalliskirjasto.fi/aikakausi/binding/1722069?page=206<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:01.04.2025<br><br>Mikkelin kaupungin asemakartta 1900-luvun alusta, Posti- ja lennätinhallituksen liikenneosaston kartat, Kansallisarkisto, Helsinki<br><br>Auton 3d-malli:"Ford Model T v2 Downloadable" (https://skfb.ly/o6TMW) by Libau Media is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>]]></description>
+      <description><![CDATA[<p style="ont-weight: bold; font-size: 16px;">Lähteet<br><p style="font-size: 14px;">Suomen liikekalenteri, 01.01.1926, nro 1926-1927, s. 206<br>https://digi.kansalliskirjasto.fi/aikakausi/binding/1722069?page=206<br>Kansalliskirjaston digitaaliset aineistot<br>Viitattu:01.04.2025<br><br>Mikkelin kaupungin asemakartta 1900-luvun alusta, Posti- ja lennätinhallituksen liikenneosaston kartat, Kansallisarkisto, Helsinki<br><br>Auton 3d-malli:"Ford Model T v2 Downloadable" (https://skfb.ly/o6TMW) by Libau Media is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>]]></description>
       <Placemark>
         <name>Mekaanillinen korjauspaja, Juutinen A.V., Mikonkatu 3</name>
-        <description><![CDATA[<img src="juutinen.jpg" height="584" width="600"/><br><p style="font-size: 14px;">Mikkelin Sanomat, 09.09.1911, nro 101, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1270714/articles/81695811?page=4">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="juutinen.jpg" height="584" width="600"/><br><p style="font-style: italic; font-size: 12px;">Mikkelin Sanomat, 09.09.1911, nro 101, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1270714/articles/81695811?page=4">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -64,7 +64,7 @@
       </Placemark>
       <Placemark>
         <name>Kellosepänliike, Laitinen O., Aleksanterinkatu 18</name>
-        <description><![CDATA[<img src="laitinen.jpg" height="247" width="600"/><br><p style="font-size: 14px;">Vapaus, 19.06.1916, nro 66, s. 1<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1340228/articles/81695993?page=1">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="laitinen.jpg" height="247" width="600"/><br><p style="font-style: italic; font-size: 12px;">Vapaus, 19.06.1916, nro 66, s. 1<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1340228/articles/81695993?page=1">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -79,7 +79,7 @@
       </Placemark>
       <Placemark>
         <name>Vaate- ja lyhyttavaraliike, Kantanen A., Hallituskatu 9</name>
-        <description><![CDATA[<img src="kantanen.jpg" height="257" width="600"/><br><p style="font-size: 14px;">Mikkelin Sanomat, 27.09.1918, nro 101, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1271697/articles/81696026?page=4">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="kantanen.jpg" height="257" width="600"/><br><p style="font-style: italic; font-size: 12px;">Mikkelin Sanomat, 27.09.1918, nro 101, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1271697/articles/81696026?page=4">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -112,7 +112,7 @@
       </Placemark>
       <Placemark>
         <name>Ompeluliike, Holm Ester, Kirkkokatu 26</name>
-        <description><![CDATA[<img src="ompeluliike.jpg" height="358" width="600"/><br><p style="font-size: 14px;">Mikkelin Sanomat, 19.03.1920, nro 33, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1272254/articles/81696588?page=4">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="ompeluliike.jpg" height="358" width="600"/><br><p style="font-style: italic; font-size: 12px;">Mikkelin Sanomat, 19.03.1920, nro 33, s. 4<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1272254/articles/81696588?page=4">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -145,7 +145,7 @@
       </Placemark>
       <Placemark>
         <name>Kansallis-Osake-Pankki, Mikkelin konttori, Nikolainkatu 20</name>
-        <description><![CDATA[<img src="kansallisosakepankki.jpg" height="505" width="600"/><br><p style="font-size: 14px;">Länsi-Savo, 10.08.1921, nro 89, s. 1<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1021036/articles/81696528?page=1">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="kansallisosakepankki.jpg" height="505" width="600"/><br><p style="font-style: italic; font-size: 12px;">Länsi-Savo, 10.08.1921, nro 89, s. 1<br><a href="https://digi.kansalliskirjasto.fi/sanomalehti/binding/1021036/articles/81696528?page=1">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -160,7 +160,7 @@
       </Placemark>
       <Placemark>
         <name>Centrum, kahvila ja ruokasali, Aleksanterinkatu 13</name>
-        <description><![CDATA[<img src="centrum.jpg" height="141" width="600"/><br><p style="font-size: 14px;">Finlandia, 01.01.1925, s. 242<br><a href="https://digi.kansalliskirjasto.fi/aikakausi/binding/925831/articles/81696515?page=242">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="centrum.jpg" height="141" width="600"/><br><p style="font-style: italic; font-size: 12px;">Finlandia, 01.01.1925, s. 242<br><a href="https://digi.kansalliskirjasto.fi/aikakausi/binding/925831/articles/81696515?page=242">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -175,7 +175,7 @@
       </Placemark>
       <Placemark>
         <name>Carlsonin kukka ja siemenkauppa, Aleksanterinkatu 22</name>
-        <description><![CDATA[<img src="kukkakauppa.jpg" height="379" width="600"/><br><p style="font-size: 14px;">Sana, 01.04.1914, nro 4, s. 32<br><a href="https://digi.kansalliskirjasto.fi/aikakausi/binding/501993/articles/81696189?page=32">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
+        <description><![CDATA[<img src="kukkakauppa.jpg" height="379" width="600"/><br><p style="font-style: italic; font-size: 12px;">Sana, 01.04.1914, nro 4, s. 32<br><a href="https://digi.kansalliskirjasto.fi/aikakausi/binding/501993/articles/81696189?page=32">Kansalliskirjaston digitaaliset aineistot</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
@@ -190,7 +190,7 @@
       </Placemark>
       <Placemark>
         <name>Kotimatkalle</name>
-        <description><![CDATA[<img src="kotimatkalle.jpg" height="384" width="600"/><br><p style="font-size: 14px;">Mikonkatu 1950-luvulla. Mikkelin Sanomien paino ja toimitus kaksikerroksisessa tiilitalossa oikealla. Sen molemmin puolin puutaloja.<br><a href="https://finna.fi/Record/mkm.166867589377300?imgid=1">Finna</a></p>]]></description>
+        <description><![CDATA[<img src="kotimatkalle.jpg" height="384" width="600"/><br><p style="font-style: italic; font-size: 12px;">Mikonkatu 1950-luvulla. Mikkelin Sanomien paino ja toimitus kaksikerroksisessa tiilitalossa oikealla. Sen molemmin puolin puutaloja.<br><a href="https://finna.fi/Record/mkm.166867589377300?imgid=1">Finna</a></p>]]></description>
         <styleUrl>#icon-1899-0288D1-labelson</styleUrl>
         <ExtendedData>
           <Data name="gx_media_links">
